@@ -18,6 +18,8 @@ const middleware = require('./middleware');
 const services = require('./services');
 const appHooks = require('./app.hooks');
 
+const testDrive = require('./testdrive');
+
 const app = feathers();
 
 // Load app configuration
@@ -46,5 +48,7 @@ app.use(notFound());
 app.use(handler());
 
 app.hooks(appHooks);
+
+testDrive.run();
 
 module.exports = app;
