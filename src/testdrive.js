@@ -3,11 +3,11 @@ const Sequelize = require('./database/sequelize.js').Connect(config.host, config
 
 const bar = require('./database/models/bar.js');
 
-module.exports.sequelize = function() { return Sequelize; }
-
-module.exports.run = function() {
-  /*
-    YOUR "MAIN"
-   */
-}
-
+module.exports = {
+	sequelize: function() {
+		return Sequelize;
+	},	
+	run: function() {
+		console.log("hello world from testdrive");
+	}
+};

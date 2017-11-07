@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../../testdrive.js').sequelize();
+const config = require('../config.json');
+const sequelize = require('../sequelize.js').Connect(config.host, config.database, config.username, config.password);
 
 const Bar = sequelize.define('bar', {
   id: {
