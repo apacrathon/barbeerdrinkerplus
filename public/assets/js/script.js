@@ -24,7 +24,7 @@
           timeout = setTimeout(delayed, threshold || 100);
       };
   }
-  // smartresize 
+  // smartresize
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
@@ -45,7 +45,7 @@
 	///////////////////////////////
 
 	function setHomeBannerHeight() {
-		var windowHeight = jQuery(window).height();	
+		var windowHeight = jQuery(window).height();
 		jQuery('#header').height(windowHeight);
 	}
 
@@ -55,8 +55,8 @@
 
 	function centerHomeBannerText() {
 			var bannerText = jQuery('#header > .center');
-			var bannerTextTop = (jQuery('#header').actual('height')/2) - (jQuery('#header > .center').actual('height')/2) - 0;		
-			bannerText.css('padding-top', bannerTextTop+'px');		
+			var bannerTextTop = (jQuery('#header').actual('height')/2) - (jQuery('#header > .center').actual('height')/2) - 0;
+			bannerText.css('padding-top', bannerTextTop+'px');
 			bannerText.show();
 	}
 
@@ -89,7 +89,6 @@
 	});
 
 	jQuery('.nav > li > a').click(function(e){
-		e.preventDefault();
 		jQuery.scrollTo(jQuery(this).attr('href'), 400, { offset:-(jQuery('#header .top').height()), axis:'y' });
 	})
 

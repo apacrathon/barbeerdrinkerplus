@@ -1,6 +1,7 @@
 const socket = io();
 const client = feathers();
 
+require('angular');
 // Create the Feathers application with a `socketio` connection
 client.configure(feathers.socketio(socket));
 
@@ -27,19 +28,6 @@ function addMessage(message) {
 messages.find().then(page => page.data.forEach(addMessage));
 messages.on('created', addMessage);
 
-document.getElementById('send-message').addEventListener('submit', function(ev) {
-  const nameInput = document.querySelector('[name="name"]');
-  // This is the message text input field
-  const textInput = document.querySelector('[name="text"]');
 
-  // Create a new message and then clear the input field
-  client.service('messages').create({
-    text: textInput.value,
-    name: nameInput.value
-  }).then(() => {
-    textInput.value = '';
-  });
-  ev.preventDefault();
-});
 
 
