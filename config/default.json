@@ -5,5 +5,11 @@
   "paginate": {
     "default": 10,
     "max": 50
-  }
+  },
+  "mysql": "mysql://app:p$ymxp5rEfA(;7AR@barbeerdrinkerplus.c3oigkdliu11.us-west-2.rds.amazonaws.com:3306/test",
+
+  "dbhost": "barbeerdrinkerplus.c3oigkdliu11.us-west-2.rds.amazonaws.com",
+  "dbname": "test",
+  "username": "app",
+  "password": "p$ymxp5rEfA(;7AR"
 }
