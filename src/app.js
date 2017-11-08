@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const favicon = require('serve-favicon');
 const compress = require('compression');
@@ -18,7 +20,7 @@ const middleware = require('./middleware');
 const services = require('./services');
 const appHooks = require('./app.hooks');
 
-const testDrive = require('./testdrive');
+const sequelize = require('./sequelize');
 
 const app = feathers();
 
@@ -36,6 +38,7 @@ app.use('/', feathers.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(hooks());
+app.configure(sequelize);
 app.configure(rest());
 app.configure(socketio());
 
@@ -48,7 +51,5 @@ app.use(notFound());
 app.use(handler());
 
 app.hooks(appHooks);
-
-testDrive.run();
 
 module.exports = app;
