@@ -9,4 +9,7 @@ $(document).ready(function() {
 
   jQuery('.allBars').select2();
 
+
+
+
 });
