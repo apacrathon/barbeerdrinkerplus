@@ -28,6 +28,7 @@
     "mocha": "mocha test/ --recursive --exit"
   },
   "dependencies": {
+    "angular": "^1.6.6",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "cors": "^2.8.4",
@@ -40,9 +41,9 @@
     "feathers-sequelize": "^2.4.0",
     "feathers-socketio": "^2.0.0",
     "helmet": "^3.9.0",
+    "jquery": "^3.2.1",
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.22.5",
     "serve-favicon": "^2.4.5",
     "socket.io": "^2.0.4",
     "winston": "^2.4.0"

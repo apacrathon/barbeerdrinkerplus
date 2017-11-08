@@ -1,0 +1,28 @@
+#mainSearchBar {
+  -webkit-border-radius: 15px 0px 0px 15px;
+  -moz-border-radius: 15px 0px 0px 15px;
+  border-radius: 15px 0px 0px 15px;
+  border-color: #c5c4c8;
+  float: left;
+  width: 60%;
+}
+#searchBarsHover:hover #mainSearchBar {
+  outline: none;
+  border-color: #c5c4c8;
+  box-shadow: 0 0 30px #c5c4c8;
+}
+#searchBarsHover:hover  #mainSearchBar2 {
+  outline: none;
+  border-color: #c5c4c8;
+  box-shadow: 0 0 30px #c5c4c8;
+}
+
+#mainSearchBar2 {
+  -webkit-border-radius: 0px 15px 15px 0px;
+  -moz-border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 15px 15px 0px;
+  border-color: #c5c4c8;
+  float: right;
+  width: 40%;
+}
+
