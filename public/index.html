@@ -6,14 +6,9 @@
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
 	<head>
-
-
     <!-- Feathers API -->
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
     <script src="https://unpkg.com/feathers-client@^2.0.0/dist/feathers.js"></script>
-
-
-
 
     <script src="angular/angular.js"></script>
     <script src="assets/lib/jquery-2.1.3.min.js"></script>
@@ -207,8 +202,6 @@
 											<a href="mailto:info@themewagon.com">info@themewagon.com</a><br>
 											<a href="http://www.themewagon.com/">www.themewagon.com</a>
 										</p>
-
-
 								</ul>
 								<div class="social">
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -218,7 +211,6 @@
 									<a href="#"><i class="fa fa-google-plus"></i></a>
 									<a href="#"><i class="fa fa-skype"></i></a>
 								</div>
-
 							</div>
 						</div>
 				</div>
@@ -231,45 +223,40 @@
 					</div>
 				</div>
 			</div><!-- #footer -->
-
 		</div><!--/#wrapper-->
 
-		<script src="assets/lib/contact.js"></script>
-		<script src="assets/lib/script.js"></script>
+    <!-- Load libraries first -->
+    <script src="assets/lib/socket.io/socket.io.js"></script>
+    <script src="assets/lib/script.js"></script>
+    <script src="assets/lib/smoothscroll.js"></script>
+
+    <!-- Then, load main app -->
+    <script src="app.js"></script>
+
+    <!-- Finally, load everything else -->
     <script src="assets/js/index.js"></script>
     <script src="assets/js/barList.js"></script>
-		<script src="assets/lib/smoothscroll.js"></script>
 		<script type="text/javascript">
 
-		jQuery(document).ready(function($){
-
-		  	$(window).scroll(function() {
-
-				if ($(window).scrollTop() > 100 ){
-
-		 		$('.top-header').addClass('shows');
-
-		  		} else {
-
-		   	 	$('.top-header').removeClass('shows');
-
-		 		};
-			});
+		jQuery(document).ready(function($) {
+		  $(window).scroll(function() {
+			  if ($(window).scrollTop() > 100 ) {
+		 		  $('.top-header').addClass('shows');
+        } else {
+          $('.top-header').removeClass('shows');
+        };
+      });
       $(document).ready(function() {
         $('.js-example-basic-multiple').select2();
       });
-		  });
+    });
 
-		jQuery('.scroll').on('click', function(e){
-				e.preventDefault()
-
+		jQuery('.scroll').on('click', function(e) {
+		  e.preventDefault();
 		  jQuery('html, body').animate({
-		      scrollTop : jQuery(this.hash).offset().top
-		    }, 1500);
+        scrollTop : jQuery(this.hash).offset().top
+      }, 1500);
 		});
-
-
 		</script>
-
 	</body>
 </html>
