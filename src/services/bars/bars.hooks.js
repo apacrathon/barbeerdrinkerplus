@@ -1,4 +1,4 @@
-
+'use strict';
 
 module.exports = {
   before: {
@@ -8,7 +8,11 @@ module.exports = {
     create: [],
     update: [],
     patch: [],
-    remove: []
+    remove: [
+      function(hook) {
+        if (hook.params.provider == 'rest') { throw new Error('You cannot delete a bar via REST'); }
+      }
+    ]
   },
 
   after: {
