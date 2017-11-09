@@ -11,19 +11,36 @@ let app = angular.module('myApp', []);
 app.controller('myCtrl', [
   '$scope',
   function($scope) {
-    $scope.barList = [];
+
     jQuery('#mainSearchForm').submit(function(event) {
       var inputVal = document.getElementById('mainSearchBar').value;
+      var inputVal2 = document.getElementById('mainSearchBar2').value;
+      $scope.barList = [];
       console.log(inputVal)
       bars.find({
         query: {
-          name: inputVal,
+          name: {
+            $like: '%'+inputVal+'%'
+          },
+          city: {
+            $like: '%'+inputVal2+'%'
+          },
           $limit: 1000
         }
       }).then(function(response) {
-        $scope.$apply(() => {
-          $scope.barList = response.data;
-        });
+        var i;
+        for(i = 0; i < response.data.length; i++) {
+          $scope.$apply(() => {
+            if(inputVal == '') {
+
+            }
+            else {
+              $scope.barList.push(response.data[i]);
+            }
+
+          });
+        }
+          console.log($scope.barList);
       });
       console.log($scope.barList);
     });
@@ -36,7 +53,10 @@ app.controller('managerBarList', [
   function($scope) {
     $scope.barList = [];
     bars.find({
-      query: { id: { $ne: -1 }, $limit: 1000 }
+      query: {
+        name: {
+          $like: '%bar%'
+        }, $limit: 1000 }
     }).then(function(response) {
       $scope.$apply(() => {
         $scope.barList = response.data;
