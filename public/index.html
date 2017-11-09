@@ -129,32 +129,30 @@
         </section>
         <br>
         <br>
-        <div class="barListing" ng-app="myApp" ng-controller="myCtrl">
+        <div class="barListing" ng-app="myApp" ng-controller='myCtrl'>
+          <div ng-repeat="x in barList">
+            <div class="col-lg-1">
 
+            </div>
+            <div class="col-lg-3" >
+              <h2> {{x.id}} {{x.name}} </h2>
+              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.street}} </h5>
+              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.city}}, {{x.state}} {{x.zipcode}}</h5>
+            </div>
 
-          <div class="col-lg-1">
-
-          </div>
-          <div class="col-lg-3">
-              <h2> {{id + 1}}. {{barName}} </h2>
-              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{barStreet}} </h5>
-              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{barCity}}, {{barState}} {{barZipCode}}</h5>
-          </div>
-
-          <div class="col-lg-4">
+            <div class="col-lg-4">
               <h5>----</h5>
-          </div>
+            </div>
 
-          <div class="col-lg-3">
-            Status: Open | Happy Hour<br>
-            <a><span class="fa fa-clock-o"/>  Weekly Hours</a>
-          </div>
+            <div class="col-lg-3">
+              Status: Open | Happy Hour<br>
+              <a><span class="fa fa-clock-o"/>  Weekly Hours</a>
+            </div>
 
-          <div class="col-lg-1">
-            <br>
+            <div class="col-lg-1">
+              <br>
+            </div>
           </div>
-        </div>
-
         </div>
       </div>
 
