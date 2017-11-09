@@ -5,10 +5,5 @@ $(document).ready(function() {
       scrollTop: jQuery('#searchResults1').offset().top -85
     }, 1000);
   });
-
   jQuery('.allBars').select2();
-
-
-
-
 });
