@@ -3,7 +3,15 @@
 module.exports = {
   before: {
     all: [],
-    find: [],
+    find: [
+      function(hook) {
+        const sequelize = hook.app.get('sequelizeClient');
+
+        hook.params.sequelize = {
+          include: [ Bars ]
+        }
+      }
+    ],
     get: [],
     create: [],
     update: [],

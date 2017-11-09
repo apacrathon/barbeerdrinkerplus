@@ -12,13 +12,13 @@ app.controller('myCtrl', [
   '$scope',
   function($scope) {
     $scope.barList = [];
-    bars.find({
+    bars.findAll({
       query: { id: { $ne: -1 }, $limit: 1000 }
     }).then(function(response) {
       $scope.$apply(() => {
         $scope.barList = response.data;
+
       });
     });
-    console.log($scope.barList);
   }
 ]);
