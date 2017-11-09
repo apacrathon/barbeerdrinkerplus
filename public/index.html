@@ -102,7 +102,7 @@
 			</div>
 		</header>
 
-		<div id="wrapper">
+		<div id="controllerElement" ng-app="myApp" ng-controller="myCtrl">
 
 			<div id="header" class="content-block">
 
@@ -110,10 +110,10 @@
           <div class="col-lg-3">
           </div>
 
-          <div class="col-lg-6" id="searchBarsHover">
+          <div class="col-lg-6" id="searchBarsHover" ng-submit="submit()">
             <form id="mainSearchForm" href="searchResults">
-              <input id="mainSearchBar" type="text" class="form-control" placeholder="Search for something...">
-              <input id="mainSearchBar2" type="text" class="form-control" placeholder="Near this...">
+              <input id="mainSearchBar" type="text" ng-model="mainSearch" name="mainSearch" class="form-control" placeholder="Search for something...">
+              <input id="mainSearchBar2" type="text" class="form-control" placeholder="Near this (Ex. City, State, Zip)">
               <input type="submit" hidden="true">
             </form>
           </div>
@@ -121,21 +121,23 @@
           </div>
 				</section>
 			</div><!-- header -->
-
-      <div class="content-block" id="searchResults">
-        <section class="center">
-          <h3 align="center"> Here's what we found!</h3>
-          <p align="center">Showing 1-2 of 69 results</p>
+      <div class="content-block">
+        <section class="center" id="searchResults1">
+        <h3 align="center"> Here's what we found!</h3>
+        <p align="center">Showing 1-2 of 69 results</p>
         </section>
-        <br>
-        <br>
-        <div class="barListing" ng-app="myApp" ng-controller='myCtrl'>
-          <div ng-repeat="x in barList">
+      </div>
+      <div class="content-block" id="searchResults" ng-repeat="x in barList" >
+        <!--<section class="center">-->
+          <!--<h3 align="center"> Here's what we found!</h3>-->
+          <!--<p align="center">Showing 1-2 of 69 results</p>-->
+        <!--</section>-->
+        <div class="barListing" >
             <div class="col-lg-1">
 
             </div>
             <div class="col-lg-3" >
-              <h2> {{x.id}} {{x.name}} </h2>
+              <h2> {{x.id + 1}} {{x.name}} </h2>
               <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.street}} </h5>
               <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.city}}, {{x.state}} {{x.zipcode}}</h5>
             </div>
@@ -153,7 +155,6 @@
               <br>
             </div>
           </div>
-        </div>
       </div>
 
 

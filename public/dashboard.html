@@ -6,7 +6,19 @@
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
 <head>
+
+  <!-- Feathers API -->
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+  <script src="https://unpkg.com/feathers-client@^2.0.0/dist/feathers.js"></script>
+
+  <script src="angular/angular.js"></script>
+  <script src="assets/lib/jquery-2.1.3.min.js"></script>
+  <script src="assets/lib/jquery.actual.min.js"></script>
+  <script src="assets/lib/jquery.scrollTo.min.js"></script>
+
+
   <title>BarBeerDrinker Plus</title>
+
   <script src="assets/lib/jquery-2.1.3.min.js"></script>
   <script src="assets/lib/bootstrap.js"></script>
   <script src="assets/lib/jquery.actual.min.js"></script>
@@ -27,6 +39,7 @@
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/customCSS.css">
   <link rel="stylesheet" href="assets/css/style.css" media="screen"/>
+
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -95,9 +108,10 @@
   <div id="header" class="content-block">
     <section class="center">
       <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
-      <select class="allBars" name="bars[]" value="Select One!">
-        <option value="A">Evil Roy Slades</option>
-        <option value="B">Western NY Communications</option>
+      <select class="allBars" name="bars[]" value="Select a Bar" ng-app="myApp" ng-controller="managerBarList" style="width:35%">
+        <optgroup label="Pick your bar!">
+          <option ng-repeat="x in barList" value="{{x.id}}">{{x.name}}</option>
+        </optgroup>
       </select>
     </section>
   </div>
@@ -176,6 +190,7 @@
 <script src="assets/lib/script.js"></script>
 <script src="assets/js/indexJS.js"></script>
 <script src="assets/lib/smoothscroll.js"></script>
+<script src="assets/js/barList.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($){
 
