@@ -40,9 +40,9 @@ app.controller('managerBarList', [
     }).then(function(response) {
       $scope.$apply(() => {
         $scope.barList = response.data;
+
       });
     });
-    console.log($scope.barList);
   }
 ]);
 
