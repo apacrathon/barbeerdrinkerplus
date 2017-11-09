@@ -12,7 +12,7 @@ app.controller('myCtrl', [
   '$scope',
   function($scope) {
     $scope.barList = [];
-    bars.findAll({
+    bars.find({
       query: { id: { $ne: -1 }, $limit: 1000 }
     }).then(function(response) {
       $scope.$apply(() => {
