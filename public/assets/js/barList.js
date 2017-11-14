@@ -16,7 +16,7 @@ app.controller('myCtrl', [
       var inputVal = document.getElementById('mainSearchBar').value;
       var inputVal2 = document.getElementById('mainSearchBar2').value;
       $scope.barList = [];
-      console.log(inputVal)
+      console.log(inputVal);
       bars.find({
         query: {
           name: {
@@ -28,18 +28,12 @@ app.controller('myCtrl', [
           $limit: 1000
         }
       }).then(function(response) {
-        var i;
-        for(i = 0; i < response.data.length; i++) {
           $scope.$apply(() => {
-            if(inputVal == '') {
-
-            }
-            else {
-              $scope.barList.push(response.data[i]);
-            }
+            $scope.searchInitiated = {totalResults: response.data.length};
+            console.log($scope.searchInitiated.totalResults);
+            $scope.barList = response.data;
 
           });
-        }
           console.log($scope.barList);
       });
       console.log($scope.barList);
@@ -59,8 +53,7 @@ app.controller('managerBarList', [
         }, $limit: 1000 }
     }).then(function(response) {
       $scope.$apply(() => {
-        $scope.barList = response.data;
-
+          $scope.barList = response.data;
       });
     });
   }

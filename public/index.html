@@ -116,10 +116,10 @@
           </div>
 				</section>
 			</div><!-- header -->
-      <div class="content-block">
-        <section class="center" id="searchResults1">
-        <h3 align="center"> Here's what we found!</h3>
-        <p align="center">Showing 1-2 of 69 results</p>
+      <div class="content-block" id="searchResults1">
+        <section class="center" ng-repeat="j in searchInitiated" >
+        <h3 align="center"> Here's what we found! </h3>
+        <p align="center"> Showing {{searchInitiated.totalResults}} result(s) </p>
         </section>
       </div>
       <div class="content-block" id="searchResults" ng-repeat="x in barList" >
@@ -132,9 +132,9 @@
 
             </div>
             <div class="col-lg-3" >
-              <h2> {{x.id + 1}} {{x.name}} </h2>
-              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.street}} </h5>
-              <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{x.city}}, {{x.state}} {{x.zipcode}}</h5>
+              <h2> {{x.name}} </h2>
+              <h4 class="barStreet"> {{x.street}} </h4>
+              <h4 class="barCityState"> {{x.city}}, {{x.state}} {{x.zipcode}}</h4>
             </div>
 
             <div class="col-lg-4">
@@ -149,6 +149,7 @@
             <div class="col-lg-1">
               <br>
             </div>
+          <div style="width: 81%; height: 3px; background: #2b3e51; overflow: hidden; margin: -20px auto" ></div>
           </div>
       </div>
 
