@@ -20,7 +20,7 @@ module.exports = function (app) {
       }
     },
     name: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       get() {
         return this.getDataValue('name');
@@ -30,7 +30,7 @@ module.exports = function (app) {
       }
     },
     gender: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       get() {
         return this.getDataValue('gender');
@@ -50,7 +50,7 @@ module.exports = function (app) {
       }
     },
     city: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       get() {
         return this.getDataValue('city');
@@ -60,7 +60,7 @@ module.exports = function (app) {
       }
     },
     state: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
       get() {
         return this.getDataValue('state');

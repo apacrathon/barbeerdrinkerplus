@@ -5,7 +5,7 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const bar = sequelizeClient.define('bars', {
+  const bars = sequelizeClient.define('bars', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -151,10 +151,10 @@ module.exports = function (app) {
     }
   });
 
-  bar.associate = function (models) { // eslint-disable-line no-unused-vars
+  bars.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return bar;
+  return bars;
 };
