@@ -6,6 +6,7 @@ const feathersClient = feathers()
 
 const bars = feathersClient.service('/bars');
 
+
 let app = angular.module('myApp', []);
 
 app.controller('myCtrl', [
@@ -48,10 +49,12 @@ app.controller('managerBarList', [
     $scope.barList = [];
     bars.find({
       query: {
-        name: {
-          $like: '%bar%'
-        }, $limit: 1000 }
-    }).then(function(response) {
+        id: {
+          $ne: -1
+          },
+        $limit: 1000 }
+    }).then(
+      function(response) {
       $scope.$apply(() => {
           $scope.barList = response.data;
       });
