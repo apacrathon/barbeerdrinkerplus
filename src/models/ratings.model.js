@@ -15,10 +15,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false,
       get() {
-        return this.getDataValue('id');
+        return this.getDataValue('barId');
       },
       set(barId) {
-        this.setDataValue('id', barId);
+        this.setDataValue('barId', barId);
       }
     },
     barName: {
