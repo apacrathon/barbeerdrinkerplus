@@ -140,7 +140,7 @@
               <h2> {{x.name}} </h2>
               <h4 class="barStreet"> {{x.street}} </h4>
               <h4 class="barCityState"> {{x.city}}, {{x.state}} {{x.zipcode}}</h4>
-              <a class="btn btn-warning">
+              <a class="btn btn-warning" class="modalMenu" data-toggle="modal" data-target="#ratingsModal">
                 <i class="fa fa-star-o fa-lg"></i> Rate this Bar!
               </a>
             </div>
@@ -293,6 +293,42 @@
 		</div>
 
       <!-- Rating Modal -->
+      <div class="modal fade" id="ratingsModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title " style="margin: auto">Rate {{barName}}</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <div class="star-rating" title="{{x.averageRating}}%">
+                  <div class="back-stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+
+                    <div class="front-stars" style="width: {{x.averageRating}}%">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <!--/#wrapper-->
 

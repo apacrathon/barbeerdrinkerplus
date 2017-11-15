@@ -70,6 +70,6 @@ module.exports = function (app) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
-  happyhour.sync({force: true});
+
   return happyhour;
 };
