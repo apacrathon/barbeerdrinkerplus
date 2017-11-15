@@ -79,13 +79,13 @@
 
 							      	<ul class="nav navbar-nav navbar-right">
 							        	<li>
-											<a href="/index.html"><i class="fa fa-home"></i> Home</a>
+											<a href="index.html"><i class="fa fa-home"></i> Home</a>
 										</li>
 										<li>
-											<a href="/dashboard.html"><i class="fa fa-tachometer"></i> Manager Dashboard</a>
+											<a href="dashboard.html"><i class="fa fa-tachometer"></i> Manager Dashboard</a>
 										</li>
 										<li>
-											<a href="#friends"><i class="fa fa-users"></i> Friends</a>
+											<a href="friends.html"><i class="fa fa-users"></i> Friends</a>
 										</li>
 										<li>
 											<a href="#account"><i class="fa fa-cog"></i> Account</a>
@@ -118,25 +118,53 @@
           </div>
 				</section>
 			</div><!-- header -->
-      <div class="content-block" id="searchResults1">
+      <div class="content-block" id="searchResults1" >
         <section class="center" ng-repeat="j in searchInitiated" >
         <h3 align="center"> Here's what we found! </h3>
         <p align="center"> Showing {{searchInitiated.totalResults}} result(s) </p>
         </section>
+        <div style="width: 81%; height: 3px; background: #2b3e51; overflow: hidden; margin: -20px auto" ng-repeat="j in searchInitiated" ></div>
       </div>
-      <div class="content-block" id="searchResults" ng-repeat="x in barList"  >
-        <!--<section class="center">-->
-          <!--<h3 align="center"> Here's what we found!</h3>-->
-          <!--<p align="center">Showing 1-2 of 69 results</p>-->
-        <!--</section>-->
-        <div class="barListing" >
-            <div class="col-lg-1">{{x.averageRating}}</div>
-            <div class="col-lg-3" >
+      <div class="content-block" style="text-align:center;" ng-if="isLoading == 1">
+        <h4>Our personal chimpanzees are finding your results!</h4>
+        <i class="fa fa-glass fa-pulse fa-5x" aria-hidden="true" ></i>
+      </div>
+      <div id="searchResultsDiv" ng-if="isLoading == 0">
+        <div class="content-block" id="searchResults" ng-repeat="x in barList" style="max-height:">
+          <div class="barListing">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-3">
+
               <h2> {{x.name}} </h2>
               <h4 class="barStreet"> {{x.street}} </h4>
               <h4 class="barCityState"> {{x.city}}, {{x.state}} {{x.zipcode}}</h4>
+              <a class="btn btn-warning">
+                <i class="fa fa-star-o fa-lg"></i> Rate this Bar!
+              </a>
             </div>
             <div class="col-lg-4">
+              <div>
+                <div class="star-rating" title="{{x.averageRating}}%">
+                  <div class="back-stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+
+                    <div class="front-stars" style="width: {{x.averageRating}}%">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <p style="font-size:1em;margin-top:-23px;margin-left:140px;">{{x.totalRatings}} Total Ratings</p>
+              </div>
               <h4>Attire: {{x.attire}} | Capacity: {{x.capacity}}</h4>
               <h4>Typical Crowd: {{x.typicalCrowd}}</h4>
               <a class="toolTipTest" data-toggle="tooltip" title="Accepts Credit Card!"><i rel="popover" class="fa fa-credit-card fa-fw fa-lg" ng-if="x.acceptsCredit == 1" ></i></a>
@@ -154,12 +182,82 @@
             <div class="col-lg-1">
               <br>
             </div>
-          <div style="width: 81%; height: 3px; background: #2b3e51; overflow: hidden; margin: -20px auto" ng-if="x.lastBar != 1" ></div>
+            <div style="width: 81%; height: 3px; background: #2b3e51; overflow: hidden; margin: -20px auto" ng-if="x.lastBar != 1" ></div>
           </div>
-
-
+        </div>
       </div>
-      <!-- Modal  -->
+
+      <div class="content-block" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 blog-post">
+
+              <h2 class="footer-block">Have a question</h2>
+              <p>Praesent lacinia dapibus, accumsan vesti bulum. Pellen tesque molestie mollis.</p>
+
+              <p>Mauris nec ligula dui, fermentum nisl ut magna dolor, rhoncus wisi. In lacus sagittis luctus, nisl eros, sit amet tempor et, accumsan eget, pede. Suspendisse est. Ut rhoncus eu, pede. Vestibulum ante ipsum dolor lorem, iaculis mi. Pellentesque eu urna eget dolor. Duis luctus a, dolor. Duis ac sapien.
+              </p>
+
+              <p>Estibulum dapibus, maurimalesfames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus ultricies gravida vitae...</p>
+            </div>
+            <div class="col-sm-4 blog-post">
+              <h2 class="footer-block">Leave us a message</h2>
+              <form action="contact-form.php" id="contactForm" method="post" name="contactform" class="" role="form">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-white" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-white" id="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control form-control-white" id="message" name="massage" placeholder="Write Something" required></textarea>
+                </div>
+                <div id="contactFormResponse"></div>
+                <div class="form-group">
+                  <input id="cfsubmit" type="submit" class="text-center btn btn-o-white" value="Say Hello">
+                </div>
+              </form>
+            </div>
+            <div class="col-sm-4 blog-post">
+
+              <h2 class="footer-block">Contact Details</h2>
+              <ul>
+                <li class="address-sub"><i class="fa fa-map-marker"></i>Office Address</li>
+                <p>
+                  Blabla Parkway, P.o Box 353 Mountain View. United States of America.
+                </p>
+                <li class="address-sub"><i class="fa fa-phone"></i>Phone</li>
+                <p>
+                  Local: 1-800-123-hello<br>
+                  Mobile: 1-800-123-hello
+                </p>
+                <li class="address-sub"><i class="fa fa-envelope-o"></i>Email Address</li>
+                <p>
+                  <a href="mailto:info@themewagon.com">info@themewagon.com</a><br>
+                  <a href="http://www.themewagon.com/">www.themewagon.com</a>
+                </p>
+              </ul>
+              <div class="social">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-skype"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-block footer-bottom" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">&copy; Copyright Nevada Plus 2015</div>
+            <div class="col-xs-6 text-right">Theme by <a href="http://www.themewagon.com/" target="_blink">ThemeWagon</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Menu Modal  -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
 
@@ -192,7 +290,11 @@
 
         </div>
       </div>
-		</div><!--/#wrapper-->
+		</div>
+
+      <!-- Rating Modal -->
+
+      <!--/#wrapper-->
 
     <!-- Load libraries first -->
     <script src="assets/lib/socket.io/socket.io.js"></script>

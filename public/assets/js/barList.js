@@ -38,6 +38,7 @@ app.controller('myCtrl', [
             $scope.barList = response.data;
             $scope.barList[response.data.length-1].lastBar = 1;
             let i;
+            $scope.isLoading = 1;
             for(i = 0; i < $scope.barList.length; i++){
               console.log(i);
               ratings.find({
@@ -56,11 +57,12 @@ app.controller('myCtrl', [
                   console.log(response2.data);
                   let k;
                   let l;
+
                   for(k=0;k<$scope.barList.length;k++){
-                    for(l=0;l<$scope.barList.length;l++){
+                    for(l=0;l<response2.data.length;l++){
                       if($scope.barList[k].id == response2.data[l].barId) {
-                        console.log("success");
-                          $scope.barList[k].averageRating = ratingAvg;
+                          $scope.barList[k].averageRating = ((ratingAvg/5)*100).toPrecision(2);
+                          $scope.barList[k].totalRatings = response2.data.length
                       }
                     }
                   }
@@ -69,9 +71,16 @@ app.controller('myCtrl', [
               });
             }
           });
-
-          console.log($scope.barList);
+          if($scope.barList.length > 10) {
+            setTimeout(function(){
+              $scope.isLoading = 0;
+            }, 3000);
+          }
+          else {
+            $scope.isLoading = 0;
+          }
       });
+
       console.log($scope.barList);
 
     });

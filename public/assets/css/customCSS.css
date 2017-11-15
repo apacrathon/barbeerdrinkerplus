@@ -34,6 +34,10 @@
   color: black;
 }
 
+.fa-glass {
+  color: #2B3E51;
+}
+
 [rel="popover"]{
   cursor: pointer;
   display:inline-block; /* chrome-fix */
@@ -73,4 +77,34 @@ body.modal-open {
   height: 100%;
   overflow-y: scroll !important;
   z-index: 10;
+}
+
+.star-rating, .back-stars, .front-stars {
+  display: flex;
+}
+
+.star-rating {
+  align-items: center;
+  font-size: 2em;
+  justify-content: left;
+}
+
+.back-stars {
+  color: #747472;
+  position: relative;
+  text-shadow: 4px 4px 10px #747472;
+}
+
+.front-stars {
+  color: #FFBC0B;
+  overflow: hidden;
+  position: absolute;
+  text-shadow: 2px 2px 5px #d29b09;
+  top: 0;
+}
+
+#searchResultsDiv {
+  overflow:scroll;
+  height:500px;
+  margin: auto;
 }

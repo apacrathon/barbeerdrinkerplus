@@ -58,7 +58,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 </head>
 
-<body  ng-app="myApp">
+<body ng-app="myApp">
 <header class="top-header">
   <div class="container">
     <div class="row">
@@ -99,8 +99,8 @@
                   <a href="#account"><i class="fa fa-cog"></i> Account</a>
                 </li>
               </ul>
-            </div>
-          </div>
+            </div><!-- /navbar-collapse -->
+          </div><!-- / .container-fluid -->
         </nav>
       </div>
     </div>
@@ -110,27 +110,18 @@
 <div id="wrapper">
   <div id="header" class="content-block">
     <section class="center">
-      <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
-      <div id="managerBarList">
-        <select class="allBars" name="bars[]" value="Select a Bar" ng-controller="managerBarList" style="width:35%">
-          <optgroup label="Pick your bar!">
-            <option ng-repeat="x in barList" value="{{x.id}}" >{{x.name}}</option>
-          </optgroup>
-        </select>
-      </div>
+      <h1 style="color:white;">Friends List</h1>
     </section>
   </div>
-  <div class="content-block" ng-controller="managerGraphs">
-    <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <div class="content-block" ng-controller="drinkersList">
+    <p ng-repeat="x in drinkersList">{{x.name}}</p>
   </div>
-
 </div><!--/#wrapper-->
+
 <script src="assets/lib/contact.js"></script>
 <script src="assets/lib/script.js"></script>
-<script src="assets/js/index.js"></script>
 <script src="assets/lib/smoothscroll.js"></script>
-<script src="assets/js/barList.js"></script>
-<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/friends.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($){
     $(window).scroll(function() {
@@ -148,7 +139,5 @@
     }, 1500);
   });
 </script>
-
-
 </body>
 </html>
