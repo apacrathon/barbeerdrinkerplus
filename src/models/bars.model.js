@@ -155,6 +155,7 @@ module.exports = function (app) {
     // Define associations here
     bars.hasOne(models.happyhour, { foreignKey: 'barId' });
     bars.hasMany(models.frequents, { foreignKey: 'barId' });
+    bars.hasMany(models.checkin, { foreignKey: 'barId' });
   };
   bars.sync({
     force: false
