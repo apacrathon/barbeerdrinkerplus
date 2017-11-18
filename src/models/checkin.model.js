@@ -1,15 +1,65 @@
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
-// for more of what you can do here.
+'use strict';
+
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const checkin = sequelizeClient.define('checkin', {
-    text: {
+    barId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      get() {
+        return this.getDataValue('barId');
+      },
+      set(barId) {
+        this.setDataValue('barId', barId);
+      }
+    },
+    barName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      get() {
+        return this.getDataValue('barName');
+      },
+      set(barName) {
+        this.setDataValue('barName', barName);
+      }
+    },
+    drinkerId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      get() {
+        return this.getDataValue('drinkerId');
+      },
+      set(drinkerId) {
+        this.setDataValue('drinkerId', drinkerId);
+      }
+    },
+    drinkerName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      get() {
+        return this.getDataValue('drinkerName');
+      },
+      set(drinkerName) {
+        this.setDataValue('drinkerName', drinkerName);
+      }
+    },
+    checkInTime: {
+      type: DataTypes.DATETIME,
+      allowNull: false,
+      get() {
+        return this.getDataValue('checkInTime');
+      },
+      set(checkInTime) {
+        this.setDataValue('checkInTime', checkInTime);
+      }
     }
+  }, {
+    timestamps: false
   }, {
     hooks: {
       beforeCount(options) {
@@ -19,8 +69,8 @@ module.exports = function (app) {
   });
 
   checkin.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    frequents.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
+    frequents.belongsTo(models.bars, { foreignKey: 'barId' });
   };
 
   return checkin;
