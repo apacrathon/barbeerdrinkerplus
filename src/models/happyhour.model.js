@@ -73,8 +73,8 @@ module.exports = function (app) {
   });
 
   happyhour.associate = function (models) {
-    //happyhour.belongsTo(models.bars, {foreignKey: 'barId'});
+    happyhour.belongsTo(models.bars, {foreignKey: 'barId'});
   };
-
+happyhour.sync({force:true});
   return happyhour;
 };
