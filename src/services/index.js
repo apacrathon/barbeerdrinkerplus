@@ -6,6 +6,7 @@ const sells = require('./sells/sells.service.js');
 const happyhour = require('./happyhour/happyhour.service.js');
 const frequents = require('./frequents/frequents.service.js');
 const checkin = require('./checkin/checkin.service.js');
+const drink = require('./drink/drink.service.js');
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(bars);
@@ -16,4 +17,5 @@ module.exports = function () {
   app.configure(happyhour);
   app.configure(frequents);
   app.configure(checkin);
+  app.configure(drink);
 };
