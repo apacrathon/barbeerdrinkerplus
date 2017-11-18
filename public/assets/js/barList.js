@@ -157,7 +157,7 @@ $(document).ready(function() {
     let drinkerName = document.getElementById('inputName').value;
     let drinkerAge = document.getElementById('inputAge').value;
     let drinkerGender = jQuery('#inputGender').val();
-    let drinkerCity = document.getElementById('inputCity').value;
+    let drinkerCity = document.getElemengtById('inputCity').value;
     let drinkerState = jQuery('#inputState').val();
     let newRating = document.getElementById('inputNewRating').value;
     let ratingDate = new Date();
