@@ -153,8 +153,10 @@ module.exports = function (app) {
 
   bars.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    bars.hasOne(models.happyhour, {foreignKey: 'barId'});
   };
-
+  bars.sync({
+    force: false
+  });
   return bars;
 };
