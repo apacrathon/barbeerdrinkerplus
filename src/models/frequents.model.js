@@ -62,8 +62,6 @@ module.exports = function (app) {
     frequents.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
     frequents.belongsTo(models.bars, { foreignKey: 'barId' });
   };
-  frequents.sync({
-    force:true
-  });
+
   return frequents;
 };
