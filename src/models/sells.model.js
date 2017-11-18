@@ -9,6 +9,7 @@ module.exports = function (app) {
     barId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       get() {
         return this.getDataValue('barId');
       },
@@ -29,6 +30,7 @@ module.exports = function (app) {
     drinkName: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true,
       get() {
         return this.getDataValue('drinkName');
       },
@@ -67,8 +69,8 @@ module.exports = function (app) {
   });
 
   sells.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    sells.belongsTo(models.bars, { foreignKey: 'barId' });
+    sells.belongsTo(models.drink, { foreignKey: 'drinkName' });
   };
 
   return sells;
