@@ -50,6 +50,7 @@ module.exports = function (app) {
 
   drink.associate = function (models) { // eslint-disable-line no-unused-vars
     drink.hasMany(models.likes, { foreignKey: 'drinkName' });
+    drink.hasMany(models.sells, { foreignKey: 'drinkName' });
   };
 
   return drink;
