@@ -3,7 +3,6 @@
 
 let managerApp = angular.module('myApp2', ['ngTable']);
 
-const drinkers = feathersClient.service('/drinkers');
 
 managerApp.controller('managerBarList', [
   '$scope',
@@ -53,7 +52,7 @@ managerApp.controller('managerGraphs', [
               }
             );
 
-            console.log($scope.barData);
+            //console.log($scope.barData);
             for(i = 0; i < $scope.barData.length; i++) {
               var dateList = $scope.barData[i].dateTime;
               var newDate = new Date(dateList);
@@ -84,7 +83,7 @@ managerApp.controller('managerGraphs', [
             for(i = 0; i < $scope.barData.length; i++) {
               ratingAvgArr.push($scope.barData[i].ratingAvgAtPoint);
             }
-            console.log(ratingAvgArr);
+            //console.log(ratingAvgArr);
             var data = [
               {
                 x: ratingDay,
@@ -122,9 +121,9 @@ managerApp.controller('managerGraphs', [
                   type: 'linear'
                 }
               }
-              console.log($scope.barData[5]);
+              //console.log($scope.barData[5]);
             Plotly.newPlot('myDiv', data, layout);
-            console.log($scope.barData[0].drinkerId);
+            //console.log($scope.barData[0].drinkerId);
             for(i = 0; i < $scope.barData.length-1; i++) {
               drinkers.find({
                 query: {
@@ -133,7 +132,7 @@ managerApp.controller('managerGraphs', [
               }).then(
                 function (response3) {
                   $scope.$apply(() => {
-                    console.log(i + " ID " + response3.data[0].id + " " + response3.data[0].name);
+                    //console.log(i + " ID " + response3.data[0].id + " " + response3.data[0].name);
                     for(i = 0; i < $scope.barData.length-1; i++) {
                       if($scope.barData[i].drinkerId == response3.data[0].id) {
                         $scope.barData[i].drinkerName = response3.data[0].name;
@@ -142,7 +141,7 @@ managerApp.controller('managerGraphs', [
                   });
                 });
             }
-            console.log($scope.barData);
+            //console.log($scope.barData);
 
 
             $scope.ratingsTable = new NgTableParams({

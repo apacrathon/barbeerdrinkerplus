@@ -109,3 +109,9 @@ body.modal-open {
   margin: auto;
 }
 
+.modalFormHidden {
+  display: none;
+}
+.modalFormShown {
+
+}
