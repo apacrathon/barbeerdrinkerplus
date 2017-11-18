@@ -1,11 +1,32 @@
 'use strict';
 
 
+let managerApp = angular.module('myApp2', ['ngTable']);
 
+const drinkers = feathersClient.service('/drinkers');
 
-app.controller('managerGraphs', [
+managerApp.controller('managerBarList', [
   '$scope',
   function($scope) {
+    $scope.barList = [];
+    bars.find({
+      query: {
+        id: {
+          $ne: -1
+        },
+        $limit: 1000 }
+    }).then(
+      function(response) {
+        $scope.$apply(() => {
+          $scope.barList = response.data;
+        });
+      });
+  }
+]);
+
+managerApp.controller('managerGraphs', [
+  '$scope', 'NgTableParams', '$filter',
+  function($scope, NgTableParams, $filter) {
     $('select').on("change",function(){
       var barValue = $(this).val();
       jQuery('html, body').animate({
@@ -23,7 +44,6 @@ app.controller('managerGraphs', [
             var i = 0;
             var ratingDay = [];
             var ratingNum = [];
-            var ratingSum = 0;
             $scope.barData.sort(
               function(a,b) {
                 var dateA = new Date(a.dateTime);
@@ -32,6 +52,7 @@ app.controller('managerGraphs', [
                 return dateA - dateB;
               }
             );
+
             console.log($scope.barData);
             for(i = 0; i < $scope.barData.length; i++) {
               var dateList = $scope.barData[i].dateTime;
@@ -50,13 +71,18 @@ app.controller('managerGraphs', [
               var ratingDate = sFullYear+'-'+sMonth+'-'+sDate+' '+sHours+':'+sMinutes+':'+sSeconds;
               ratingDay.push(ratingDate);
               ratingNum.push($scope.barData[i].rating);
-              ratingSum += $scope.barData[i].rating;
+              //ratingSum += $scope.barData[i].rating;
+              let ratingSum = 0;
+              let m;
+              for(m = 0; m < i+1; m++) {
+                ratingSum += $scope.barData[m].rating;
+              }
+              $scope.barData[i].ratingAvgAtPoint = (ratingSum/m);
+              $scope.barData[i].ratingDay = ratingDay[i].toString();
             }
-            var ratingAvg = ratingSum / $scope.barData.length;
-            var ratingAvgArr = []
-            console.log(ratingAvg);
+            var ratingAvgArr = [];
             for(i = 0; i < $scope.barData.length; i++) {
-              ratingAvgArr.push(ratingAvg);
+              ratingAvgArr.push($scope.barData[i].ratingAvgAtPoint);
             }
             console.log(ratingAvgArr);
             var data = [
@@ -75,8 +101,6 @@ app.controller('managerGraphs', [
                 name: 'Average'
               }
             ];
-
-
 
             var layout =
               {
@@ -98,8 +122,43 @@ app.controller('managerGraphs', [
                   type: 'linear'
                 }
               }
-
+              console.log($scope.barData[5]);
             Plotly.newPlot('myDiv', data, layout);
+            console.log($scope.barData[0].drinkerId);
+            for(i = 0; i < $scope.barData.length-1; i++) {
+              drinkers.find({
+                query: {
+                  id: $scope.barData[i].drinkerId,
+                }
+              }).then(
+                function (response3) {
+                  $scope.$apply(() => {
+                    console.log(i + " ID " + response3.data[0].id + " " + response3.data[0].name);
+                    for(i = 0; i < $scope.barData.length-1; i++) {
+                      if($scope.barData[i].drinkerId == response3.data[0].id) {
+                        $scope.barData[i].drinkerName = response3.data[0].name;
+                      }
+                    }
+                  });
+                });
+            }
+            console.log($scope.barData);
+
+
+            $scope.ratingsTable = new NgTableParams({
+              page: 1,
+              count: 15
+            }, {
+              total: $scope.barData.length,
+              getData: function (params) {
+                $scope.data = params.sorting() ? $filter('orderBy')($scope.barData, params.orderBy()) : $scope.barData;
+                $scope.data = params.filter() ? $filter('filter')($scope.data, params.filter()) : $scope.data;
+                $scope.data = $scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                return $scope.data;
+              }
+            });
+
+
           });
         });
     });

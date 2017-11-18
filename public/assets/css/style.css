@@ -574,7 +574,7 @@ h2.footer-block {
 }
 .form-control{
   border-radius: none !important;
-  padding: 20px 26px;
+  /*padding: 20px 26px;*/
 }
 .form-group .btn.btn-o-white {
     width: 100%;

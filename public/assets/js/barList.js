@@ -11,9 +11,6 @@ const ratings = feathersClient.service('/ratings');
 
 let app = angular.module('myApp', []);
 
-
-
-
 app.controller('myCtrl', [
   '$scope',
   function($scope) {
@@ -48,20 +45,25 @@ app.controller('myCtrl', [
                 }
               }).then(function(response2) {
                 $scope.$apply(()=> {
-                  let ratingSum = 0;
+
                   let j;
+                  let m;
+                  let ratingAvg = [];
                   for(j = 0; j < response2.data.length; j++) {
-                    ratingSum += response2.data[j].rating;
+                    let ratingSum = 0;
+                    for(m = 0; m < j+1; m++) {
+                      ratingSum += response2.data[m].rating;
+                    }
+                    response2.data[j].ratingAvgAtPoint = (((ratingSum/m)*100)/5).toPrecision(4);
                   }
-                  let ratingAvg = ratingSum/response2.data.length;
                   console.log(response2.data);
+                  console.log(ratingAvg);
                   let k;
                   let l;
-
                   for(k=0;k<$scope.barList.length;k++){
                     for(l=0;l<response2.data.length;l++){
                       if($scope.barList[k].id == response2.data[l].barId) {
-                          $scope.barList[k].averageRating = ((ratingAvg/5)*100).toPrecision(2);
+                          $scope.barList[k].averageRating = response2.data[response2.data.length-1].ratingAvgAtPoint;
                           $scope.barList[k].totalRatings = response2.data.length
                       }
                     }
@@ -111,24 +113,6 @@ app.controller('myCtrl', [
   }
 ]);
 
-app.controller('managerBarList', [
-  '$scope',
-  function($scope) {
-    $scope.barList = [];
-    bars.find({
-      query: {
-        id: {
-          $ne: -1
-          },
-        $limit: 1000 }
-    }).then(
-      function(response) {
-      $scope.$apply(() => {
-          $scope.barList = response.data;
-      });
-    });
-  }
-]);
 
 $(document).ready(function() {
   jQuery('#mainSearchForm').submit(function(event) {
