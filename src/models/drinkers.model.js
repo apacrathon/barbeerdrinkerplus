@@ -84,8 +84,7 @@ module.exports = function (app) {
     }
   }, {
       timestamps: false
-    },
-    {
+  }, {
     hooks: {
       beforeCount(options) {
         options.raw = true;
@@ -96,6 +95,7 @@ module.exports = function (app) {
   drinkers.associate = function (models) { // eslint-disable-line no-unused-vars
     drinkers.hasMany(models.frequents, { foreignKey: 'drinkerId' });
     drinkers.hasMany(models.checkin, { foreignKey: 'drinkerId' });
+    drinkers.hasMany(models.likes, { foreignKey: 'drinkerId' });
   };
   drinkers.sync({
     force: false
