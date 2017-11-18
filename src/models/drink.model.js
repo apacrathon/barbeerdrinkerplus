@@ -20,6 +20,7 @@ module.exports = function (app) {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true,
       get() {
         this.getDataValue('name');
       },
@@ -48,8 +49,7 @@ module.exports = function (app) {
 });
 
   drink.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    drink.hasMany(models.likes, { foreignKey: 'drinkName' });
   };
 
   return drink;
