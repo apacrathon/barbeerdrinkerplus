@@ -49,8 +49,9 @@ module.exports = function (app) {
       }
     },
     checkInTime: {
-      type: DataTypes.DATETIME,
+      type: DataTypes.DATE,
       allowNull: false,
+      primaryKey: true,
       get() {
         return this.getDataValue('checkInTime');
       },
@@ -69,8 +70,8 @@ module.exports = function (app) {
   });
 
   checkin.associate = function (models) { // eslint-disable-line no-unused-vars
-    frequents.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
-    frequents.belongsTo(models.bars, { foreignKey: 'barId' });
+    checkin.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
+    checkin.belongsTo(models.bars, { foreignKey: 'barId' });
   };
 
   return checkin;
