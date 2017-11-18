@@ -95,6 +95,7 @@ module.exports = function (app) {
 
   drinkers.associate = function (models) { // eslint-disable-line no-unused-vars
     drinkers.hasMany(models.frequents, { foreignKey: 'drinkerId' });
+    drinkers.hasMany(models.checkin, { foreignKey: 'drinkerId' });
   };
   drinkers.sync({
     force: false
