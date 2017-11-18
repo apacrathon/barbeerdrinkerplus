@@ -94,9 +94,10 @@ module.exports = function (app) {
   });
 
   drinkers.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    drinkers.hasMany(models.frequents, { foreignKey: 'drinkerId' });
   };
-
+  drinkers.sync({
+    force: false
+  });
   return drinkers;
 };

@@ -153,7 +153,8 @@ module.exports = function (app) {
 
   bars.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    bars.hasOne(models.happyhour, {foreignKey: 'barId'});
+    bars.hasOne(models.happyhour, { foreignKey: 'barId' });
+    bars.hasMany(models.frequents, { foreignKey: 'barId' });
   };
   bars.sync({
     force: false
