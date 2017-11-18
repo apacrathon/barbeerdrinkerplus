@@ -5,6 +5,8 @@
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
+const Bars = require('./bars.model');
+
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const happyhour = sequelizeClient.define('happyhour', {
@@ -20,24 +22,26 @@ module.exports = function (app) {
       }
     },
     day: {
-      type: 'VARBINARY(7)',
+      type: DataTypes.STRING.BINARY,
       allowNull: false,
-      validate: {
-        min: 0b0000000,
-        max: 0b1111111,
-        // @TODO - Validate day input as a binary value.
-      },
+      primaryKey: true,
       get() {
         return this.getDataValue('day');
       },
       set(day) {
         this.setDataValue('day', day);
+      },
+      validate: {
+        is: /^[01]+$/, // Binary regex
+        len: [7,7]
       }
     },
     startTime: {
-      type: DataTypes.DATE,
+      type: DataTypes.TIME,
       allowNull: false,
-      // @TODO - restrict only to time.
+      validate: {
+        is: /^([01]\d|2[0-3]):?([0-5]\d)$/   // 24 hour time regex
+      },
       get() {
         return this.getDataValue('startTime');
       },
@@ -46,9 +50,11 @@ module.exports = function (app) {
       }
     },
     endTime: {
-      type: DataTypes.DATE,
+      type: DataTypes.TIME,
       allowNull: false,
-      // @TODO - restrict only to time.
+      validate: {
+        is: /^([01]\d|2[0-3]):?([0-5]\d)$/  // 24 hour time regex
+      },
       get() {
         return this.getDataValue('endTime');
       },
@@ -66,9 +72,8 @@ module.exports = function (app) {
     }
   });
 
-  happyhour.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+  happyhour.associate = function (models) {
+    //happyhour.belongsTo(models.bars, {foreignKey: 'barId'});
   };
 
   return happyhour;
