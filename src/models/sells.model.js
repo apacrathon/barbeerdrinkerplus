@@ -78,8 +78,5 @@ module.exports = function (app) {
     sells.belongsTo(models.bars, { foreignKey: 'barId' });
   };
 
-  sells.sync({
-    force: true
-  });
   return sells;
 };
