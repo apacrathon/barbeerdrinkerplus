@@ -9,6 +9,7 @@ $(document).ready(function() {
   jQuery('.allStates').select2();
   jQuery('.allGenders').select2();
   jQuery('.allDrinkers').select2();
+  jQuery('.allFriends').select2();
 
   jQuery('#oldDrinkerButton').click(function() {
     jQuery('#oldDrinkerForm').removeClass().addClass("modalFormShown");

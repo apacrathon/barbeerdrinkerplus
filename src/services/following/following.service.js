@@ -12,7 +12,10 @@ module.exports = function () {
   const options = {
     name: 'following',
     Model,
-    paginate
+    paginate: {
+      default: 1,
+      max: 500
+    }
   };
 
   // Initialize our service with any options it requires

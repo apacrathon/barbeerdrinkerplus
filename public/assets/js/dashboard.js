@@ -185,7 +185,7 @@ managerApp.controller('managerGraphs', [
               //console.log($scope.barData[5]);
             Plotly.newPlot('myDiv', data, layout);
             //console.log($scope.barData[0].drinkerId);
-            for(i = 0; i < $scope.barData.length-1; i++) {
+            for(i = 0; i < $scope.barData.length; i++) {
               drinkers.find({
                 query: {
                   id: $scope.barData[i].drinkerId,
@@ -194,7 +194,7 @@ managerApp.controller('managerGraphs', [
                 function (response3) {
                   $scope.$apply(() => {
                     //console.log(i + " ID " + response3.data[0].id + " " + response3.data[0].name);
-                    for(i = 0; i < $scope.barData.length-1; i++) {
+                    for(i = 0; i < $scope.barData.length; i++) {
                       if($scope.barData[i].drinkerId == response3.data[0].id) {
                         $scope.barData[i].drinkerName = response3.data[0].name;
                       }

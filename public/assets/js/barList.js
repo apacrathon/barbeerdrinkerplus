@@ -10,6 +10,9 @@ const ratings = feathersClient.service('/ratings');
 const drinkers = feathersClient.service('/drinkers');
 const frequents = feathersClient.service('/frequents');
 const checkin = feathersClient.service('/checkin');
+const following = feathersClient.service('/following');
+const barTimes = feathersClient.service('/barTimes');
+const happyHour = feathersClient.service('/happyhour');
 
 let app = angular.module('myApp', []);
 
@@ -101,7 +104,120 @@ app.controller('myCtrl', [
                   //console.log($scope.barList);
                 });
               });
+              barTimes.find({
+                query: {
+                  barId : $scope.barList[i].id
+                }
+              }).then(function(response) {
+                $scope.$apply(() => {
+                  for(i = 0; i < $scope.barList.length; i++) {
+                    if($scope.barList[i].id === response.data[0].barId){
+                      let openTime = new Date();
+                      openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
+                      let closeTime = new Date();
+                      closeTime.setHours(response.data[0].closeTime[0]+''+response.data[0].closeTime[1],response.data[0].closeTime[3]+''+response.data[0].closeTime[4],response.data[0].closeTime[6]+''+response.data[0].closeTime[7]);
+                      if(closeTime.getHours() <= 5) {
+                        closeTime.setDate(closeTime.getDate()+1);
+                      }
+                      let currentTime = new Date();
+                      if(currentTime > openTime && currentTime < closeTime) {
+                        $scope.barList[i].isOpen = 1;
+                      }
+                      else {
+                        $scope.barList[i].isOpen = 0;
+                      }
+                      $scope.barList[i].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
+                      $scope.barList[i].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
+                    }
+                  }
+                });
+              });
+              happyHour.find({
+                query: {
+                  barId: $scope.barList[i].id
+                }
+              }).then(function(response) {
+                $scope.$apply(()=> {
+                  console.log(response.data);
+                  for(i = 0; i < $scope.barList.length; i++) {
+                    if($scope.barList[i].id === response.data[0].barId){
+                      $scope.barList[i].daysList = '';
+                      for(var k = 0; k < response.data[0].day.length; k++){
+                        if(response.data[0].day[k] == 1) {
+                          switch(k) {
+                            case 0:
+                              $scope.barList[i].daysList += 'S ';
+                              break;
+                            case 1:
+                              $scope.barList[i].daysList += 'M ';
+                              break;
+                            case 2:
+                              $scope.barList[i].daysList += 'T ';
+                              break;
+                            case 3:
+                              $scope.barList[i].daysList += "W ";
+                              break;
+                            case 4:
+                              $scope.barList[i].daysList += "TH ";
+                              break;
+                            case 5:
+                              $scope.barList[i].daysList += "F ";
+                              break;
+                            case 6:
+                              $scope.barList[i].daysList += "SA ";
+                          }
+                        }
+                      }
+                      $scope.barList[i].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
+                      $scope.barList[i].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
+
+                      let openTime = new Date();
+                      openTime.setHours(response.data[0].startTime[0]+''+response.data[0].startTime[1],response.data[0].startTime[3]+''+response.data[0].startTime[4],response.data[0].startTime[6]+''+response.data[0].startTime[7]);
+                      let closeTime = new Date();
+                      closeTime.setHours(response.data[0].endTime[0]+''+response.data[0].endTime[1],response.data[0].endTime[3]+''+response.data[0].endTime[4],response.data[0].endTime[6]+''+response.data[0].endTime[7]);
+                      let j = 1;  //MONDAY
+                      if(response.data[0].day[j]) {
+                        let currentTime = new Date();
+                        if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
+                          $scope.barList[i].isHappyHour = 1;
+                        }
+                      }
+                      j = 2;  //TUESDAY
+                      if(response.data[0].day[j]) {
+                        let currentTime = new Date();
+                        if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
+                          $scope.barList[i].isHappyHour = 1;
+                        }
+                      }
+                      j = 3;  //WEDNESDAY
+                      if(response.data[0].day[j]) {
+                        let currentTime = new Date();
+                        if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
+                          $scope.barList[i].isHappyHour = 1;
+                        }
+                      }
+                      j = 4;  //Thursday
+                      if(response.data[0].day[j]) {
+                        let currentTime = new Date();
+                        if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
+                          $scope.barList[i].isHappyHour = 1;
+                        }
+                      }
+                      j = 5;  //FRIDAY
+                      if(response.data[0].day[j]) {
+                        let currentTime = new Date();
+                        if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
+                          $scope.barList[i].isHappyHour = 1;
+                        }
+                      }
+                    }
+                  }
+                });
+              });
+
             }
+            console.log(new Date());
+
           });
           if($scope.barList.length > 10) {
             setTimeout(function(){
@@ -113,7 +229,6 @@ app.controller('myCtrl', [
           }
       });
 
-      //console.log($scope.barList);
 
     });
     jQuery(document).ready(function(){
@@ -148,10 +263,33 @@ $(document).ready(function() {
   jQuery('#oldDrinkerRatingForm').submit(function() {
     let drinkerId = jQuery('#drinkersDropdown').val();
     let rating = document.getElementById('inputOldRating').value;
-    let barName = document.getElementById('ratingsModalBarName').innerHTML;
+    let barName = document.getElementById('ratingsModalBarName').innerText;
     let barId = document.getElementById('ratingsModalBarId').innerHTML;
     let ratingDate = new Date();
+    ratingDate.toISOString().substring(0, 10);
+
     console.log(drinkerId,rating, barName, barId, ratingDate);
+    // ratings.find({
+    //   query: {
+    //     id: 5000,
+    //     $sort: {
+    //       id: -1
+    //     },
+    //     $limit: 1
+    //   }
+    // }).then(
+    //   function(response) {
+    //       console.log("hellooo");
+    //   });
+    // console.log();
+    ratings.create({
+      barId: barId,
+      barName: barName,
+      drinkerId: drinkerId,
+      dateTime: ratingDate
+    }).then(rating => {
+      console.log(rating);
+    });
   });
 
   jQuery('#newDrinkerRatingForm').submit(function() {

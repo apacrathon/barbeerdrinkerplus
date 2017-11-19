@@ -58,7 +58,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="friendsApp">
 <header class="top-header">
   <div class="container">
     <div class="row">
@@ -110,17 +110,27 @@
 <div id="wrapper">
   <div id="header" class="content-block">
     <section class="center">
-      <h1 style="color:white;">Friends List</h1>
+      <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
+      <div id="friendsList">
+        <select class="allFriends" name="friends[]" value="Select your Name and ID" ng-controller="drinkersList" style="width:35%">
+          <optgroup label="Pick your Name and Id">
+            <option ng-repeat="x in drinkersList" value="{{x.id}}">{{x.name}} - {{x.id}}</option>
+          </optgroup>
+        </select>
+      </div>
     </section>
   </div>
-  <div class="content-block" ng-controller="friendsList">
-    <p ng-repeat="x in friendsList">{{x.name}}</p>
+  <div class="content-block" id="followingResults" ng-controller="friendsList">
+    <br><br><br><br>
+    <p ng-repeat="x in friendsList">{{x.barName}} {{x.drinkerName}}</p>
   </div>
 </div><!--/#wrapper-->
 
 <script src="assets/lib/contact.js"></script>
 <script src="assets/lib/script.js"></script>
 <script src="assets/lib/smoothscroll.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/barList.js"></script>
 <script src="assets/js/friends.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($){
