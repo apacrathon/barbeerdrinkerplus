@@ -3,11 +3,11 @@
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
-const Drink = require('./drink.model');
+const Drinker = require('./drinkers.model');
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const likes = sequelizeClient.define('likes', {
+  const following = sequelizeClient.define('following', {
     drinkerId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -17,6 +17,10 @@ module.exports = function (app) {
       },
       set(drinkerId) {
         this.setDataValue('drinkerId', drinkerId);
+      },
+      references: {
+        model: Drinker(app),
+        key: 'id'
       }
     },
     drinkerName: {
@@ -29,19 +33,29 @@ module.exports = function (app) {
         this.setDataValue('drinkerName', drinkerName);
       }
     },
-    drinkName: {
-      type: DataTypes.STRING,
+    followingId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       get() {
-        return this.getDataValue('drinkName');
+        return this.getDataValue('followingId');
       },
-      set(drinkName) {
-        this.setDataValue('drinkName', drinkName);
+      set(followingId) {
+        this.setDataValue('followingId', followingId);
       },
       references: {
-        model: Drink(app),
-        key: 'name'
+        model: Drinker(app),
+        key: 'id'
+      }
+    },
+    followingName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      get() {
+        return this.getDataValue('followingName');
+      },
+      set(followingName) {
+        this.setDataValue('followingName', followingName);
       }
     }
   }, {
@@ -52,11 +66,12 @@ module.exports = function (app) {
         options.raw = true;
       }
     }
-});
+  });
 
-  likes.associate = function (models) { // eslint-disable-line no-unused-vars
-    likes.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
+  following.associate = function (models) { // eslint-disable-line no-unused-vars
+    // Define associations here
+    // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return likes;
+  return following;
 };

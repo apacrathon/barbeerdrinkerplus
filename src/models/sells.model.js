@@ -3,6 +3,9 @@
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
+const Drink = require('./drink.model');
+const Bar = require('./bars.model.js');
+
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const sells = sequelizeClient.define('sells', {
@@ -15,7 +18,7 @@ module.exports = function (app) {
       },
       set(barId) {
         this.serDataValue('barId', barId);
-      }
+      },
     },
     barName: {
       type: DataTypes.STRING,
@@ -36,6 +39,10 @@ module.exports = function (app) {
       },
       set(drinkName) {
         this.setDataValue('drinkName', drinkName);
+      },
+      references: {
+        model: Drink(app),
+        key: 'name'
       }
     },
     price: {
@@ -70,7 +77,6 @@ module.exports = function (app) {
 
   sells.associate = function (models) { // eslint-disable-line no-unused-vars
     sells.belongsTo(models.bars, { foreignKey: 'barId' });
-    sells.belongsTo(models.drink, { foreignKey: 'drinkName' });
   };
 
   return sells;
