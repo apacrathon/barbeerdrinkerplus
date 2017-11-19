@@ -1,6 +1,6 @@
 'use strict'
 
-let serverUrl = 'https://localhost:3030';
+let serverUrl = 'http://localhost:3030';
 const feathersClient = feathers()
   .configure(feathers.rest(serverUrl).fetch(fetch));
 
