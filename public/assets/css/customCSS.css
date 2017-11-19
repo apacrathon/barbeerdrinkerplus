@@ -115,3 +115,8 @@ body.modal-open {
 .modalFormShown {
 
 }
+
+.whiteBg {
+  color: #444444;
+  background: #f7f7f7;
+}

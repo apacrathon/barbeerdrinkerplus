@@ -9,6 +9,7 @@ const sells = feathersClient.service('/sells');
 const ratings = feathersClient.service('/ratings');
 const drinkers = feathersClient.service('/drinkers');
 const frequents = feathersClient.service('/frequents');
+const checkin = feathersClient.service('/checkin');
 
 let app = angular.module('myApp', []);
 

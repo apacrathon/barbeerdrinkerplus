@@ -31,6 +31,68 @@ managerApp.controller('managerGraphs', [
       jQuery('html, body').animate({
         scrollTop: jQuery('#myDiv').offset().top -85
       }, 1000);
+
+      checkin.find({
+        query: {
+          barId: barValue,
+          $limit: 1000
+        }
+      }).then(
+        function(response) {
+          $scope.$apply(() => {
+            $scope.checkinData = response.data;
+            let i;
+            $scope.checkinData.sort(
+              function(a,b) {
+                var dateA = new Date(a.checkInTime);
+                var dateB = new Date(b.checkInTime);
+
+                return dateA - dateB;
+              }
+            );
+            var offset = new Date().getTimezoneOffset();
+            var offsetHours = offset/60;
+            var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var dayCounter = [0,0,0,0,0,0,0];
+            for(i = 0; i < $scope.checkinData.length; i++){
+              let dateList = new Date($scope.checkinData[i].checkInTime);
+              // dateList.setHours(dateList.getHours()+offsetHours);
+              // dateList = new Date(dateList);
+              $scope.checkinData[i].dayOfWeek = days[dateList.getDay()];
+              dayCounter[dateList.getDay()]++;
+            };
+
+            var data1 = [{
+              x: days,
+              y: dayCounter,
+              type: 'bar'
+            }];
+
+            var layout1 =
+              {
+                title: $scope.checkinData[0].barName + ' Popularity',
+                titlefont: {
+                  size: 28,
+                  family: 'Raleway, sans-serif'
+                },
+                xaxis: {
+                  title: 'Time',
+                  type: 'text'
+                },
+                yaxis: {
+                  title: 'Rating',
+                  type: 'linear'
+                }
+              }
+
+            Plotly.newPlot('checkinDiv', data1, layout1);
+
+
+          });
+        }
+      );
+
+
       frequents.find({
         query: {
           barId: barValue,
@@ -70,6 +132,7 @@ managerApp.controller('managerGraphs', [
             console.log($scope.frequentingDrinkers.length);
           });
         });
+
       ratings.find({
         query: {
           barId: barValue,
