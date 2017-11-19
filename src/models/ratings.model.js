@@ -11,6 +11,19 @@ const Drinker = require('./drinkers.model');
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const ratings = sequelizeClient.define('ratings', {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+      unique: true,
+      get() {
+        return this.getDataValue('id');
+      },
+      set(id) {
+        this.setDataValue('id', id);
+      }
+    },
     barId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -69,8 +82,8 @@ module.exports = function (app) {
   });
 
   ratings.associate = function (models) { // eslint-disable-line no-unused-vars
-    // Define associations here
-    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    ratings.belongsTo(models.bars, { foreignKey: 'barId' });
+    ratings.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
   };
 
   return ratings;

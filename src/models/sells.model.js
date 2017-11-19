@@ -4,6 +4,7 @@ const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
 const Drink = require('./drink.model');
+const Bar = require('./bars.model.js');
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
@@ -17,7 +18,7 @@ module.exports = function (app) {
       },
       set(barId) {
         this.serDataValue('barId', barId);
-      }
+      },
     },
     barName: {
       type: DataTypes.STRING,

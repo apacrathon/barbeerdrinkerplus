@@ -10,6 +10,8 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
+      unique: true,
       get() {
         this.getDataValue('id');
       },

@@ -11,6 +11,7 @@ module.exports = function (app) {
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
+      unique: true,
       get() {
         return this.getDataValue('id');
       },
@@ -155,9 +156,11 @@ module.exports = function (app) {
     // Define associations here
     bars.hasOne(models.happyhour, { foreignKey: 'barId' });
     bars.hasOne(models.bartimes, { foreignKey: 'barId' });
+    bars.hasMany(models.sells, { foreignKey: 'barId' });
+    bars.hasMany(models.ratings, { foreignKey: 'barId' });
     bars.hasMany(models.frequents, { foreignKey: 'barId' });
     bars.hasMany(models.checkin, { foreignKey: 'barId' });
-  }
+  };
 
   return bars;
 };
