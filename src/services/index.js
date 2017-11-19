@@ -10,6 +10,7 @@ const drink = require('./drink/drink.service.js');
 const likes = require('./likes/likes.service.js');
 const bartimes = require('./bartimes/bartimes.service.js');
 const following = require('./following/following.service.js');
+const query = require('./query/query.service');
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(bars);
@@ -24,4 +25,5 @@ module.exports = function () {
   app.configure(likes);
   app.configure(bartimes);
   app.configure(following);
+  app.configure(query);
 };
