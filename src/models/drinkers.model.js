@@ -97,8 +97,6 @@ module.exports = function (app) {
     drinkers.hasMany(models.checkin, { foreignKey: 'drinkerId' });
     drinkers.hasMany(models.likes, { foreignKey: 'drinkerId' });
   };
-  drinkers.sync({
-    force: false
-  });
+
   return drinkers;
 };
