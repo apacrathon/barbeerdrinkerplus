@@ -106,7 +106,7 @@ app.controller('myCtrl', [
           if($scope.barList.length > 10) {
             setTimeout(function(){
               $scope.isLoading = 0;
-            }, 3000);
+            }, 5000);
           }
           else {
             $scope.isLoading = 0;
