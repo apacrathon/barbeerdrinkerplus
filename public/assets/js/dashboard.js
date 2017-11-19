@@ -31,6 +31,45 @@ managerApp.controller('managerGraphs', [
       jQuery('html, body').animate({
         scrollTop: jQuery('#myDiv').offset().top -85
       }, 1000);
+      frequents.find({
+        query: {
+          barId: barValue,
+          $limit: 1000
+        }
+      }).then(
+        function(response) {
+          $scope.$apply(() => {
+            $scope.frequentsList = response.data;
+            $scope.frequentingDrinkers = [];
+            let i;
+            for(i = 0; i < $scope.frequentsList.length-1; i++) {
+              drinkers.find({
+                query: {
+                  id: $scope.frequentsList[i].drinkerId,
+                }
+              }).then(
+                function(response) {
+                  $scope.$apply(() => {
+                    //console.log(response.data[0]);
+                    $scope.frequentingDrinkers.push(response.data[0]);
+                    $scope.frequentsTable = new NgTableParams({
+                      page: 1,
+                      count: 15
+                    }, {
+                      total: $scope.frequentingDrinkers.length,
+                      getData: function (params) {
+                        $scope.data1 = params.sorting() ? $filter('orderBy')($scope.frequentingDrinkers, params.orderBy()) : $scope.frequentingDrinkers;
+                        $scope.data1 = params.filter() ? $filter('filter')($scope.data1, params.filter()) : $scope.data1;
+                        $scope.data1 = $scope.data1.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                        return $scope.data1;
+                      }
+                    });
+                  });
+                });
+            }
+            console.log($scope.frequentingDrinkers.length);
+          });
+        });
       ratings.find({
         query: {
           barId: barValue,
@@ -141,9 +180,7 @@ managerApp.controller('managerGraphs', [
                   });
                 });
             }
-            //console.log($scope.barData);
-
-
+            console.log($scope.barData);
             $scope.ratingsTable = new NgTableParams({
               page: 1,
               count: 15
@@ -156,8 +193,6 @@ managerApp.controller('managerGraphs', [
                 return $scope.data;
               }
             });
-
-
           });
         });
     });

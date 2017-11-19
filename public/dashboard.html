@@ -142,9 +142,6 @@
       </tr>
     </table>
   </div>
-  <style>
-
-  </style>
   <div class="col-lg-3">
 
   </div>
@@ -153,6 +150,39 @@
   </div>
 
 </div>
+    <div class="content-block">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <h2 style="text-align:center;">Frequents Table</h2>
+        <table ng-table="frequentsTable" class="frequentsTable">
+          <tr ng-repeat="r in data1">
+            <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }" >
+              {{r.name}}
+            </td>
+            <td data-title="'Age'" sortable="'age'" filter="{ 'age': 'text' }">
+              {{r.age}}
+            </td>
+            <td data-title="'Gender'" sortable="'gender'" filter="{ 'gender': 'text' }" >
+              <div ng-if="r.gender == 1">
+                Male
+              </div>
+              <div ng-if="r.gender == 0">
+                Female
+              </div>
+            </td>
+            <td data-title="'State'" sortable="'state'" filter="{ 'state': 'text' }" >
+              {{r.state}}
+            </td>
+            <td data-title="'City'" sortable="'city'" filter="{ 'city': 'text' }">
+              {{r.city}}
+            </td>
+          </tr>
+        </table>
+        <!--id, name, gender, state, age, city, zip-->
+      </div>
+      <div class="col-lg-3"></div>
+
+    </div>
 
 
   </div>
