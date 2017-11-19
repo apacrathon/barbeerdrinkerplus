@@ -58,8 +58,5 @@ module.exports = function (app) {
     likes.belongsTo(models.drinkers, { foreignKey: 'drinkerId' });
   };
 
-  likes.sync({
-    force:true
-  });
   return likes;
 };
