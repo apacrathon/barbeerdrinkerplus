@@ -157,9 +157,7 @@ module.exports = function (app) {
     bars.hasOne(models.bartimes, { foreignKey: 'barId' });
     bars.hasMany(models.frequents, { foreignKey: 'barId' });
     bars.hasMany(models.checkin, { foreignKey: 'barId' });
-  };
-  bars.sync({
-    force: false
-  });
+  }
+
   return bars;
 };
