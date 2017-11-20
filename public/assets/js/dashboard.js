@@ -243,6 +243,21 @@ managerApp.controller('managerGraphs', [
           });
         });
 
+      query.find({
+        query: {
+          rawQuery: "SELECT L.drinkName, " +
+          "COUNT(*) FROM test.likes L WHERE drinkerId IN " +
+          "(SELECT F.drinkerId FROM test.frequents F WHERE barId = "+barValue+") " +
+          "GROUP BY L.drinkName ORDER BY COUNT(*) DESC LIMIT 10;"
+        }
+      }).then(response => {
+        $scope.$apply(() => {
+          console.log(response);
+
+        });
+      });
+
+
       frequents.find({
         query: {
           barId: barValue,
@@ -262,6 +277,8 @@ managerApp.controller('managerGraphs', [
               }).then(
                 function(response) {
                   $scope.$apply(() => {
+
+
                     //console.log(response.data[0]);
                     $scope.frequentingDrinkers.push(response.data[0]);
                     $scope.frequentsTable = new NgTableParams({

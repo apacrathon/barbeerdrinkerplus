@@ -13,6 +13,7 @@ const checkin = feathersClient.service('/checkin');
 const following = feathersClient.service('/following');
 const barTimes = feathersClient.service('/barTimes');
 const happyHour = feathersClient.service('/happyhour');
+const query = feathersClient.service('/query');
 
 let app = angular.module('myApp', []);
 
@@ -246,7 +247,7 @@ app.controller('myCtrl', [
             //console.log(new Date());
 
           });
-          if($scope.barList.length > 10 && $scope.barList.length < 100) {
+          if($scope.barList.length < 100 && $scope.barList.length > 10) {
             setTimeout(function(){
               $scope.isLoading = 0;
             }, 3000);
@@ -320,14 +321,14 @@ $(document).ready(function() {
     let newRating = document.getElementById('inputNewRating').value;
     let barName = document.getElementById('ratingsModalBarName').innerText;
     let barId = document.getElementById('ratingsModalBarId').innerHTML;
-    // drinkers.create({
-    //   name: drinkerName,
-    //   gender: drinkerGender,
-    //   age: drinkerAge,
-    //   city: drinkerCity,
-    //   state: drinkerState,
-    //   zipcode: drinkerZip
-    // });
+    drinkers.create({
+      name: drinkerName,
+      gender: drinkerGender,
+      age: drinkerAge,
+      city: drinkerCity,
+      state: drinkerState,
+      zipcode: drinkerZip
+    });
     console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
   });
 

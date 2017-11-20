@@ -1,6 +1,5 @@
 'use strict'
 
-const query = feathersClient.service('/query');
 
 // query.find({
 //   query: {
