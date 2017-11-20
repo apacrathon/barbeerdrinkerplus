@@ -17,5 +17,5 @@ process.on('unhandledRejection', (reason, p) =>
 );
 
 server.on('listening', () =>
-  logger.info('BarBeerDrinker Plus started on https://%s:%d', app.get('host'))
+  logger.info('BarBeerDrinker Plus started on https://%s', app.get('host'))
 );
