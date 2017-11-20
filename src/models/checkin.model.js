@@ -47,20 +47,12 @@ module.exports = function (app) {
       set(drinkerName) {
         this.setDataValue('drinkerName', drinkerName);
       }
-    },
-    checkInTime: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      primaryKey: true,
-      get() {
-        return this.getDataValue('checkInTime');
-      },
-      set(checkInTime) {
-        this.setDataValue('checkInTime', checkInTime);
-      }
     }
   }, {
-    timestamps: false
+    timestamps: true,
+    updatedAt: false,
+    deletedAt: false,
+    createdAt: 'checkInTime'
   }, {
     hooks: {
       beforeCount(options) {
