@@ -42,7 +42,34 @@ app.controller('myCtrl', [
               $scope.drinkersList = response.data;
               $scope.barName = modalBarName;
               $scope.barId = modalBarId;
-              console.log($scope.drinkersList);
+              //console.log($scope.drinkersList);
+            });
+          });
+      };
+    });
+    jQuery(document).ready(function(){
+      $scope.checkInClick = function(id,name) {
+        //console.log("in modal click");
+        var modalBarId = id;
+        var modalBarName = name;
+        jQuery("#ratingsModal").on("show", function () {
+          jQuery("body").addClass("modal-open");
+        }).on("hidden", function () {
+          jQuery("body").removeClass("modal-open")
+        });
+        drinkers.find({
+          query: {
+            id: {
+              $ne: -1
+            },
+            $limit: 1000 }
+        }).then(
+          function(response) {
+            $scope.$apply(() => {
+              $scope.drinkersList = response.data;
+              $scope.barName = modalBarName;
+              $scope.barId = modalBarId;
+              //console.log($scope.drinkersList);
             });
           });
       };
@@ -138,7 +165,7 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(()=> {
-                  console.log(response.data);
+                  //console.log(response.data);
                   for(i = 0; i < $scope.barList.length; i++) {
                     if($scope.barList[i].id === response.data[0].barId){
                       $scope.barList[i].daysList = '';
@@ -216,10 +243,15 @@ app.controller('myCtrl', [
               });
 
             }
-            console.log(new Date());
+            //console.log(new Date());
 
           });
-          if($scope.barList.length > 10) {
+          if($scope.barList.length > 10 && $scope.barList.length < 100) {
+            setTimeout(function(){
+              $scope.isLoading = 0;
+            }, 3000);
+          }
+          else if ($scope.barList.length > 100) {
             setTimeout(function(){
               $scope.isLoading = 0;
             }, 5000);
@@ -265,43 +297,83 @@ $(document).ready(function() {
     let rating = document.getElementById('inputOldRating').value;
     let barName = document.getElementById('ratingsModalBarName').innerText;
     let barId = document.getElementById('ratingsModalBarId').innerHTML;
-    let ratingDate = new Date();
-    ratingDate.toISOString().substring(0, 10);
-
     console.log(drinkerId,rating, barName, barId, ratingDate);
-    // ratings.find({
-    //   query: {
-    //     id: 5000,
-    //     $sort: {
-    //       id: -1
-    //     },
-    //     $limit: 1
-    //   }
-    // }).then(
-    //   function(response) {
-    //       console.log("hellooo");
-    //   });
-    // console.log();
     ratings.create({
       barId: barId,
       barName: barName,
       drinkerId: drinkerId,
-      dateTime: ratingDate
-    }).then(rating => {
-      console.log(rating);
+      rating: rating
+    }).then(response => {
+      alert("Pick a rating between 1 and 5");
+      //console.log(response);
+    }).then(response2 => {
+      //console.log(response2);
     });
   });
-
   jQuery('#newDrinkerRatingForm').submit(function() {
     let drinkerName = document.getElementById('inputName').value;
     let drinkerAge = document.getElementById('inputAge').value;
     let drinkerGender = jQuery('#inputGender').val();
-    let drinkerCity = document.getElemengtById('inputCity').value;
+    let drinkerCity = document.getElementById('inputCity').value;
+    let drinkerZip = document.getElementById('inputZip').value;
     let drinkerState = jQuery('#inputState').val();
     let newRating = document.getElementById('inputNewRating').value;
-    let ratingDate = new Date();
-    console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, newRating, ratingDate);
+    let barName = document.getElementById('ratingsModalBarName').innerText;
+    let barId = document.getElementById('ratingsModalBarId').innerHTML;
+    // drinkers.create({
+    //   name: drinkerName,
+    //   gender: drinkerGender,
+    //   age: drinkerAge,
+    //   city: drinkerCity,
+    //   state: drinkerState,
+    //   zipcode: drinkerZip
+    // });
+    console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
   });
+
+  jQuery('#oldDrinkerCheckInForm').submit(function() {
+    var drinkerVal1 = jQuery('#drinkersCheckInDropdown').val();
+    drinkerVal1 = drinkerVal1.split(',');
+    var drinkerId = drinkerVal1[0];
+    var drinkerName = drinkerVal1[1];
+    let barName = document.getElementById('ratingsModalBarName').innerText;
+    let barId = document.getElementById('ratingsModalBarId').innerHTML;
+    console.log(drinkerId, drinkerName, barName, barId);
+    checkin.create({
+      barId: barId,
+      barName: barName,
+      drinkerId: drinkerId,
+      drinkerName: drinkerName
+    }).then(response => {
+      alert("Pick a rating between 1 and 5");
+      //console.log(response);
+    }).then(response2 => {
+      //console.log(response2);
+    });
+  });
+  jQuery('#newDrinkerCheckInForm').submit(function() {
+    let drinkerName = document.getElementById('inputName').value;
+    let drinkerAge = document.getElementById('inputAge').value;
+    let drinkerGender = jQuery('#inputGender').val();
+    let drinkerCity = document.getElementById('inputCity').value;
+    let drinkerZip = document.getElementById('inputZip').value;
+    let drinkerState = jQuery('#inputState').val();
+    let newRating = document.getElementById('inputNewRating').value;
+    let barName = document.getElementById('ratingsModalBarName').innerText;
+    let barId = document.getElementById('ratingsModalBarId').innerHTML;
+    // drinkers.create({
+    //   name: drinkerName,
+    //   gender: drinkerGender,
+    //   age: drinkerAge,
+    //   city: drinkerCity,
+    //   state: drinkerState,
+    //   zipcode: drinkerZip
+    // });
+    console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
+  });
+
+
+
 });
 
 //'http://maps.googleapis.com/maps/api/distancematrix/json?origins=$postcode2&destinations=$postcode1&mode=driving&language=en-EN&sensor=false"'

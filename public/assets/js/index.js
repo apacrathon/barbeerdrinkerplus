@@ -25,6 +25,20 @@ $(document).ready(function() {
     jQuery('#oldDrinkerButton').removeClass().addClass("btn btn-default");
 
   });
+  jQuery('#oldDrinkerButtonCheck').click(function() {
+    jQuery('#oldDrinkerFormCheck').removeClass().addClass("modalFormShown");
+    jQuery('#newDrinkerFormCheck').removeClass().addClass("modalFormHidden");
+    jQuery('#oldDrinkerButtonCheck').removeClass().addClass("btn btn-primary");
+    jQuery('#newDrinkerButtonCheck').removeClass().addClass("btn btn-default");
+  });
+
+  jQuery('#newDrinkerButtonCheck').click(function() {
+    jQuery('#newDrinkerFormCheck').removeClass().addClass("modalFormShown");
+    jQuery('#oldDrinkerFormCheck').removeClass().addClass("modalFormHidden");
+    jQuery('#newDrinkerButtonCheck').removeClass().addClass("btn btn-primary");
+    jQuery('#oldDrinkerButtonCheck').removeClass().addClass("btn btn-default");
+
+  });
 
 
 

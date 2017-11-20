@@ -93,7 +93,7 @@
                   <a href="dashboard.html"><i class="fa fa-tachometer"></i> Manager Dashboard</a>
                 </li>
                 <li>
-                  <a href="friends.html"><i class="fa fa-users"></i> Friends</a>
+                  <a href="friends.html"><i class="fa fa-users"></i> Network</a>
                 </li>
                 <li>
                   <a href="#account"><i class="fa fa-cog"></i> Account</a>
@@ -110,27 +110,26 @@
 <div id="wrapper">
   <div id="header" class="content-block">
     <section class="center">
-      <h1 style="color:white;">Welcome to your Dashboard, please select your Name and ID</h1>
+      <h1 style="color:white;">Welcome to your Network, please select your Name and ID</h1>
       <div id="friendsList">
         <select class="allFriends" name="friends[]" value="Select your Name and ID" ng-controller="drinkersList" style="width:35%">
-          <optgroup label="Pick your Name and Id">
-            <option ng-repeat="x in drinkersList" value="{{x.id}}">{{x.name}} - {{x.id}}</option>
-          </optgroup>
+            <option>Pick your Name and ID</option>
+            <option ng-repeat="x in drinkersList" value="{{x.id}},{{x.city}},{{x.name}}">{{x.name}} - {{x.id}}</option>
         </select>
       </div>
     </section>
   </div>
   <div class="content-block" id="followingResults" ng-controller="friendsList">
-    <section class="center">
-      <h1 style="margin:auto;">We found {{networkSize}} people in your network! See what they've been up to.</h1><br><br>
+    <section class="center" ng-if="networkSize > 0">
+      <h1 style="margin:auto;text-align:center;">We found {{networkSize}} people in your network! See what they've been up to.</h1><br><br>
     </section>
-    <div class="row">
-      <div class="col-lg-4"><h2>Submitted Ratings</h2></div>
-      <div class="col-lg-4"><h2>Last Check-in</h2></div>
-      <div class="col-lg-4"><h2>Mutual Friends</h2></div>
+    <div class="row" ng-if="networkSize > 0">
+      <div class="col-lg-4" style="padding-left:-10px;text-align:center;"><h2>Submitted Ratings</h2></div>
+      <div class="col-lg-4" style="text-align:center;"><h2>Last Check-in</h2></div>
+      <div class="col-lg-4" style="text-align:center;"><h2>Nearby People</h2></div>
     </div>
-    <div class="row">
-      <div class="col-lg-4" id="followingRatingsList">
+    <div class="row" style="max-height:500px;overflow:scroll;margin: auto;">
+      <div class="col-lg-4" style="padding-left:-10px;" id="followingRatingsList">
         <div ng-repeat="x in followingList">
           <div style="height:125px;">
             <h3 class="followingBarsList">{{x.followingName}}</h3>
@@ -168,13 +167,20 @@
             <h4 class="followingBarsList">At: {{x.checkedInAtTime}}</h4>
             <br>
           </div>
-          <div style="width: 100%; height: 3px; background: #2b3e51; overflow: hidden; margin: -10px auto" ng-if="x.lastBar != 1" ></div>
+          <div style="width: 100%; height: 3px; background: #2b3e51; overflow: hidden; margin: -10px auto"  ></div>
           <br><br>
         </div>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div ng-repeat="x in nearbyPeople">
+          <h4 class="followingBarsList">{{x.name}}, {{x.age}}</h4>
+          <h5 class="followingBarsList" ng-if="x.gender == 1">Male</h5>
+          <h5 class="followingBarsList" ng-if="x.gender == 0">Female</h5>
+          <button type = "button" ng-click="followClick(x.id,x.name)" id ="drinker{{x.id}}" class = "btn btn-primary" style="float:right;margin-top:-8%;margin-right:10%;"><i class="fa fa-plus fa-inverse" aria-hidden="true" ></i>Follow</button>
+          <br>
+        </div>
+      </div>
     </div>
-
 
   </div>
 </div><!--/#wrapper-->

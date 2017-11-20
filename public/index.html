@@ -85,7 +85,7 @@
 											<a href="dashboard.html"><i class="fa fa-tachometer"></i> Manager Dashboard</a>
 										</li>
 										<li>
-											<a href="friends.html"><i class="fa fa-users"></i> Friends</a>
+											<a href="friends.html"><i class="fa fa-users"></i> Network</a>
 										</li>
 										<li>
 											<a href="#account"><i class="fa fa-cog"></i> Account</a>
@@ -140,9 +140,17 @@
               <h2> {{x.name}} </h2>
               <h4 class="barStreet"> {{x.street}} </h4>
               <h4 class="barCityState"> {{x.city}}, {{x.state}} {{x.zipcode}}</h4>
-              <a class="btn btn-warning" class="modalMenu" data-toggle="modal" data-target="#ratingsModal" ng-click="ratingClick(x.id,x.name)">
-                <i class="fa fa-star-o fa-lg"></i> Rate this Bar!
-              </a>
+              <div class = "btn-group">
+                <button class="btn btn-warning" class="modalMenu" data-toggle="modal" data-target="#ratingsModal" ng-click="ratingClick(x.id,x.name)">
+                  <i class="fa fa-star-o fa-lg"></i> Rate this Bar!
+                </button>
+                <button ng-if="x.isOpen == 1" class="btn btn-success" class="modalMenu" data-toggle="modal" data-target="#checkInModal" ng-click="checkInClick(x.id,x.name)">
+                  <i class="fa fa-map-marker fa-inverse fa-lg"></i> Check-in!
+                </button>
+                <button ng-if="x.isOpen == 0" class="btn btn-success disabled">
+                  <i class="fa fa-map-marker fa-inverse fa-lg"></i> Bar Closed
+                </button>
+              </div>
             </div>
             <div class="col-lg-4">
               <div>
@@ -203,7 +211,6 @@
           </div>
         </div>
       </div>
-      <div id="decodeIt" style="display:n"></div>
       <div class="content-block" id="footer">
         <div class="container">
           <div class="row">
@@ -339,7 +346,7 @@
                     <label for="inputOldRating">Rating</label>
                     <input type="text" class="form-control" id="inputOldRating" placeholder="Enter your rating out of 5">
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-warning"><i class="fa fa-star-o fa-lg"></i> Submit Rating!</button>
                 </form>
               </div>
 
@@ -358,15 +365,19 @@
                     <br>
                     <select id="inputGender" class="allGenders" name="genders[]" value="Select your gender" style="width:100%">
                       <optgroup label="Select your gender!">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                        <option value="NO">I do not wish to disclose</option>
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                        <option value="-1">I do not wish to disclose</option>
                       </optgroup>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="inputCity">City</label>
                     <input type="text" class="form-control" id="inputCity" placeholder="City">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputZip">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="Zipcode">
                   </div>
                   <div class="form-group">
                     <label for="inputState">State</label><br>
@@ -430,7 +441,133 @@
                     <label for="inputNewRating">Rating</label>
                     <input type="text" class="form-control" id="inputNewRating" placeholder="Enter your rating out of 5">
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-warning"><i class="fa fa-star-o fa-lg"></i> Submit Rating!</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Check In Modal -->
+      <div class="modal fade" id="checkInModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" id="checkInModalBarName">{{barName}}</h4>
+              <p style="display:none" id="checkInModalBarId"> {{barId}} </p>
+            </div>
+            <div class="modal-body">
+              <div class = "btn-group" style="margin: auto;">
+                <button type = "button" id="oldDrinkerButtonCheck" class = "btn btn-primary">Old Drinker</button>
+                <button type = "button" id="newDrinkerButtonCheck" class = "btn btn-default">New Drinker</button>
+              </div>
+              <div id="oldDrinkerFormCheck" class="modalFormShown" >
+                <form id="oldDrinkerCheckInForm">
+                  <div class="form-group">
+                    <label>Pick your Name and ID</label>
+                    <br>
+                    <select class="allDrinkers" name="drinkers[]" value="Select your Name and ID" style="width:100%" id="drinkersCheckInDropdown">
+                      <optgroup label="Select your Name and ID!">
+                        <option ng-repeat="x in drinkersList" value="{{x.id}},{{x.name}}">{{x.name}} - {{x.id}}</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-success"><i class="fa fa-map-marker fa-inverse fa-lg"></i> Check-In</button>
+                </form>
+              </div>
+
+
+              <div id="newDrinkerFormCheck" class="modalFormHidden">
+                <form id="newDrinkerCheckInForm">
+                  <div class="form-group">
+                    <label for="inputName">Full Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter your Full Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAge">Age</label>
+                    <input type="text" class="form-control" id="inputAge" placeholder="Enter your age">
+                    <br>
+                    <label for="inputGender">Gender</label>
+                    <br>
+                    <select id="inputGender" class="allGenders" name="genders[]" value="Select your gender" style="width:100%">
+                      <optgroup label="Select your gender!">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                        <option value="-1">I do not wish to disclose</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputZip">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZip" placeholder="Zipcode">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputState">State</label><br>
+                    <select id="inputState" class="allStates" name="states[]" value="Select your state" style="width:100%">
+                      <optgroup label="Select your state!">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-success"><i class="fa fa-map-marker fa-inverse fa-lg"></i> Check-In</button>
                 </form>
               </div>
             </div>

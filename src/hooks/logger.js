@@ -9,6 +9,7 @@ module.exports = function () {
       message += `: ${hook.error.message}`;
     }
 
+   /*
     logger.info(message);
     logger.debug('hook.data', hook.data);
     logger.debug('hook.params', hook.params);
@@ -16,6 +17,7 @@ module.exports = function () {
     if (hook.result) {
       logger.debug('hook.result', hook.result);
     }
+    */
 
     if (hook.error) {
       logger.error(hook.error);

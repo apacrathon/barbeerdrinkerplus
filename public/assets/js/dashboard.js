@@ -60,6 +60,19 @@ managerApp.controller('managerGraphs', [
               // dateList = new Date(dateList);
               $scope.checkinData[i].dayOfWeek = days[dateList.getDay()];
               dayCounter[dateList.getDay()]++;
+              var sFullYear = dateList.getFullYear();
+              var sMonth = dateList.getMonth()+1;
+              var sDate = dateList.getDate();
+              var sHours = dateList.getHours();
+              var sMinutes = dateList.getMinutes();
+              var sSeconds = dateList.getSeconds();
+              if (sMonth < 10) sMonth = "0" + sMonth;
+              if (sHours < 10) sHours = "0" + sHours;
+              if (sDate < 10) sDate = "0" + sDate;
+              if (sMinutes < 10) sMinutes = "0" + sMinutes;
+              if (sSeconds < 10) sSeconds = "0" + sSeconds;
+              $scope.checkinData[i].checkedInAtDate = sFullYear+'-'+sMonth+'-'+sDate;
+              $scope.checkinData[i].checkedInAtTime = sHours+':'+sMinutes;
             };
 
             var data = [{
@@ -86,7 +99,19 @@ managerApp.controller('managerGraphs', [
               }
 
             Plotly.newPlot('checkinDiv', data, layout);
-
+            console.log($scope.checkinData);
+            $scope.checkInTable = new NgTableParams({
+              page: 1,
+              count: 15
+            }, {
+              total: $scope.checkinData.length,
+              getData: function (params) {
+                $scope.data3 = params.sorting() ? $filter('orderBy')($scope.checkinData, params.orderBy()) : $scope.checkinData;
+                $scope.data3 = params.filter() ? $filter('filter')($scope.data3, params.filter()) : $scope.data3;
+                $scope.data3 = $scope.data3.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                return $scope.data3;
+              }
+            });
 
           });
         }

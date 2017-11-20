@@ -100,7 +100,7 @@
                   <a href="dashboard.html"><i class="fa fa-tachometer"></i> Manager Dashboard</a>
                 </li>
                 <li>
-                  <a href="friends.html"><i class="fa fa-users"></i> Friends</a>
+                  <a href="friends.html"><i class="fa fa-users"></i> Network</a>
                 </li>
                 <li>
                   <a href="#account"><i class="fa fa-cog"></i> Account</a>
@@ -121,6 +121,7 @@
       <div id="managerBarList">
         <select class="allBars" name="bars[]" value="Select a Bar" ng-controller="managerBarList" style="width:35%">
           <optgroup label="Pick your bar!">
+            <option value="0">Pick your bar!</option>
             <option ng-repeat="x in barList" value="{{x.id}}">{{x.name}}</option>
           </optgroup>
         </select>
@@ -147,11 +148,21 @@
           </tr>
         </table>
       </div>
-      <div class="col-lg-3">
-
-      </div>
-      <div class="col-lg-3">
-
+      <div class="col-lg-6">
+        <h2 style="text-align:center;">Check-in Table</h2>
+        <table ng-table="checkInTable" class="checkInTable">
+          <tr ng-repeat="r in data3">
+            <td data-title="'Drinker'" sortable="'drinkerId'" filter="{ 'drinkerName': 'text' }" style="width:35%">
+              {{r.drinkerName}} - {{r.drinkerId}}
+            </td>
+            <td data-title="'Check In'" sortable="'checkInTime'" style="width:20%" filter="{ 'checkInTime': 'text' }">
+              {{r.checkedInAtDate}} {{r.checkedInAtTime}}
+            </td>
+            <td data-title="'Day Of the Week'" sortable="'checkInDay'" style="width:20%" filter="{ 'checkInTime': 'text' }">
+              {{r.dayOfWeek}}
+            </td>
+          </tr>
+        </table>
       </div>
 
     </div>
