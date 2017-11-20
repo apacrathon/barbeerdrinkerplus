@@ -57,8 +57,6 @@ module.exports = function (app) {
             throw new Error('Age must be an integer.')
           }
         },
-        min: 21,
-        max: 110
       }
     },
     city: {
