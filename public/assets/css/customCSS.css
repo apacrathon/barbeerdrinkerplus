@@ -120,3 +120,9 @@ body.modal-open {
   color: #444444;
   background: #f7f7f7;
 }
+
+.followingBarsList {
+  padding: 0;
+  margin: 0;
+}
+

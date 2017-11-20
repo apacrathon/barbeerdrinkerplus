@@ -2,13 +2,16 @@
 
 const query = feathersClient.service('/query');
 
-query.find({
-  query: {
-    rawQuery: "SELECT * FROM bars WHERE name like '%bar%'" // Insert query here
-  }
-}).then(response => {
-  console.log(response);
-});
+// query.find({
+//   query: {
+//     rawQuery: "SELECT R.barId, R.barName, R.drinkerId, " +
+//     "X.followingId, X.followingName, R.rating, R.dateTime " +
+//     "FROM test.ratings R, (SELECT * FROM test.following F WHERE F.drinkerId = 1) X " +
+//     "WHERE R.drinkerId = 3096 ORDER BY dateTime DESC LIMIT 1;" // Insert query here
+//   }
+// }).then(response => {
+//   console.log(response);
+// });
 
 let friendsApp = angular.module('friendsApp', []);
 
@@ -27,7 +30,7 @@ friendsApp.controller('drinkersList', [
       function(response) {
         $scope.$apply(() => {
           $scope.drinkersList = response.data;
-          console.log($scope.drinkersList);
+          //console.log($scope.drinkersList);
         });
       });
   }
@@ -42,37 +45,76 @@ friendsApp.controller('friendsList', [
       jQuery('html, body').animate({
         scrollTop: jQuery('#followingResults').offset().top - 85
       }, 1000);
-      $scope.followingList = [];
-      following.find({
+      query.find({
         query: {
-          drinkerId: drinkerVal,
-          $limit: 12000
+          rawQuery: "SELECT * FROM test.following WHERE drinkerId = "+drinkerVal+";"
         }
-      }).then(
-        function(response) {
-          $scope.$apply(() => {
-            $scope.drinkersList = response.data;
-            $scope.friendsList = [];
-            let i;
-            for(i = 0; i < $scope.drinkersList.length; i++) {
-              ratings.find({
-                query: {
-                  drinkerId: $scope.drinkersList[i].followingId,
-                  $sort: {
-                    dateTime: -1
-                  },
-                  $limit: 1
+      }).then(response => {
+        $scope.$apply(() => {
+          $scope.drinkersList = response[0];
+          $scope.followingList = [];
+          $scope.followingCheckinList = [];
+          $scope.networkSize = $scope.drinkersList.length;
+          let i;
+          for(i = 0; i < $scope.drinkersList.length; i++) {
+            query.find({
+              query: {
+                rawQuery: "SELECT R.barId, R.barName, R.drinkerId, " +
+                "X.followingId, X.followingName, R.rating, R.dateTime " +
+                "FROM test.ratings R, (SELECT * FROM test.following F WHERE F.drinkerId = "+drinkerVal+") X " +
+                "WHERE R.drinkerId = "+$scope.drinkersList[i].followingId+" AND X.followingId = "+$scope.drinkersList[i].followingId+" " +
+                "ORDER BY dateTime DESC LIMIT 1;",
+                $sort: {
+                  followingId: 1
                 }
-              }).then(
-                function(response) {
-                  $scope.$apply(() => {
-                    $scope.friendsList.push(response.data);
-                  });
-                });
-            }
+              }
+            }).then(response => {
+              $scope.$apply(() => {
+                $scope.responseAns = response[0];
+                //console.log($scope.responseAns[0]);
+                $scope.responseAns[0].rating = ((($scope.responseAns[0].rating)/5)*100);
+                $scope.followingList.push($scope.responseAns[0]);
+              });
+            });
 
-          });
+            query.find({
+              query: {
+                rawQuery: "SELECT C.barId, C.barName, X.followingId, X.followingName, C.checkInTime FROM" +
+                " test.checkin C, (SELECT * FROM test.following F WHERE F.drinkerId = "+drinkerVal+") X WHERE " +
+                "C.drinkerId = "+$scope.drinkersList[i].followingId+" AND " +
+                "X.followingId = "+$scope.drinkersList[i].followingId+" ORDER BY C.checkInTime DESC LIMIT 1;",
+                $sort: {
+                  followingId: 1
+                }
+              }
+            }).then(response => {
+              $scope.$apply(() => {
+                $scope.responseAns = response[0];
+                console.log($scope.responseAns[0]);
+                $scope.responseAns[0].checkedInAt = new Date($scope.responseAns[0].checkInTime);
+                var newDate = $scope.responseAns[0].checkedInAt;
+                var sFullYear = newDate.getFullYear();
+                var sMonth = newDate.getMonth()+1;
+                var sDate = newDate.getDate();
+                var sHours = newDate.getHours();
+                var sMinutes = newDate.getMinutes();
+                var sSeconds = newDate.getSeconds();
+                if (sMonth < 10) sMonth = "0" + sMonth;
+                if (sHours < 10) sHours = "0" + sHours;
+                if (sDate < 10) sDate = "0" + sDate;
+                if (sMinutes < 10) sMinutes = "0" + sMinutes;
+                if (sSeconds < 10) sSeconds = "0" + sSeconds;
+                $scope.responseAns[0].checkedInAtDate = sFullYear+'-'+sMonth+'-'+sDate;
+                $scope.responseAns[0].checkedInAtTime = sHours+':'+sMinutes+':'+sSeconds;
+                $scope.followingCheckinList.push($scope.responseAns[0]);
+              });
+            });
+          }
         });
+      });
+
+
+
     });
 
   }

@@ -110,7 +110,7 @@
 <div id="wrapper">
   <div id="header" class="content-block">
     <section class="center">
-      <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
+      <h1 style="color:white;">Welcome to your Dashboard, please select your Name and ID</h1>
       <div id="friendsList">
         <select class="allFriends" name="friends[]" value="Select your Name and ID" ng-controller="drinkersList" style="width:35%">
           <optgroup label="Pick your Name and Id">
@@ -121,8 +121,61 @@
     </section>
   </div>
   <div class="content-block" id="followingResults" ng-controller="friendsList">
-    <br><br><br><br>
-    <p ng-repeat="x in friendsList">{{x.barName}} {{x.drinkerName}}</p>
+    <section class="center">
+      <h1 style="margin:auto;">We found {{networkSize}} people in your network! See what they've been up to.</h1><br><br>
+    </section>
+    <div class="row">
+      <div class="col-lg-4"><h2>Submitted Ratings</h2></div>
+      <div class="col-lg-4"><h2>Last Check-in</h2></div>
+      <div class="col-lg-4"><h2>Mutual Friends</h2></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" id="followingRatingsList">
+        <div ng-repeat="x in followingList">
+          <div style="height:125px;">
+            <h3 class="followingBarsList">{{x.followingName}}</h3>
+            <h4 class="followingBarsList">Left at rating for: {{x.barName}}</h4>
+            <br>
+            <div class="star-rating" title="{{x.rating}}%">
+              <div class="back-stars">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <div class="front-stars" style="width: {{x.rating}}%">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+          </div>
+          <div style="width: 100%; height: 3px; background: #2b3e51; overflow: hidden; margin: -10px auto" ></div>
+          <br><br>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div ng-repeat="x in followingCheckinList">
+          <div style="height:125px;">
+            <h4 class="followingBarsList">&nbsp;</h4>
+            <h4 class="followingBarsList">Checked in at: {{x.barName}}</h4>
+            <h4 class="followingBarsList">On: {{x.checkedInAtDate}}</h4>
+            <h4 class="followingBarsList">At: {{x.checkedInAtTime}}</h4>
+            <br>
+          </div>
+          <div style="width: 100%; height: 3px; background: #2b3e51; overflow: hidden; margin: -10px auto" ng-if="x.lastBar != 1" ></div>
+          <br><br>
+        </div>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
+
   </div>
 </div><!--/#wrapper-->
 

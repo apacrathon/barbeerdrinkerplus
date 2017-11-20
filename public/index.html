@@ -130,7 +130,7 @@
         <i class="fa fa-glass fa-pulse fa-5x" aria-hidden="true" ></i>
       </div>
       <div id="searchResultsDiv" ng-if="isLoading == 0">
-        <div class="content-block" id="searchResults" ng-repeat="x in barList" style="max-height:">
+        <div class="content-block" id="searchResults" ng-repeat="x in barList">
           <div class="barListing">
             <div class="col-lg-1">
 
@@ -186,7 +186,7 @@
               <br>
               <div style="float:left;margin-top:-15px;"><i class="fa fa-clock-o"></i> Open - Close</div>
               <br>
-              <div style="flaot:left;margin-top:-15px;">
+              <div style="float:left;margin-top:-15px;">
                 {{x.openTime}} - {{x.closeTime}}<br>
                 <br>
                 HAPPY HOUR:<br>
@@ -203,7 +203,7 @@
           </div>
         </div>
       </div>
-      <span id="decodeIt" style="display:none;"></span>
+      <div id="decodeIt" style="display:n"></div>
       <div class="content-block" id="footer">
         <div class="container">
           <div class="row">
