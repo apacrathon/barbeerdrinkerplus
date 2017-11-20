@@ -1,6 +1,5 @@
+'use strict';
 
-// See http://docs.sequelizejs.com/en/latest/docs/models-definition/
-// for more of what you can do here.
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
@@ -47,6 +46,19 @@ module.exports = function (app) {
       },
       set(drinkerAge) {
         this.setDataValue('age', drinkerAge);
+      },
+      validate: {
+        validAge(value) {
+          if (value < 21) {
+            throw new Error('You must be at least 21 years old! It\' it\'s the law!');
+          } else if (value > 120) {
+            throw new Error('Sorry, an age greater than 120 seems unrealistic nowadays. We will change this constraint when medicine has further advanced.');
+          } else if (!Number.isInteger(value)) {
+            throw new Error('Age must be an integer.')
+          }
+        },
+        min: 21,
+        max: 110
       }
     },
     city: {
