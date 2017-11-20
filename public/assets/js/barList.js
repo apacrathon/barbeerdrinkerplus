@@ -298,29 +298,84 @@ $(document).ready(function() {
     let rating = document.getElementById('inputOldRating').value;
     let barName = document.getElementById('ratingsModalBarName').innerText;
     let barId = document.getElementById('ratingsModalBarId').innerHTML;
-    console.log(drinkerId,rating, barName, barId, ratingDate);
+    //console.log(drinkerId,rating, barName, barId, ratingDate);
     ratings.create({
       barId: barId,
       barName: barName,
       drinkerId: drinkerId,
       rating: rating
-    }).then(response => {
-      alert("Pick a rating between 1 and 5");
-      //console.log(response);
-    }).then(response2 => {
-      //console.log(response2);
+    }).catch(error => {
+      alert(error.message);
     });
   });
   jQuery('#newDrinkerRatingForm').submit(function() {
-    let drinkerName = document.getElementById('inputName').value;
-    let drinkerAge = document.getElementById('inputAge').value;
-    let drinkerGender = jQuery('#inputGender').val();
-    let drinkerCity = document.getElementById('inputCity').value;
-    let drinkerZip = document.getElementById('inputZip').value;
-    let drinkerState = jQuery('#inputState').val();
-    let newRating = document.getElementById('inputNewRating').value;
-    let barName = document.getElementById('ratingsModalBarName').innerText;
-    let barId = document.getElementById('ratingsModalBarId').innerHTML;
+    const drinkerName = document.getElementById('inputName').value;
+    const drinkerAge = Number.parseInt(document.getElementById('inputAge').value);
+    const drinkerGender = jQuery('#inputGender').val();
+    const drinkerCity = document.getElementById('inputCity').value;
+    const drinkerZip = Number.parseInt(document.getElementById('inputZip').value);
+    const drinkerState = jQuery('#inputState').val();
+    const newRating = Number.parseInt(document.getElementById('inputNewRating').value);
+    const barName = document.getElementById('ratingsModalBarName').innerText;
+    const barId = Number.parseInt(document.getElementById('ratingsModalBarId').innerHTML);
+
+    if (newRating < 1 || newRating > 5) {
+      alert("Rating must be a value between 1 and 5.");
+    } else if (!Number.isInteger(Number.parseInt(newRating))) {
+      alert("Ratings must be an integer.");
+    } else {
+      drinkers.create({
+        name: drinkerName,
+        gender: drinkerGender,
+        age: drinkerAge,
+        city: drinkerCity,
+        state: drinkerState,
+        zipcode: drinkerZip
+      }).catch(error => {
+        alert(error.message);
+      }).then(response => {
+        ratings.create({
+          barId: barId,
+          barName: barName,
+          drinkerId: response.id,
+          rating: newRating
+        }).then(response => {
+          alert("Successfuly created drinker and submitted rating.");
+        }).catch(error => {
+          alert(error.message);
+        });
+      });
+    }
+    //console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
+  });
+
+  jQuery('#oldDrinkerCheckInForm').submit(function() {
+    let drinkerVal1 = jQuery('#drinkersCheckInDropdown').val();
+    drinkerVal1 = drinkerVal1.split(',');
+    const drinkerId = drinkerVal1[0];
+    const drinkerName = drinkerVal1[1];
+    const barName = document.getElementById('ratingsModalBarName').innerText;
+    const barId = document.getElementById('ratingsModalBarId').innerHTML;
+    //console.log(drinkerId, drinkerName, barName, barId);
+    checkin.create({
+      barId: barId,
+      barName: barName,
+      drinkerId: drinkerId,
+      drinkerName: drinkerName
+    }).catch(error => {
+      alert(error.message);
+    });
+  });
+  jQuery('#newDrinkerCheckInForm').submit(function() {
+    const drinkerName = document.getElementById('inputName').value;
+    const drinkerAge = document.getElementById('inputAge').value;
+    const drinkerGender = jQuery('#inputGender').val();
+    const drinkerCity = document.getElementById('inputCity').value;
+    const drinkerZip = document.getElementById('inputZip').value;
+    const drinkerState = jQuery('#inputState').val();
+    const newRating = document.getElementById('inputNewRating').value;
+    const barName = document.getElementById('ratingsModalBarName').innerText;
+    const barId = document.getElementById('ratingsModalBarId').innerHTML;
     drinkers.create({
       name: drinkerName,
       gender: drinkerGender,
@@ -329,48 +384,6 @@ $(document).ready(function() {
       state: drinkerState,
       zipcode: drinkerZip
     });
-    console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
-  });
-
-  jQuery('#oldDrinkerCheckInForm').submit(function() {
-    var drinkerVal1 = jQuery('#drinkersCheckInDropdown').val();
-    drinkerVal1 = drinkerVal1.split(',');
-    var drinkerId = drinkerVal1[0];
-    var drinkerName = drinkerVal1[1];
-    let barName = document.getElementById('ratingsModalBarName').innerText;
-    let barId = document.getElementById('ratingsModalBarId').innerHTML;
-    console.log(drinkerId, drinkerName, barName, barId);
-    checkin.create({
-      barId: barId,
-      barName: barName,
-      drinkerId: drinkerId,
-      drinkerName: drinkerName
-    }).then(response => {
-      alert("Pick a rating between 1 and 5");
-      //console.log(response);
-    }).then(response2 => {
-      //console.log(response2);
-    });
-  });
-  jQuery('#newDrinkerCheckInForm').submit(function() {
-    let drinkerName = document.getElementById('inputName').value;
-    let drinkerAge = document.getElementById('inputAge').value;
-    let drinkerGender = jQuery('#inputGender').val();
-    let drinkerCity = document.getElementById('inputCity').value;
-    let drinkerZip = document.getElementById('inputZip').value;
-    let drinkerState = jQuery('#inputState').val();
-    let newRating = document.getElementById('inputNewRating').value;
-    let barName = document.getElementById('ratingsModalBarName').innerText;
-    let barId = document.getElementById('ratingsModalBarId').innerHTML;
-    // drinkers.create({
-    //   name: drinkerName,
-    //   gender: drinkerGender,
-    //   age: drinkerAge,
-    //   city: drinkerCity,
-    //   state: drinkerState,
-    //   zipcode: drinkerZip
-    // });
-    console.log(drinkerName, drinkerAge, drinkerGender, drinkerCity, drinkerState, drinkerZip);
   });
 
 
