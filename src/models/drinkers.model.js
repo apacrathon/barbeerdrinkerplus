@@ -36,6 +36,14 @@ module.exports = function (app) {
       },
       set(drinkerGender) {
         this.setDataValue('gender', drinkerGender);
+      },
+      validate :{
+        valididateGender(value) {
+          const valueLower = value.toLowerCase();
+          if (!(valueLower == "1" || valueLower == "0" || valueLower == "-1")) {
+            throw new Error ("Unknown gender value specified.");
+          }
+        }
       }
     },
     age: {
