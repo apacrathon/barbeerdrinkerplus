@@ -362,20 +362,23 @@ $(document).ready(function() {
       barName: barName,
       drinkerId: drinkerId,
       drinkerName: drinkerName
+    }).then(response => {
+      alert("Successfully checked into " + barName);
     }).catch(error => {
       alert(error.message);
     });
   });
+
   jQuery('#newDrinkerCheckInForm').submit(function() {
-    const drinkerName = document.getElementById('inputName').value;
-    const drinkerAge = document.getElementById('inputAge').value;
-    const drinkerGender = jQuery('#inputGender').val();
-    const drinkerCity = document.getElementById('inputCity').value;
-    const drinkerZip = document.getElementById('inputZip').value;
-    const drinkerState = jQuery('#inputState').val();
-    const newRating = document.getElementById('inputNewRating').value;
+    const drinkerName = document.getElementById('inputName2').value;
+    const drinkerAge = Number.parseInt(document.getElementById('inputAge2').value);
+    const drinkerGender = jQuery('#inputGender2').val();
+    const drinkerCity = document.getElementById('inputCity2').value;
+    const drinkerZip = Number.parseInt(document.getElementById('inputZip2').value);
+    const drinkerState = jQuery('#inputState2').val();
     const barName = document.getElementById('ratingsModalBarName').innerText;
     const barId = document.getElementById('ratingsModalBarId').innerHTML;
+
     drinkers.create({
       name: drinkerName,
       gender: drinkerGender,
@@ -383,6 +386,19 @@ $(document).ready(function() {
       city: drinkerCity,
       state: drinkerState,
       zipcode: drinkerZip
+    }).then(response => {
+      checkin.create({
+        barId: barId,
+        barName: barName,
+        drinkerId: response.id,
+        drinkerName: drinkerName
+      }).then(response => {
+        alert("Sucessfully checked into " + barName);
+      }).catch(error => {
+        alert(error.message);
+      });
+    }).catch(error => {
+      alert(error.message);
     });
   });
 
