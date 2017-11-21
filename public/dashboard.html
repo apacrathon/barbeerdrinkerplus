@@ -102,9 +102,6 @@
                 <li>
                   <a href="friends.html"><i class="fa fa-users"></i> Network</a>
                 </li>
-                <li>
-                  <a href="#account"><i class="fa fa-cog"></i> Account</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -120,7 +117,7 @@
       <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
       <div id="managerBarList">
         <select class="allBars" name="bars[]" value="Select a Bar" ng-controller="managerBarList" style="width:35%">
-            <option value="0">Pick your bar!</option>
+            <option value="0">Pick your bar! For example: Brick House</option>
             <option ng-repeat="x in barList" value="{{x.id}}">{{x.name}}</option>
         </select>
       </div>
@@ -133,8 +130,8 @@
       <div class="col-lg-6">
         <div id="likesDiv"></div>
       </div>
-      <div class="col-lg-6">
-        <h2 style="text-align:center;">Frequent Drinker Information</h2>
+      <div class="col-lg-6" ng-if="isSelected == 1">
+        <h2 style="text-align:center;" >Frequent Drinker Information</h2>
         <table ng-table="frequentsTable" class="frequentsTable row-border hover">
           <tr ng-repeat="r in data1">
             <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">
@@ -162,7 +159,7 @@
       </div>
     </div>
 
-    <div class="content-block">
+    <div class="content-block" ng-if="isSelected == 1">
       <div class="col-lg-6">
         <h2 style="text-align:center;">Ratings Detailed Information</h2>
         <table ng-table="ratingsTable" class="ratingsTable">
@@ -195,14 +192,6 @@
           </tr>
         </table>
       </div>
-
-    </div>
-    <div class="content-block">
-      <div class="col-lg-3"></div>
-      <div class="col-lg-6">
-
-      </div>
-      <div class="col-lg-3"></div>
 
     </div>
 

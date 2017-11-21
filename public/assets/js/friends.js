@@ -1,17 +1,5 @@
 'use strict'
 
-
-// query.find({
-//   query: {
-//     rawQuery: "SELECT R.barId, R.barName, R.drinkerId, " +
-//     "X.followingId, X.followingName, R.rating, R.dateTime " +
-//     "FROM test.ratings R, (SELECT * FROM test.following F WHERE F.drinkerId = 1) X " +
-//     "WHERE R.drinkerId = 3096 ORDER BY dateTime DESC LIMIT 1;" // Insert query here
-//   }
-// }).then(response => {
-//   console.log(response);
-// });
-
 let friendsApp = angular.module('friendsApp', []);
 
 friendsApp.controller('drinkersList', [
@@ -29,7 +17,6 @@ friendsApp.controller('drinkersList', [
       function(response) {
         $scope.$apply(() => {
           $scope.drinkersList = response.data;
-          //console.log($scope.drinkersList);
         });
       });
   }
@@ -45,8 +32,6 @@ friendsApp.controller('friendsList', [
       var drinkerVal = drinkerVal1[0];
       var drinkerCity = drinkerVal1[1];
       var drinkerName = drinkerVal1[2];
-      console.log(drinkerName);
-      //console.log(drinkerVal,drinkerCity);
 
       jQuery('html, body').animate({
         scrollTop: jQuery('#followingResults').offset().top - 85
@@ -54,14 +39,12 @@ friendsApp.controller('friendsList', [
 
       jQuery(document).ready(function(){
         $scope.followClick = function(id,name) {
-          console.log(drinkerVal, drinkerName, id, name);
           following.create({
             drinkerId: drinkerVal,
             drinkerName: drinkerName,
             followingId: id,
             followingName: name
           }).then(response => {
-            console.log(response);
             let followButton = document.getElementById('drinker'+id);
               followButton.className = "btn btn-success";
               followButton.innerHTML = "Following";
@@ -79,7 +62,6 @@ friendsApp.controller('friendsList', [
           $scope.followingCheckinList = [];
           $scope.networkSize = $scope.drinkersList.length;
           let i;
-          console.log("HEllo");
 
           for(i = 0; i < $scope.drinkersList.length; i++) {
             query.find({
@@ -96,7 +78,6 @@ friendsApp.controller('friendsList', [
             }).then(response => {
               $scope.$apply(() => {
                 $scope.responseAns = response[0];
-                //console.log($scope.responseAns[0]);
                 $scope.responseAns[0].rating = ((($scope.responseAns[0].rating)/5)*100);
                 $scope.followingList.push($scope.responseAns[0]);
               });
@@ -115,7 +96,6 @@ friendsApp.controller('friendsList', [
             }).then(response => {
               $scope.$apply(() => {
                 $scope.responseAns = response[0];
-                //console.log($scope.responseAns[0]);
                 $scope.responseAns[0].checkedInAt = new Date($scope.responseAns[0].checkInTime);
                 var newDate = $scope.responseAns[0].checkedInAt;
                 var sFullYear = newDate.getFullYear();

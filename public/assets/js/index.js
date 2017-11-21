@@ -5,11 +5,17 @@ $(document).ready(function() {
       scrollTop: jQuery('#searchResults1').offset().top -85
     }, 1000);
   });
-  jQuery('.allBars').select2();
+  jQuery('.allBars').select2({
+    minimumInputLength: 2
+  });
   jQuery('.allStates').select2();
   jQuery('.allGenders').select2();
-  jQuery('.allDrinkers').select2();
-  jQuery('.allFriends').select2();
+  jQuery('.allDrinkers').select2({
+    minimumInputLength: 2
+  });
+  jQuery('.allFriends').select2({
+    minimumInputLength: 2
+  });
 
   jQuery('#oldDrinkerButton').click(function() {
     jQuery('#oldDrinkerForm').removeClass().addClass("modalFormShown");

@@ -125,4 +125,9 @@
   padding: 0;
   margin: 0;
 }
+#topRatedSearch {
+  border-color: #c5c4c8;
+  margin: auto;
+  width: 40%;
+}
 

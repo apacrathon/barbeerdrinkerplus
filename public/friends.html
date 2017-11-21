@@ -95,9 +95,6 @@
                 <li>
                   <a href="friends.html"><i class="fa fa-users"></i> Network</a>
                 </li>
-                <li>
-                  <a href="#account"><i class="fa fa-cog"></i> Account</a>
-                </li>
               </ul>
             </div><!-- /navbar-collapse -->
           </div><!-- / .container-fluid -->
@@ -113,7 +110,7 @@
       <h1 style="color:white;">Welcome to your Network, please select your Name and ID</h1>
       <div id="friendsList">
         <select class="allFriends" name="friends[]" value="Select your Name and ID" ng-controller="drinkersList" style="width:35%">
-            <option>Pick your Name and ID</option>
+            <option>Pick your Name and ID! For example: Mit Patel - 1</option>
             <option ng-repeat="x in drinkersList" value="{{x.id}},{{x.city}},{{x.name}}">{{x.name}} - {{x.id}}</option>
         </select>
       </div>

@@ -87,9 +87,6 @@
 										<li>
 											<a href="friends.html"><i class="fa fa-users"></i> Network</a>
 										</li>
-										<li>
-											<a href="#account"><i class="fa fa-cog"></i> Account</a>
-										</li>
 							      	</ul>
 							    </div><!-- /navbar-collapse -->
 						  	</div><!-- / .container-fluid -->
@@ -114,6 +111,18 @@
               <input type="submit" hidden="true">
             </form>
           </div>
+          <br>
+          <br>
+          <br>
+          <h3 style="color:white;cursor:pointer;" ng-click="topRatedClick()"><i class="fa fa-star fa-inverse"></i>Top Rated Bars</h3>
+          <form id="topRatedSearchForm" href="searchResults" class="modalFormHidden">
+            <input id="topRatedSearch" type="text" class="form-control" placeholder="Enter Your City">
+          </form>
+          <br>
+          <div id ="topResultsSpinner" class="modalFormHidden" >
+            <i style="color:white;" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+          </div>
+
           <div class="col-lg-3">
           </div>
 				</section>
@@ -136,7 +145,6 @@
 
             </div>
             <div class="col-lg-3">
-
               <h2> {{x.name}} </h2>
               <h4 class="barStreet"> {{x.street}} </h4>
               <h4 class="barCityState"> {{x.city}}, {{x.state}} {{x.zipcode}}</h4>
@@ -274,7 +282,8 @@
                     <label>Pick your Name and ID</label>
                     <br>
                     <select class="allDrinkers" name="drinkers[]" value="Select your Name and ID" style="width:100%" id="drinkersDropdown">
-                      <optgroup label="Select your Name and ID!">
+                      <optgroup label="Pick your Name and ID! For example: Mit Patel - 1">
+                        <option>Pick your Name and ID! For example: Mit Patel - 1</option>
                         <option ng-repeat="x in drinkersList" value="{{x.id}}">{{x.name}} - {{x.id}}</option>
                       </optgroup>
                     </select>
@@ -408,7 +417,8 @@
                     <label>Pick your Name and ID</label>
                     <br>
                     <select class="allDrinkers" name="drinkers[]" value="Select your Name and ID" style="width:100%" id="drinkersCheckInDropdown">
-                      <optgroup label="Select your Name and ID!">
+                      <optgroup label="Pick your Name and ID! For example: Mit Patel - 1">
+                        <option>Pick your Name and ID! For example: Mit Patel - 1</option>
                         <option ng-repeat="x in drinkersList" value="{{x.id}},{{x.name}}">{{x.name}} - {{x.id}}</option>
                       </optgroup>
                     </select>
