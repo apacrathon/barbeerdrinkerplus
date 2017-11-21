@@ -242,22 +242,6 @@ managerApp.controller('managerGraphs', [
             });
           });
         });
-
-      query.find({
-        query: {
-          rawQuery: "SELECT L.drinkName, " +
-          "COUNT(*) FROM test.likes L WHERE drinkerId IN " +
-          "(SELECT F.drinkerId FROM test.frequents F WHERE barId = "+barValue+") " +
-          "GROUP BY L.drinkName ORDER BY COUNT(*) DESC LIMIT 10;"
-        }
-      }).then(response => {
-        $scope.$apply(() => {
-          console.log(response);
-
-        });
-      });
-
-
       frequents.find({
         query: {
           barId: barValue,
@@ -299,6 +283,51 @@ managerApp.controller('managerGraphs', [
             console.log($scope.frequentingDrinkers.length);
           });
         });
+      query.find({
+        query: {
+          rawQuery: "SELECT L.drinkName, " +
+          "COUNT(*) AS likesCount FROM test.likes L WHERE drinkerId IN " +
+          "(SELECT F.drinkerId FROM test.frequents F WHERE barId = "+barValue+") " +
+          "GROUP BY L.drinkName ORDER BY COUNT(*) DESC LIMIT 10;"
+        }
+      }).then(response => {
+        $scope.$apply(() => {
+          $scope.likesData = response[0];
+          let i;
+          let likesNames = [];
+          let likesNum = [];
+          let likesSum = 0;
+          for(i = 0; i < $scope.likesData.length; i++) {
+            likesSum += $scope.likesData[i].likesCount;
+            likesNames.push($scope.likesData[i].drinkName);
+            likesNum.push($scope.likesData[i].likesCount);
+          }
+          for(i = 0; i < $scope.likesData.length; i++) {
+            likesNum[i] = ((likesNum[i])/(likesSum))*100;
+          }
+          console.log(likesNum);
+          var data = [{
+            values: likesNum,
+            labels: likesNames,
+            type: 'pie'
+          }];
+
+          var layout = {
+            title: 'What Your Loyal Customers Like',
+            titlefont: {
+              size: 28,
+              family: 'Raleway, sans-serif'
+            },
+            height: 400,
+            width: 500
+          };
+
+          Plotly.newPlot('likesDiv', data, layout);
+        });
+      });
+
+
+
     });
   }
 ]);

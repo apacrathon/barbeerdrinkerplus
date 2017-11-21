@@ -120,10 +120,8 @@
       <h1 style="color:white;">Welcome to your Dashboard, please select your bar</h1>
       <div id="managerBarList">
         <select class="allBars" name="bars[]" value="Select a Bar" ng-controller="managerBarList" style="width:35%">
-          <optgroup label="Pick your bar!">
             <option value="0">Pick your bar!</option>
             <option ng-repeat="x in barList" value="{{x.id}}">{{x.name}}</option>
-          </optgroup>
         </select>
       </div>
     </section>
@@ -131,6 +129,39 @@
   <div class="content-block" ng-controller="managerGraphs">
     <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
     <div id="checkinDiv"></div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="likesDiv"></div>
+      </div>
+      <div class="col-lg-6">
+        <h2 style="text-align:center;">Frequents Table</h2>
+        <table ng-table="frequentsTable" class="frequentsTable row-border hover">
+          <tr ng-repeat="r in data1">
+            <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">
+              {{r.name}}
+            </td>
+            <td data-title="'Age'" sortable="'age'" filter="{ 'age': 'text' }">
+              {{r.age}}
+            </td>
+            <td data-title="'Gender'" sortable="'gender'" filter="{ 'gender': 'text' }">
+              <div ng-if="r.gender == 1">
+                Male
+              </div>
+              <div ng-if="r.gender == 0">
+                Female
+              </div>
+            </td>
+            <td data-title="'State'" sortable="'state'" filter="{ 'state': 'text' }">
+              {{r.state}}
+            </td>
+            <td data-title="'City'" sortable="'city'" filter="{ 'city': 'text' }">
+              {{r.city}}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
     <div class="content-block">
       <div class="col-lg-6">
         <h2 style="text-align:center;">Ratings Table</h2>
@@ -169,32 +200,7 @@
     <div class="content-block">
       <div class="col-lg-3"></div>
       <div class="col-lg-6">
-        <h2 style="text-align:center;">Frequents Table</h2>
-        <table ng-table="frequentsTable" class="frequentsTable row-border hover">
-          <tr ng-repeat="r in data1">
-            <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">
-              {{r.name}}
-            </td>
-            <td data-title="'Age'" sortable="'age'" filter="{ 'age': 'text' }">
-              {{r.age}}
-            </td>
-            <td data-title="'Gender'" sortable="'gender'" filter="{ 'gender': 'text' }">
-              <div ng-if="r.gender == 1">
-                Male
-              </div>
-              <div ng-if="r.gender == 0">
-                Female
-              </div>
-            </td>
-            <td data-title="'State'" sortable="'state'" filter="{ 'state': 'text' }">
-              {{r.state}}
-            </td>
-            <td data-title="'City'" sortable="'city'" filter="{ 'city': 'text' }">
-              {{r.city}}
-            </td>
-          </tr>
-        </table>
-        <!--id, name, gender, state, age, city, zip-->
+
       </div>
       <div class="col-lg-3"></div>
 
