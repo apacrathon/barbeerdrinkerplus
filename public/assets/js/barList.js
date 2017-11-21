@@ -283,6 +283,8 @@ $(document).ready(function() {
       rating: rating
     }).catch(error => {
       alert(error.message);
+    }).then(response => {
+      alert("Successfully submitted rating for " + barName + ".");
     });
   });
   jQuery('#newDrinkerRatingForm').submit(function() {
@@ -377,10 +379,7 @@ $(document).ready(function() {
     }).catch(error => {
       alert(error.message);
     });
-  });
-
-
-
+  })
 });
 
 //'http://maps.googleapis.com/maps/api/distancematrix/json?origins=$postcode2&destinations=$postcode1&mode=driving&language=en-EN&sensor=false"'
