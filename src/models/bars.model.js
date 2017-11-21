@@ -62,7 +62,11 @@ module.exports = function (app) {
     zipcode: {
       type: DataTypes.INTEGER(5).ZEROFILL,
       validate: {
-        len: [5, 5]
+        validZipRegExp(value) {
+          if (!(/^([0-9]{5})(?:[-\s]*([0-9]{4}))?$/.test(value))) {
+            throw new Error('Not a valid zip code');
+          }
+        }
       },
       allowNull: false,
       get() {

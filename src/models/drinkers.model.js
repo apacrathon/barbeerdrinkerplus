@@ -2,6 +2,19 @@
 
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
+const USStates = [
+  "AK","AL","AR","AZ","CA",
+  "CO","CT","DC","DE","FL",
+  "GA","GU","HI","IA","ID",
+  "IL","IN","KS","KY","LA",
+  "MA","MD","ME","MH","MI",
+  "MN","MO","MS","MT","NC",
+  "ND","NE","NH","NJ","NM",
+  "NV","NY", "OH","OK","OR",
+  "PA","PR","PW","RI","SC",
+  "SD","TN","TX","UT","VA",
+  "VI","VT","WA","WI","WV","WY"
+];
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
@@ -36,6 +49,14 @@ module.exports = function (app) {
       },
       set(drinkerGender) {
         this.setDataValue('gender', drinkerGender);
+      },
+      validate :{
+        valididateGender(value) {
+          const valueLower = value.toLowerCase();
+          if (!(valueLower == "1" || valueLower == "0" || valueLower == "-1")) {
+            throw new Error ("Unknown gender value specified.");
+          }
+        }
       }
     },
     age: {
@@ -77,6 +98,13 @@ module.exports = function (app) {
       },
       set(drinkerState) {
         this.setDataValue('state', drinkerState);
+      },
+      validate: {
+        validateState(value) {
+          if (!USStates.includes(value)) {
+            throw new Error ("Invalid state abbreviation");
+          }
+        }
       }
     },
     zipcode: {
