@@ -130,4 +130,27 @@
   margin: auto;
   width: 40%;
 }
+#mostPopularSearch {
+  border-color: #c5c4c8;
+  margin: auto;
+  width: 40%;
+}
+.fireIcon:hover i{
+  color: #ff5e0b;
+}
+.fireIcon i{
+  color: white;
+}
+.fireIcon {
+  color: white;
+}
+.starIcon:hover i{
+  color: #FFBC0B;
+}
+.starIcon i{
+  color: white;
+}
+.starIcon {
+  color: white;
+}
 

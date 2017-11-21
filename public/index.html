@@ -101,6 +101,7 @@
 			<div id="header" class="content-block">
 
 				<section class="center">
+          <div class="row">
           <div class="col-lg-3">
           </div>
 
@@ -111,20 +112,40 @@
               <input type="submit" hidden="true">
             </form>
           </div>
-          <br>
-          <br>
-          <br>
-          <h3 style="color:white;cursor:pointer;" ng-click="topRatedClick()"><i class="fa fa-star fa-inverse"></i>Top Rated Bars</h3>
-          <form id="topRatedSearchForm" href="searchResults" class="modalFormHidden">
-            <input id="topRatedSearch" type="text" class="form-control" placeholder="Enter Your City">
-          </form>
-          <br>
-          <div id ="topResultsSpinner" class="modalFormHidden" >
-            <i style="color:white;" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-          </div>
-
           <div class="col-lg-3">
           </div>
+
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-6">
+
+                <h3 style="cursor:pointer;float:left;margin-left:5%;margin-top:5%;"  ng-click="topRatedClick()" class="starIcon"><i class="fa fa-star fa-inverse"></i> Top Rated Bars</h3>
+                <h3 style="cursor:pointer;float:right;margin-right:5%;margin-top:5%;" ng-click="mostPopularClick()" class="fireIcon"><i class="fa fa-fire fa-inverse"></i> Most Popular Bars</h3>
+              <div class="modalFormHidden" id="allCitiesDropDown">
+                <select class="allCities" name="cities[]" value="Select your Name and ID" style="width:35%" class="modalFormHidden">
+                  <option>Pick your city and state. For Example: New Brunswick, NJ</option>
+                  <option ng-repeat="x in cityStateList" value="{{x.city}}">{{x.city}},{{x.state}}</option>
+                </select>
+              </div>
+
+              <!--<form id="topRatedSearchForm" href="searchResults" class="modalFormHidden">-->
+                <!--<input id="topRatedSearch" type="text" class="form-control" placeholder="Enter Your City">-->
+              <!--</form>-->
+              <!--<form id="mostPopularSearchForm" href="searchResults" class="modalFormHidden">-->
+                <!--<input id="mostPopularSearch" type="text" class="form-control" placeholder="Enter Your City">-->
+              <!--</form>-->
+              <div id ="topResultsSpinner" class="modalFormHidden" >
+                <i style="color:white;" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+              </div>
+            </div>
+            <div class="col-lg-3">
+
+            </div>
+          </div>
+
 				</section>
 			</div><!-- header -->
       <div class="content-block" id="searchResults1" >
@@ -185,7 +206,7 @@
               <h4>Typical Crowd: {{x.typicalCrowd}}</h4>
               <a class="toolTipTest" data-toggle="tooltip" title="Accepts Credit Card!"><i rel="popover" class="fa fa-credit-card fa-fw fa-lg" ng-if="x.acceptsCredit == 1" ></i></a>
               <i rel="popover" class="fa fa-users fa-fw fa-lg" ng-if="x.isGoodForGroups == 1" data-toggle="tooltip" title="Good For Groups!"></i>
-              <i rel="popover" class="fa fa-wifi fa-fw fa-lg" ng-if="x.hasWifi == 1" data-toggle="tooltip" title="WiFi Access!"></i>
+              <i rel="popover" class="fa fa-wifi fa-fw fa-lg" ng-if="x.hasWiFi == 1" data-toggle="tooltip" title="WiFi Access!"></i>
               <img rel="popover" width="16" height="24" src="assets/images/no-smoking.svg" ng-if="x.allowsSmoking == 0" data-toggle="tooltip" title="No Smoking!">
               <img rel="popover"width="16" height="24" src="assets/images/smoking.svg" ng-if="x.allowsSmoking == 1" data-toggle="tooltip" title="Smoking Allowed!">
               <h4 ng-click="menuClick(x.id)" class="modalMenu" data-toggle="modal" data-target="#myModal" id="{{x.id}}">Menu</h4>
