@@ -129,11 +129,12 @@ app.controller('myCtrl', [
                       openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
                       let closeTime = new Date();
                       closeTime.setHours(response.data[0].closeTime[0]+''+response.data[0].closeTime[1],response.data[0].closeTime[3]+''+response.data[0].closeTime[4],response.data[0].closeTime[6]+''+response.data[0].closeTime[7]);
+
+                      let currentTime = new Date();
                       if(closeTime.getHours() <= 5) {
                         closeTime.setDate(closeTime.getDate()+1);
-                        openTime.setDate(openTime.getDate()-1);
+                        currentTime.setDate(currentTime.getDate()+1);
                       }
-                      let currentTime = new Date();
                       if(currentTime > openTime && currentTime < closeTime) {
                         $scope.barList[i].isOpen = 1;
                       }
@@ -289,12 +290,11 @@ app.controller('myCtrl', [
                       openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
                       let closeTime = new Date();
                       closeTime.setHours(response.data[0].closeTime[0]+''+response.data[0].closeTime[1],response.data[0].closeTime[3]+''+response.data[0].closeTime[4],response.data[0].closeTime[6]+''+response.data[0].closeTime[7]);
+                      let currentTime = new Date();
                       if(closeTime.getHours() <= 5) {
                         closeTime.setDate(closeTime.getDate()+1);
-                        openTime.setDate(openTime.getDate()-1);
+                        currentTime.setDate(currentTime.getDate()+1);
                       }
-
-                      let currentTime = new Date();
                       if(currentTime > openTime && currentTime < closeTime) {
                         $scope.barList[i].isOpen = 1;
                       }
