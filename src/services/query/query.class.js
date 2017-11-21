@@ -17,7 +17,7 @@ class Service {
   }
 
   find (params) {
-    if (params.query.rawQuery.substr(0, 6).toLowerCase("select")) {
+    if (!(params.query.rawQuery.substr(0, 6).toLowerCase() == "select")) {
       throw Error("Received a restricted query. Rejecting request...");
       return Promise.reject("Your query was not processed for security reasons.");
     }
