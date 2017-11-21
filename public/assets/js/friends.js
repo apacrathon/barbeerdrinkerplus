@@ -28,14 +28,11 @@ friendsApp.controller('friendsList', [
   function($scope) {
     $('select').on("change",function() {
       var drinkerVal1 = $(this).val();
+      jQuery('#networkSpinner').removeClass().addClass("modalFormShown");
       drinkerVal1 = drinkerVal1.split(',');
       var drinkerVal = drinkerVal1[0];
       var drinkerCity = drinkerVal1[1];
       var drinkerName = drinkerVal1[2];
-
-      jQuery('html, body').animate({
-        scrollTop: jQuery('#followingResults').offset().top - 85
-      }, 1000);
 
       jQuery(document).ready(function(){
         $scope.followClick = function(id,name) {
@@ -112,6 +109,7 @@ friendsApp.controller('friendsList', [
                 $scope.responseAns[0].checkedInAtDate = sFullYear+'-'+sMonth+'-'+sDate;
                 $scope.responseAns[0].checkedInAtTime = sHours+':'+sMinutes+':'+sSeconds;
                 $scope.followingCheckinList.push($scope.responseAns[0]);
+                //console.log($scope.followingCheckinList);
               });
             });
           }
@@ -126,6 +124,12 @@ friendsApp.controller('friendsList', [
               $scope.nearbyPeople = response[0];
             });
             });
+          setTimeout(function(){
+            jQuery('html, body').animate({
+              scrollTop: jQuery('#followingResults').offset().top -85
+            }, 1000);
+            jQuery('#networkSpinner').removeClass().addClass("modalFormHidden");
+          }, 2000);
 
 
         });

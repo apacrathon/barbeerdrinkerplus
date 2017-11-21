@@ -80,7 +80,6 @@ app.controller('myCtrl', [
       }).then(function(response) {
         $scope.$apply(() => {
           $scope.cityStateList = response[0];
-          //console.log($scope.cityStateList);
         });
       });
     });
@@ -130,8 +129,8 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(() => {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
+                  for(let j = 0; j < $scope.barList.length; j++) {
+                    if($scope.barList[j].id == response.data[0].barId){
                       let openTime = new Date();
                       openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
                       let closeTime = new Date();
@@ -140,16 +139,15 @@ app.controller('myCtrl', [
                       let currentTime = new Date();
                       if(closeTime.getHours() <= 5) {
                         closeTime.setDate(closeTime.getDate()+1);
-                        currentTime.setDate(currentTime.getDate()+1);
                       }
                       if(currentTime > openTime && currentTime < closeTime) {
-                        $scope.barList[i].isOpen = 1;
+                        $scope.barList[j].isOpen = 1;
                       }
                       else {
-                        $scope.barList[i].isOpen = 0;
+                        $scope.barList[j].isOpen = 0;
                       }
-                      $scope.barList[i].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
-                      $scope.barList[i].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
+                      $scope.barList[j].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
+                      $scope.barList[j].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
                     }
                   }
                 });
@@ -242,6 +240,7 @@ app.controller('myCtrl', [
                 scrollTop: jQuery('#searchResults1').offset().top -85
               }, 1000);
               jQuery('#topResultsSpinner').removeClass().addClass("modalFormHidden");
+              jQuery('#allCitiesDropDown').removeClass().addClass("modalFormHidden");
             }, 0);
           });
           setTimeout(function(){
@@ -258,8 +257,6 @@ app.controller('myCtrl', [
       };
       jQuery('select').on("change",function() {
         var inputCity = jQuery(this).val();
-        //console.log(inputCity);
-        //jQuery("#mostPopularSearchForm")[0].reset();
         jQuery('#topResultsSpinner').removeClass().addClass("modalFormShown");
         query.find({
           query: {
@@ -296,8 +293,8 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(() => {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
+                  for(let j = 0; j < $scope.barList.length; j++) {
+                    if($scope.barList[j].id == response.data[0].barId){
                       let openTime = new Date();
                       openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
                       let closeTime = new Date();
@@ -306,16 +303,15 @@ app.controller('myCtrl', [
                       let currentTime = new Date();
                       if(closeTime.getHours() <= 5) {
                         closeTime.setDate(closeTime.getDate()+1);
-                        currentTime.setDate(currentTime.getDate()+1);
                       }
                       if(currentTime > openTime && currentTime < closeTime) {
-                        $scope.barList[i].isOpen = 1;
+                        $scope.barList[j].isOpen = 1;
                       }
                       else {
-                        $scope.barList[i].isOpen = 0;
+                        $scope.barList[j].isOpen = 0;
                       }
-                      $scope.barList[i].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
-                      $scope.barList[i].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
+                      $scope.barList[j].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
+                      $scope.barList[j].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
                     }
                   }
                 });
@@ -408,6 +404,7 @@ app.controller('myCtrl', [
                 scrollTop: jQuery('#searchResults1').offset().top -85
               }, 1000);
               jQuery('#topResultsSpinner').removeClass().addClass("modalFormHidden");
+              jQuery('#allCitiesDropDown').removeClass().addClass("modalFormHidden");
             }, 0);
 
           });
@@ -463,25 +460,25 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(() => {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
+                  for(let j = 0; j < $scope.barList.length; j++) {
+                    if($scope.barList[j].id == response.data[0].barId){
                       let openTime = new Date();
                       openTime.setHours(response.data[0].openTime[0]+''+response.data[0].openTime[1],response.data[0].openTime[3]+''+response.data[0].openTime[4],response.data[0].openTime[6]+''+response.data[0].openTime[7]);
                       let closeTime = new Date();
                       closeTime.setHours(response.data[0].closeTime[0]+''+response.data[0].closeTime[1],response.data[0].closeTime[3]+''+response.data[0].closeTime[4],response.data[0].closeTime[6]+''+response.data[0].closeTime[7]);
+
                       let currentTime = new Date();
                       if(closeTime.getHours() <= 5) {
                         closeTime.setDate(closeTime.getDate()+1);
-                        currentTime.setDate(currentTime.getDate()+1);
                       }
                       if(currentTime > openTime && currentTime < closeTime) {
-                        $scope.barList[i].isOpen = 1;
+                        $scope.barList[j].isOpen = 1;
                       }
                       else {
-                        $scope.barList[i].isOpen = 0;
+                        $scope.barList[j].isOpen = 0;
                       }
-                      $scope.barList[i].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
-                      $scope.barList[i].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
+                      $scope.barList[j].openTime = response.data[0].openTime[0]+''+response.data[0].openTime[1]+':'+response.data[0].openTime[3]+''+response.data[0].openTime[4];
+                      $scope.barList[j].closeTime = response.data[0].closeTime[0]+''+response.data[0].closeTime[1]+':'+response.data[0].closeTime[3]+''+response.data[0].closeTime[4];
                     }
                   }
                 });

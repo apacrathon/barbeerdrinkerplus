@@ -114,6 +114,9 @@
             <option ng-repeat="x in drinkersList" value="{{x.id}},{{x.city}},{{x.name}}">{{x.name}} - {{x.id}}</option>
         </select>
       </div>
+      <div id ="networkSpinner" class="modalFormHidden" >
+        <i style="color:white;" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      </div>
     </section>
   </div>
   <div class="content-block" id="followingResults" ng-controller="friendsList">
@@ -125,8 +128,8 @@
       <div class="col-lg-4" style="text-align:center;"><h2>Last Check-in</h2></div>
       <div class="col-lg-4" style="text-align:center;"><h2>Nearby People</h2></div>
     </div>
-    <div class="row" style="max-height:500px;overflow:scroll;margin: auto;">
-      <div class="col-lg-4" style="padding-left:-10px;" id="followingRatingsList">
+    <div class="row">
+      <div class="col-lg-4" style="padding-left:-10px;max-height:500px;overflow:scroll;margin: auto;" id="followingRatingsList">
         <div ng-repeat="x in followingList">
           <div style="height:125px;">
             <h3 class="followingBarsList">{{x.followingName}}</h3>
@@ -155,10 +158,10 @@
           <br><br>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4" style="max-height:500px;overflow:scroll;margin: auto;">
         <div ng-repeat="x in followingCheckinList">
           <div style="height:125px;">
-            <h4 class="followingBarsList">&nbsp;</h4>
+            <h3 class="followingBarsList">{{x.followingName}}</h3>
             <h4 class="followingBarsList">Checked in at: {{x.barName}}</h4>
             <h4 class="followingBarsList">On: {{x.checkedInAtDate}}</h4>
             <h4 class="followingBarsList">At: {{x.checkedInAtTime}}</h4>
@@ -168,8 +171,8 @@
           <br><br>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div ng-repeat="x in nearbyPeople">
+      <div class="col-lg-4" style="max-height:500px;overflow:scroll;margin: auto;">
+        <div ng-repeat="x in nearbyPeople" >
           <h4 class="followingBarsList">{{x.name}}, {{x.age}}</h4>
           <h5 class="followingBarsList" ng-if="x.gender == 1">Male</h5>
           <h5 class="followingBarsList" ng-if="x.gender == 0">Female</h5>
