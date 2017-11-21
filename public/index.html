@@ -127,7 +127,7 @@
               <div class="modalFormHidden" id="allCitiesDropDown">
                 <select class="allCities" name="cities[]" value="Select your Name and ID" style="width:35%" class="modalFormHidden">
                   <option>Pick your city and state. For Example: New Brunswick, NJ</option>
-                  <option ng-repeat="x in cityStateList" value="{{x.city}}">{{x.city}},{{x.state}}</option>
+                  <option ng-repeat="x in cityStateList" value="{{x.city}}">{{x.city}}, {{x.state}}</option>
                 </select>
               </div>
 
@@ -213,7 +213,7 @@
             </div>
             <div class="col-lg-3">
               <div>
-                <p style="float:left;">Status: </p>
+                <p style="float:left;">Status:&nbsp;</p>
                 <p ng-if="x.isOpen == 1" style="color: green;float:left;"> Open </p>
                 <p ng-if="x.isOpen == 0" style="color: red;float:left;"> Closed </p>
                 <p ng-if="x.isHappyHour == 1" style="float:left;">|</p>
@@ -244,8 +244,12 @@
         <div class="container">
           <div class="row">
             <div class="text-center">By Raj Patel, Nill Patel, Prabhjot Singh - Database 336 Fall 2017</div>
+            <br><br>
+              <div class="text-center">
+                <i class="fa fa-github fa-2x"></i>
+              </div>
           </div>
-        </div>
+        </a>
       </div>
       <!-- Menu Modal  -->
       <div class="modal fade" id="myModal" role="dialog">
