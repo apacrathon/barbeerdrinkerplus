@@ -134,7 +134,7 @@
         <div id="likesDiv"></div>
       </div>
       <div class="col-lg-6">
-        <h2 style="text-align:center;">Frequents Table</h2>
+        <h2 style="text-align:center;">Frequent Drinker Information</h2>
         <table ng-table="frequentsTable" class="frequentsTable row-border hover">
           <tr ng-repeat="r in data1">
             <td data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">
@@ -164,11 +164,11 @@
 
     <div class="content-block">
       <div class="col-lg-6">
-        <h2 style="text-align:center;">Ratings Table</h2>
+        <h2 style="text-align:center;">Ratings Detailed Information</h2>
         <table ng-table="ratingsTable" class="ratingsTable">
           <tr ng-repeat="r in data">
             <td data-title="'Drinker'" sortable="'drinkerId'" filter="{ 'drinkerName': 'text' }" style="width:50%">
-              {{r.drinkerName}} - {{r.drinkerId}}
+              {{r.name}} - {{r.drinkerId}}
             </td>
             <td data-title="'Rating'" sortable="'rating'" style="width:20%" filter="{ 'rating': 'number' }">
               {{r.rating}}
@@ -180,7 +180,7 @@
         </table>
       </div>
       <div class="col-lg-6">
-        <h2 style="text-align:center;">Check-in Table</h2>
+        <h2 style="text-align:center;">Check-in Detailed Information</h2>
         <table ng-table="checkInTable" class="checkInTable">
           <tr ng-repeat="r in data3">
             <td data-title="'Drinker'" sortable="'drinkerId'" filter="{ 'drinkerName': 'text' }" style="width:35%">

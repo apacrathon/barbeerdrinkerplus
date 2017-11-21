@@ -20,6 +20,9 @@ let app = angular.module('myApp', []);
 app.controller('myCtrl', [
   '$scope',
   function($scope) {
+    $.get("https://ip-api.com/json", function (response) {
+      console.log(response);
+    });
     jQuery(document).ready(function(){
       $scope.ratingClick = function(id,name) {
         //console.log("in modal click");
@@ -99,37 +102,21 @@ app.controller('myCtrl', [
             $scope.isLoading = 1;
             for(i = 0; i < $scope.barList.length; i++){
               //console.log(i);
-              ratings.find({
+              query.find({
                 query: {
-                  barId: $scope.barList[i].id,
-                  $limit: 1000
+                  rawQuery: "SELECT AVG(rating) as ratingAvg, COUNT(rating) as ratingCount, barId FROM test.ratings WHERE barId = "+$scope.barList[i].id+";"
                 }
-              }).then(function(response2) {
+              }).then(response2 =>  {
                 $scope.$apply(()=> {
-
-                  let j;
-                  let m;
-                  let ratingAvg = [];
-                  for(j = 0; j < response2.data.length; j++) {
-                    let ratingSum = 0;
-                    for(m = 0; m < j+1; m++) {
-                      ratingSum += response2.data[m].rating;
-                    }
-                    response2.data[j].ratingAvgAtPoint = (((ratingSum/m)*100)/5).toPrecision(4);
-                  }
-                  //console.log(response2.data);
-                  //console.log(ratingAvg);
-                  let k;
-                  let l;
-                  for(k=0;k<$scope.barList.length;k++){
-                    for(l=0;l<response2.data.length;l++){
-                      if($scope.barList[k].id == response2.data[l].barId) {
-                          $scope.barList[k].averageRating = response2.data[response2.data.length-1].ratingAvgAtPoint;
-                          $scope.barList[k].totalRatings = response2.data.length
-                      }
+                  console.log(response2)
+                  $scope.rating = response2[0];
+                  let i;
+                  for(i = 0; i < $scope.barList.length; i++){
+                    if($scope.barList[i].id == $scope.rating[0].barId)  {
+                      $scope.barList[i].averageRating = ((($scope.rating[0].ratingAvg)/5)*100).toPrecision(4);
+                      $scope.barList[i].numRatings = $scope.rating[0].ratingCount;
                     }
                   }
-                  //console.log($scope.barList);
                 });
               });
               barTimes.find({
@@ -247,19 +234,9 @@ app.controller('myCtrl', [
             //console.log(new Date());
 
           });
-          if($scope.barList.length < 100 && $scope.barList.length > 10) {
             setTimeout(function(){
               $scope.isLoading = 0;
-            }, 3000);
-          }
-          else if ($scope.barList.length > 100) {
-            setTimeout(function(){
-              $scope.isLoading = 0;
-            }, 5000);
-          }
-          else {
-            $scope.isLoading = 0;
-          }
+            }, ($scope.barList.length)*7);
       });
 
 

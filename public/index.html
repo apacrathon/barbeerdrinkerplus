@@ -109,8 +109,8 @@
 
           <div class="col-lg-6" id="searchBarsHover" ng-submit="submit()">
             <form id="mainSearchForm" href="searchResults">
-              <input id="mainSearchBar" type="text" ng-model="mainSearch" name="mainSearch" class="form-control" placeholder="Search for a bar (Ex: ">
-              <input id="mainSearchBar2" type="text" class="form-control" placeholder="Near this (Ex. City, State, Zip)">
+              <input id="mainSearchBar" type="text" ng-model="mainSearch" name="mainSearch" class="form-control" placeholder="Search for a bar (Ex: Golden Rail Pub) ">
+              <input id="mainSearchBar2" type="text" class="form-control" placeholder="OR City Name (Ex: New York)">
               <input type="submit" hidden="true">
             </form>
           </div>
@@ -171,7 +171,7 @@
                     </div>
                   </div>
                 </div>
-                <p style="font-size:1em;margin-top:-23px;margin-left:140px;">{{x.totalRatings}} Total Ratings</p>
+                <p style="font-size:1em;margin-top:-23px;margin-left:140px;">{{x.numRatings}} Total Ratings</p>
               </div>
               <h4>Attire: {{x.attire}} | Capacity: {{x.capacity}}</h4>
               <h4>Typical Crowd: {{x.typicalCrowd}}</h4>
