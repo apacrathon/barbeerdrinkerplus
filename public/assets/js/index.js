@@ -16,6 +16,7 @@ $(document).ready(function() {
   jQuery('.allFriends').select2({
     minimumInputLength: 2
   });
+  jQuery('.allCities').select2();
 
   jQuery('#oldDrinkerButton').click(function() {
     jQuery('#oldDrinkerForm').removeClass().addClass("modalFormShown");
