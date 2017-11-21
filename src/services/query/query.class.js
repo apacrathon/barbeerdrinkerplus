@@ -17,6 +17,10 @@ class Service {
   }
 
   find (params) {
+    if (params.query.rawQuery.substr(0, 6).toLowerCase("select")) {
+      throw Error("Received a restricted query. Rejecting request...");
+      return Promise.reject("Your query was not processed for security reasons.");
+    }
     return sequelize.query(params.query.rawQuery, { type: sequelize.QueryTypes.RAW })
       .then(result => { return [result[0]]; });
   }
