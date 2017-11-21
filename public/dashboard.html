@@ -140,13 +140,8 @@
             <td data-title="'Age'" sortable="'age'" filter="{ 'age': 'text' }">
               {{r.age}}
             </td>
-            <td data-title="'Gender'" sortable="'gender'" filter="{ 'gender': 'text' }">
-              <div ng-if="r.gender == 1">
-                Male
-              </div>
-              <div ng-if="r.gender == 0">
-                Female
-              </div>
+            <td data-title="'Gender'" sortable="'gender'" filter="{ 'genderString': 'text' }">
+              {{r.genderString}}
             </td>
             <td data-title="'State'" sortable="'state'" filter="{ 'state': 'text' }">
               {{r.state}}
@@ -167,7 +162,7 @@
             <td data-title="'Drinker'" sortable="'drinkerId'" filter="{ 'name': 'text' }" style="width:50%">
               {{r.name}} - {{r.drinkerId}}
             </td>
-            <td data-title="'Rating'" sortable="'rating'" style="width:20%" filter="{ 'rating': 'number' }">
+            <td data-title="'Rating'" sortable="'rating'" style="width:20%" filter="{ 'rating': 'text' }">
               {{r.rating}}
             </td>
             <td data-title="'Date Time'" sortable="'ratingDay'" filter="{ 'ratingDay': 'text' }" style="width:30%">
@@ -186,7 +181,7 @@
             <td data-title="'Check In'" sortable="'checkInTime'" style="width:20%" filter="{ 'checkInTime': 'text' }">
               {{r.checkedInAtDate}} {{r.checkedInAtTime}}
             </td>
-            <td data-title="'Day Of the Week'" sortable="'checkInDay'" style="width:20%" filter="{ 'checkInTime': 'text' }">
+            <td data-title="'Day Of the Week'" sortable="'checkInDay'" style="width:20%" filter="{ 'dayOfWeek': 'text' }">
               {{r.dayOfWeek}}
             </td>
           </tr>

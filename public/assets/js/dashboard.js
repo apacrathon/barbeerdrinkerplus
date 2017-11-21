@@ -216,6 +216,17 @@ managerApp.controller('managerGraphs', [
       }).then(response => {
         $scope.$apply(() => {
           $scope.frequentingDrinkers = response[0];
+          for(let c = 0; c < $scope.frequentingDrinkers.length; c++) {
+            if($scope.frequentingDrinkers[c].gender == 1) {
+              $scope.frequentingDrinkers[c].genderString = 'M';
+            }
+            else if($scope.frequentingDrinkers[c].gender == 0) {
+              $scope.frequentingDrinkers[c].genderString = "F"
+            }
+            else {
+              $scope.frequentingDrinkers[c].genderString = "";
+            }
+          }
           $scope.frequentsTable = new NgTableParams({
             page: 1,
             count: 15

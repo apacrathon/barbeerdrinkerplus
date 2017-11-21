@@ -88,7 +88,7 @@ app.controller('myCtrl', [
         jQuery('#allCitiesDropDown').removeClass().addClass("modalFormHidden");
         jQuery('#allCitiesDropDown').removeClass().addClass("modalFormShown");
       };
-      jQuery('select').on("change",function() {
+      jQuery('.allCities').on('select2:close',function() {
         var inputCity = jQuery(this).val();
         //jQuery("#topRatedSearchForm")[0].reset();
         jQuery('#topResultsSpinner').removeClass().addClass("modalFormShown");
@@ -158,37 +158,38 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(()=> {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
-                      $scope.barList[i].daysList = '';
+                  let b;
+                  for(b = 0; b < $scope.barList.length; b++) {
+                    if($scope.barList[b].id === response.data[0].barId){
+                      $scope.barList[b].daysList = '';
                       for(var k = 0; k < response.data[0].day.length; k++){
                         if(response.data[0].day[k] == 1) {
                           switch(k) {
                             case 0:
-                              $scope.barList[i].daysList += 'S ';
+                              $scope.barList[b].daysList += 'S ';
                               break;
                             case 1:
-                              $scope.barList[i].daysList += 'M ';
+                              $scope.barList[b].daysList += 'M ';
                               break;
                             case 2:
-                              $scope.barList[i].daysList += 'T ';
+                              $scope.barList[b].daysList += 'T ';
                               break;
                             case 3:
-                              $scope.barList[i].daysList += "W ";
+                              $scope.barList[b].daysList += "W ";
                               break;
                             case 4:
-                              $scope.barList[i].daysList += "TH ";
+                              $scope.barList[b].daysList += "TH ";
                               break;
                             case 5:
-                              $scope.barList[i].daysList += "F ";
+                              $scope.barList[b].daysList += "F ";
                               break;
                             case 6:
-                              $scope.barList[i].daysList += "SA ";
+                              $scope.barList[b].daysList += "SA ";
                           }
                         }
                       }
-                      $scope.barList[i].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
-                      $scope.barList[i].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
+                      $scope.barList[b].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
+                      $scope.barList[b].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
 
                       let openTime = new Date();
                       openTime.setHours(response.data[0].startTime[0]+''+response.data[0].startTime[1],response.data[0].startTime[3]+''+response.data[0].startTime[4],response.data[0].startTime[6]+''+response.data[0].startTime[7]);
@@ -198,35 +199,50 @@ app.controller('myCtrl', [
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 2;  //TUESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 3;  //WEDNESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 4;  //Thursday
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 5;  //FRIDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                     }
@@ -255,7 +271,7 @@ app.controller('myCtrl', [
         jQuery('#allCitiesDropDown').removeClass().addClass("modalFormHidden");
         jQuery('#allCitiesDropDown').removeClass().addClass("modalFormShown");
       };
-      jQuery('select').on("change",function() {
+      jQuery('.allCities').on('select2:close',function() {
         var inputCity = jQuery(this).val();
         jQuery('#topResultsSpinner').removeClass().addClass("modalFormShown");
         query.find({
@@ -322,37 +338,38 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(()=> {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
-                      $scope.barList[i].daysList = '';
+                  let b;
+                  for(b = 0; b < $scope.barList.length; b++) {
+                    if($scope.barList[b].id === response.data[0].barId){
+                      $scope.barList[b].daysList = '';
                       for(var k = 0; k < response.data[0].day.length; k++){
                         if(response.data[0].day[k] == 1) {
                           switch(k) {
                             case 0:
-                              $scope.barList[i].daysList += 'S ';
+                              $scope.barList[b].daysList += 'S ';
                               break;
                             case 1:
-                              $scope.barList[i].daysList += 'M ';
+                              $scope.barList[b].daysList += 'M ';
                               break;
                             case 2:
-                              $scope.barList[i].daysList += 'T ';
+                              $scope.barList[b].daysList += 'T ';
                               break;
                             case 3:
-                              $scope.barList[i].daysList += "W ";
+                              $scope.barList[b].daysList += "W ";
                               break;
                             case 4:
-                              $scope.barList[i].daysList += "TH ";
+                              $scope.barList[b].daysList += "TH ";
                               break;
                             case 5:
-                              $scope.barList[i].daysList += "F ";
+                              $scope.barList[b].daysList += "F ";
                               break;
                             case 6:
-                              $scope.barList[i].daysList += "SA ";
+                              $scope.barList[b].daysList += "SA ";
                           }
                         }
                       }
-                      $scope.barList[i].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
-                      $scope.barList[i].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
+                      $scope.barList[b].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
+                      $scope.barList[b].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
 
                       let openTime = new Date();
                       openTime.setHours(response.data[0].startTime[0]+''+response.data[0].startTime[1],response.data[0].startTime[3]+''+response.data[0].startTime[4],response.data[0].startTime[6]+''+response.data[0].startTime[7]);
@@ -362,35 +379,50 @@ app.controller('myCtrl', [
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 2;  //TUESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 3;  //WEDNESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 4;  //Thursday
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 5;  //FRIDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                     }
@@ -489,37 +521,38 @@ app.controller('myCtrl', [
                 }
               }).then(function(response) {
                 $scope.$apply(()=> {
-                  for(i = 0; i < $scope.barList.length; i++) {
-                    if($scope.barList[i].id === response.data[0].barId){
-                      $scope.barList[i].daysList = '';
+                  let b;
+                  for(b = 0; b < $scope.barList.length; b++) {
+                    if($scope.barList[b].id === response.data[0].barId){
+                      $scope.barList[b].daysList = '';
                       for(var k = 0; k < response.data[0].day.length; k++){
                         if(response.data[0].day[k] == 1) {
                           switch(k) {
                             case 0:
-                              $scope.barList[i].daysList += 'S ';
+                              $scope.barList[b].daysList += 'S ';
                               break;
                             case 1:
-                              $scope.barList[i].daysList += 'M ';
+                              $scope.barList[b].daysList += 'M ';
                               break;
                             case 2:
-                              $scope.barList[i].daysList += 'T ';
+                              $scope.barList[b].daysList += 'T ';
                               break;
                             case 3:
-                              $scope.barList[i].daysList += "W ";
+                              $scope.barList[b].daysList += "W ";
                               break;
                             case 4:
-                              $scope.barList[i].daysList += "TH ";
+                              $scope.barList[b].daysList += "TH ";
                               break;
                             case 5:
-                              $scope.barList[i].daysList += "F ";
+                              $scope.barList[b].daysList += "F ";
                               break;
                             case 6:
-                              $scope.barList[i].daysList += "SA ";
+                              $scope.barList[b].daysList += "SA ";
                           }
                         }
                       }
-                      $scope.barList[i].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
-                      $scope.barList[i].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
+                      $scope.barList[b].startTime = response.data[0].startTime[0]+''+response.data[0].startTime[1]+':'+response.data[0].startTime[3]+''+response.data[0].startTime[4];
+                      $scope.barList[b].endTime = response.data[0].endTime[0]+''+response.data[0].endTime[1]+':'+response.data[0].endTime[3]+''+response.data[0].endTime[4];
 
                       let openTime = new Date();
                       openTime.setHours(response.data[0].startTime[0]+''+response.data[0].startTime[1],response.data[0].startTime[3]+''+response.data[0].startTime[4],response.data[0].startTime[6]+''+response.data[0].startTime[7]);
@@ -529,35 +562,50 @@ app.controller('myCtrl', [
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 2;  //TUESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 3;  //WEDNESDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 4;  //Thursday
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                       j = 5;  //FRIDAY
                       if(response.data[0].day[j]) {
                         let currentTime = new Date();
                         if(currentTime > openTime && currentTime < closeTime && currentTime.getDay() == j) {
-                          $scope.barList[i].isHappyHour = 1;
+                          $scope.barList[b].isHappyHour = 1;
+                        }
+                        else {
+                          $scope.barList[b].isHappyHour = 0;
                         }
                       }
                     }
@@ -619,11 +667,12 @@ $(document).ready(function() {
       barName: barName,
       drinkerId: drinkerId,
       rating: rating
-    }).catch(error => {
-      alert(error.message);
     }).then(response => {
       alert("Successfully submitted rating for " + barName + ".");
+    }).catch(error => {
+      alert(error.message);
     });
+    return false;
   });
   jQuery('#newDrinkerRatingForm').submit(function() {
     const drinkerName = document.getElementById('inputName').value;
@@ -663,6 +712,7 @@ $(document).ready(function() {
         });
       });
     }
+    return false;
   });
 
   jQuery('#oldDrinkerCheckInForm').submit(function() {
@@ -682,6 +732,7 @@ $(document).ready(function() {
     }).catch(error => {
       alert(error.message);
     });
+    return false;
   });
 
   jQuery('#newDrinkerCheckInForm').submit(function() {
@@ -715,6 +766,7 @@ $(document).ready(function() {
     }).catch(error => {
       alert(error.message);
     });
+    return false;
   })
 
 });

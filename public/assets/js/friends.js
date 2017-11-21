@@ -26,7 +26,7 @@ friendsApp.controller('drinkersList', [
 friendsApp.controller('friendsList', [
   '$scope',
   function($scope) {
-    $('select').on("change",function() {
+    $('.allFriends').on('select2:close',function() {
       var drinkerVal1 = $(this).val();
       jQuery('#networkSpinner').removeClass().addClass("modalFormShown");
       drinkerVal1 = drinkerVal1.split(',');
