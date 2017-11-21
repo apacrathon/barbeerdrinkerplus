@@ -105,7 +105,7 @@
 
 #searchResultsDiv {
   overflow:scroll;
-  height:500px;
+  max-height:500px;
   margin: auto;
 }
 
@@ -118,7 +118,7 @@
 
 .whiteBg {
   color: #444444;
-  background: #f7f7f7;
+  background: #ffffff;
 }
 
 .followingBarsList {
