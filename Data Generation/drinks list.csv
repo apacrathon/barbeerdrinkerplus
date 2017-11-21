@@ -1,0 +1,201 @@
+﻿DrinkID,Drink Name,type 
+0,Abita Turbodog,Beer
+1,Alaskan Amber,Beer
+2,Anheuser-Busch ,Beer
+3,Bards Tale,Beer
+4,Boulevard Pale Ale,Beer
+5,Angry Orchird,Beer
+6,Budweiser,Beer
+7,Coors light,Beer
+8,Goodse Island IPA,Beer
+9,Corona,Beer
+10,Heineken,Beer
+11,Miller Lite,Beer
+12,Bud Light ,Beer
+13,Yuengling,Beer
+14,Modelo Especial,Beer
+15,Michelob Ultra Light,Beer
+16,Guiness Draught,Beer
+17,Dead Guy Ale,Beer
+18,Punkin Ale,Beer
+19,Maharaja,Beer
+20,Ranger,Beer
+21,Samual Adams Lager,Beer
+22,Newcastle Brown Ale,Beer
+23,Zima,Beer
+24,Desperados,Beer
+25,Beck's,Beer
+26,Bud Light Lime,Beer
+27,Amstel Light,Beer
+28,Boddingtons,Beer
+29,Chimay Premiere,Beer
+30,Weissiber,Beer
+31,Dos Equis,Beer
+32,Harp,Beer
+33,Molson Ice,Beer
+34,Labatt Blue,Beer
+35,Samual Smith's Porter,Beer
+36,Peroni,Beer
+37,Moose Drool,Beer
+38,Sam Adams Light,Beer
+39,Blue Moon,Beer
+40,Fat Tire Ale,Beer
+41,Hefeweizen,Beer
+42,Foster's Lager,Beer
+43,Bass Ale,Beer
+44,Victoria Bitter,Beer
+45,Cerveza Quilmes,Beer
+46,Skol,Beer
+47,Angkor Beer,Beer
+48,Snow Beer,Beer
+49,Pilsner Urquell,Beer
+50,Carlsberg,Beer
+51,St. George Lager,Beer
+52,Kingfisher,Beer
+53,Bintang Beer,Beer
+54,Goldstar,Beer
+55,Red Stripe,Beer
+56,Asahi,Beer
+57,Tusker,Beer
+58,Beerlao,Beer
+59,Murree Beer,Beer
+60,Tiger Beer,Beer
+61,Hite,Beer
+62,Brahma Beer,Beer
+63,Harpoon Cider,Beer
+64,Shipyard Pumpkinhead Ale,Beer
+65,Southern Tier India Pale Ale,Beer
+66,Demented Scarlet Knight,Beer
+67,Manger's Irish Cider,Beer
+68,Allagash White,Beer
+69,Victory Brewing Hop Devil,Beer
+70,Black 'N Tan,Beer
+71,Hofbrau,Beer
+72,Sierra Nevada Nooner Pilsner,Beer
+73,Southern Tier Pumking,Beer
+74,Harpoon UFO Big Squeeze,Beer
+75,Lost Abbey Inferno Ale,Beer
+76,Stella Artois,Beer
+77,Anderson Valley Blood Orange,Beer
+78,Founders All Day IPA,Beer
+79,Sixpoint Sweet Aciton,Beer
+80,Oskar Blues Dale's Pale Ale,Beer
+81,Old Style,Beer
+82,Special Export,Beer
+83,Whitetail Wheat,Beer
+84,Creamy Dark,Beer
+85,Red Lager,Beer
+86,Northwoords Lager,Beer
+87,Honey Brown,Beer
+88,Honey Wheat,Beer
+89,Original,Beer
+90,Dogfish Head,Beer
+91,Rolling Rock,Beer
+92,Beck's Brewery,Beer
+93,Alaskan Pale,Beer
+94,Anchor Old Foghorn,Beer
+95,Henry Weinhard's Amber Ale,Beer
+96,Golden Gate Orginal Brown Ale,Beer
+97,Celis White,Beer
+98,Brooklyn Brown Ale,Beer
+99,Tecate,Beer
+100,Blue Hawaiian ,Cocktail
+101,Irish Peach Sour,Cocktail
+102,Raspberry Cosmo,Cocktail
+103,Applebee's Bahama Mama,Cocktail
+104,Bourbon + Berries,Cocktail
+105,Mango Summer Squeeze,Cocktail
+106,Fireball Whisky Lemonade,Cocktail
+107,Highball,Cocktail
+108,Scotch and Soda,Cocktail
+109,Whiskey and Water,Cocktail
+110,Rum and Coke,Cocktail
+111,Cuba Libre,Cocktail
+112,Gin and Tonic,Cocktail
+113,Presbyterian,Cocktail
+114,Gin Rickey,Cocktail
+115,Old Fashioned,Cocktail
+116,Juice Type,Cocktail
+117,Bloody Mary,Cocktail
+118,Greyhound,Cocktail
+119,Salty Dog,Cocktail
+120,Screwdriver,Cocktail
+121,Harvey Wallbanger,Cocktail
+122,Tequila Sunrise,Cocktail
+123,Cape Cod,Cocktail
+124,Sea Breeze,Cocktail
+125,Bay Breeze,Cocktail
+126,Madras,Cocktail
+127,Sex On The Beach,Cocktail
+128,Slow Screw,Cocktail
+129,FireBall Shot,Shot
+130,Dreamsickle,Cocktail
+131,Toasted Almond,Cocktail
+132,Smith & Kerns,Cocktail
+133,Martini,Cocktail
+134,Gibson,Cocktail
+135,Manhattan,Cocktail
+136,Vodka Shot,Shot
+137,Jager Shot,Shot
+138,Rob Roy,Cocktail
+139,Jolly Rancher,Shot
+140,Mind Eraser,Shot
+141,Southern Comfort Manhattan,Cocktail
+142,Two Liquor Drinks,Cocktail
+143,B&B,Cocktail
+144,French Connection/ Beautiful,Cocktail
+145,Black Russian,Cocktail
+146,Dirty Mother,Cocktail
+147,Brave Bull,Cocktail
+148,White Russian,Cocktail
+149,Dirty White Mother,Cocktail
+150,White Bull,Cocktail
+151,Godfather,Cocktail
+152,Godmother,Cocktail
+153,Godchild,Cocktail
+154,Gimlet,Cocktail
+155,Vodka Gimlet,Cocktail
+156,Black Jamaican,Cocktail
+157,Rusty Nail,Cocktail
+158,Stinger,Cocktail
+159,Colorado Bulldog,Cocktail
+160,Rootbeer Float,Cocktail
+161,Short Sours,Cocktail
+162,Whiskey Sour,Cocktail
+163,Daiquiri,Cocktail
+164,Bacardi Cocktail,Cocktail
+165,Margarita,Cocktail
+166,Irish Car Bomb,Shot
+167,Long Island Iced Tea,Cocktail
+168,Tokyo Tea,Cocktail
+169,Lemonade,Cocktail
+170,Electric Lemonade,Cocktail
+171,Adios,Cocktail
+172,Lynchburg Lemonade,Cocktail
+173,Frozen Daiquiri Slush,Cocktail
+174,Bourbolicious Slush,Cocktail
+175,Exotic Drinks,Cocktail
+176,Mai Tai,Cocktail
+177,Zombie,Cocktail
+178,Green Zombie,Cocktail
+179,Singapore Sling,Cocktail
+180,Fog Cutter,Cocktail
+181,Tequila Shot,Shot
+182,Hurricane,Cocktail
+183,Planter's Punch,Cocktail
+184,Rum Runner,Cocktail
+185,Bahama Mama,Cocktail
+186,Pina Colada,Cocktail
+187,Chi Chi,Cocktail
+188,Sake Bomb,Shot
+189,B-52,Shot
+190,Mudslide,Cocktail
+191,Depth Charge,Cocktail
+192,Lemon Drop,Shot
+193,Kamakazi Shot,Shot
+194,Poppers/Slammers,Cocktail
+195,Snakebite,Cocktail
+196,Liquid Cocaine,Shot
+197,Oatmeal Cookie,Shot
+198,Cement Mixer,Cocktail
+199,Hot Shots,Shot

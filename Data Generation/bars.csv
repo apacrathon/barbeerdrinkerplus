@@ -1,0 +1,1001 @@
+barId,name,street,city,state,zipcode,capacity,attire,Accepts credit card,isGoodForGroups,hasWiFi,allowsSmoking,typicalCrowd
+0,Evil Roy Slades,7926 Nicolls Avenue ,Austin,TX,78730,335,Formal,1,0,0,0,Middle Age
+1,Western Ny Communications,874 Hilltop Dr. ,Villanova,PA,19085,125,Smart Casual,1,0,1,0,Young
+2,Brick House,8695 Old Edgewater Court ,Trenton,NJ,08608,145,Smart Casual,0,0,0,0,Middle Age
+3,Oak Room,774 Helen St. ,Austin,TX,78730,145,Smart Casual,0,0,0,0,Young
+4,Player's Night Club,9 Clay Dr. ,Boston,MA,01841,195,Smart Casual,0,1,0,0,Young
+5,Hanging Tree Saloon,9027 Edgewood Street ,Indianapolis,IN,46290,115,Smart Casual,0,0,0,0,Middle Age
+6,The Underdark Tavern,66 Rockville Street ,Washington,DC,20001,165,Formal,1,0,0,1,Old
+7,Eight To The Bar,20 West Cedar Street ,Brooklyn,NY,11249,195,Casual,1,0,0,0,Middle Age
+8,Sin Sin Leopard Lounge,743 Dunbar Lane ,Frankfort,KY,40601,190,Formal,1,1,0,0,Young
+9,Cowboy Bill,91 Spruce Street ,Las Vegas,NV,89134,130,Formal,1,0,1,0,Young
+10,Planet Pocono,54 Rock Maple Drive ,Nashville,TN,37201,175,Smart Casual,1,0,0,0,Young
+11,Meridan Night Club,7670 North Pheasant Street ,Norwalk,CA,90650,195,Casual,1,1,0,0,Young
+12,Nutmeg Leathercare,486 Saxton Drive ,Weston,MA,02493,130,Formal,1,0,1,0,Young
+13,Nob Hill Bar & Grill,9340 North Squaw Creek Lane ,Villanova,PA,19085,145,Casual,0,0,0,0,Young
+14,Spot Bar,50 Helen Street ,Great Falls,VA,22066,190,Formal,1,0,0,0,Young
+15,Holy Grail,768 Mayfair Drive ,Weston,MA,02493,130,Casual,0,0,0,0,Middle Age
+16,Military St Music Cafe,681 Glen Eagles Ave. ,Austin,TX,78730,105,Formal,1,0,0,0,Young
+17,Dallas Eagle,488 Riverview St. ,Oklahoma City,OK,73102,155,Formal,1,0,0,0,Middle Age
+18,Friepete Inc,8382 Fifth Ave. ,Miami,FL,33158,130,Smart Casual,0,0,0,0,Middle Age
+19,Chop Stix,869 Olive Dr. ,Fontana,CA,92335,135,Casual,1,0,0,0,Middle Age
+20,Saloon No 10,413 Columbia St. ,Dover,MA,02030,125,Casual,1,0,0,0,Middle Age
+21,Maxwell's Beach Cafe,7911 N. Amerige St. ,Richmond,VA,23218,290,Formal,0,0,0,0,Middle Age
+22,Two Bar West,76 Newbridge Ave. ,Salt Lake City,UT,84101,365,Casual,1,0,0,0,Middle Age
+23,Grata Bar & Lounge,25 North Cherry St. ,San Jose,CA,95120,140,Casual,0,1,0,0,Young
+24,Paradise Tiki Hut,94 Deerfield Drive ,Houston,TX,77084,105,Smart Casual,1,0,0,0,Middle Age
+25,Top Rail Ballroom,59 Airport Ave. ,Las Vegas,NV,89134,115,Casual,1,0,0,0,Middle Age
+26,Star Hotel,123 New Ave. ,Dallas,TX,75001,140,Casual,1,0,1,0,Young
+27,Tailgaters Bar Grill,9784 8th Dr. ,Trenton,NJ,08608,135,Casual,1,0,0,0,Middle Age
+28,NorthEnd Tavern,8080 Heritage Street ,Villanova,PA,19085,190,Formal,1,0,0,0,Middle Age
+29,Golden Burro Cafe & Lounge,450 West San Pablo Avenue ,Weston,MA,02493,195,Casual,1,1,0,1,Young
+30,W. H. Frank Wine & Liquor Merchants; LTD,47 Smoky Hollow St. ,Iowa City,IA,52240,110,Formal,1,0,0,0,Middle Age
+31,Fraternal Order Of Eagles,726 Lincoln Drive ,Austin,TX,78730,120,Smart Casual,1,0,1,0,Young
+32,Circus Bar,60 Honey Creek Drive ,Dover,DE,19901,170,Casual,1,0,0,0,Middle Age
+33,Riskys Sports Bar & Grill,516 Fordham Street ,Dover,DE,19901,190,Formal,0,0,0,0,Middle Age
+34,Pounders Bar & Grill,8404 Green Ave. ,Austin,TX,78730,145,Formal,0,0,0,0,Middle Age
+35,Claddagh Irish Pub Lyndhurst,30 E. Briarwood St. ,Springfield,PA,19064,110,Formal,1,1,0,0,Young
+36,Shenanigans Bar & Grill,324 Elmwood Ave. ,Miami Beach,FL,33109,125,Casual,1,0,0,1,Old
+37,Pine Tavern Inc,774 Mill Pond Court ,Fontana,CA,92335,190,Smart Casual,0,0,1,0,Young
+38,El Corazon,618 West Greenview Ave. ,Great Falls,VA,22066,390,Casual,0,0,1,0,Young
+39,Denyce's Deli & Wine Shop,58 Creek St. ,Springfield,PA,19064,115,Smart Casual,0,0,0,0,Middle Age
+40,Cactus Moon Saloon,8983 Lyme Street ,Katy,TX,77449,170,Casual,0,0,0,1,Old
+41,Keenan's Irish Pub,473 Madison Rd. ,Oklahoma City,OK,73101,120,Formal,1,1,0,0,Young
+42,Tomas Leszczynski,643 New St. ,Atlanta,GA,30334,180,Formal,1,0,0,0,Middle Age
+43,Flanagan's Pub,7600 3rd St. ,Annapolis,MD,21401,145,Smart Casual,1,1,0,0,Young
+44,Brass Monkey,7465 Taylor Ave. ,Highland,MD,20777,180,Smart Casual,1,0,1,0,Young
+45,Orpheum Theatre,51 West St Margarets Court ,Austin,TX,78730,175,Casual,1,0,0,0,Young
+46,Silver Dollar,547 Gregory Drive ,Nashville,TN,37201,130,Casual,0,0,0,0,Middle Age
+47,Lake House,578 NE. Westport Ave. ,Boston,MA,01841,160,Casual,1,0,0,0,Middle Age
+48,Redroom,89 Somerset Drive ,Los Angeles,CA,90011,155,Formal,1,0,1,0,Young
+49,Station 4,934 Cedar Swamp Street ,Oklahoma City,OK,73101,180,Casual,1,0,1,0,Young
+50,Esquire Lounge,89 South Windfall St. ,Memphis,TN,38157,175,Formal,0,1,0,0,Young
+51,Boulevard,737 Oakwood St. ,Princeton Junction,NJ,08550,105,Formal,0,0,0,0,Young
+52,O'Sullivan's Sports Bar,638 W. Oak Meadow Lane ,Boston,MA,01841,170,Casual,1,0,0,0,Middle Age
+53,Braddocks Tavern Of Medford,8667 Canal Avenue ,Oklahoma City,OK,73101,150,Smart Casual,1,0,0,0,Young
+54,Mini Max Marble,295 E. Woodland St. ,Fontana,CA,92335,130,Casual,0,0,1,0,Young
+55,Computech Software Services,7867 Park Court ,Richmond,VA,23218,385,Formal,0,0,0,0,Young
+56,Molly's Pub & Shabeen,750 Lafayette Rd. ,Dover,DE,19901,175,Smart Casual,1,1,1,0,Young
+57,NU Towne Saloon,904 Vine Lane ,Memphis,TN,38157,125,Casual,1,0,1,0,Young
+58,Jack's Pub & Volley Ball Club,7100 Bridle Road ,Highland,MD,20777,175,Smart Casual,1,1,0,0,Young
+59,Blue Note Jazz Club,70 Silver Spear Lane ,Weston,MA,02493,160,Smart Casual,1,1,0,0,Young
+60,Brown Room At Congress Hall,821 Pulaski Street ,El Paso,TX,79936,105,Casual,1,0,0,0,Young
+61,Altamont Wine & Liquor,7 Old York Avenue ,Atlanta,GA,30334,185,Formal,0,0,1,0,Young
+62,Indigo Joe's Sports Pub & Bar,7524 Ridge Ave. ,Boston,MA,01841,115,Casual,1,1,0,0,Young
+63,Comedy City,8404 Ocean Ave. ,Trenton,NJ,08608,130,Casual,1,0,1,0,Young
+64,Euclid Tavern,286 Pumpkin Hill Drive ,Great Falls,VA,22066,385,Smart Casual,1,0,0,1,Old
+65,Fifth Avenue Billiards,798 High Street ,New York,NY,10029,140,Casual,1,0,1,0,Young
+66,Oxer Bar;,64 West Bow Ridge Circle ,Salt Lake City,UT,84101,360,Casual,1,0,0,0,Middle Age
+67,Tallahassee Comedy Zone,7858 Birchwood Dr. ,Chesapeake,VA,23320,275,Casual,1,0,0,0,Middle Age
+68,G's Lounge,971 Tarkiln Hill Avenue ,Illinois,IL,62701,160,Smart Casual,1,1,0,0,Young
+69,Women Wine And Weapons,9928 Green Hill Drive ,Norwalk,CA,90650,170,Smart Casual,1,0,0,0,Young
+70,Le Chic,993 East Bishop Ave. ,Nashville,TN,37201,105,Smart Casual,1,0,0,0,Young
+71,Tradesman Tavern Inc,877 Brown St. ,Sun City,AZ,85351,145,Casual,1,0,0,0,Middle Age
+72,Pit Stop,55 Galvin Rd. ,Great Falls,VA,22066,205,Casual,1,0,1,0,Young
+73,Pinnacle,12 St Margarets Lane ,Salt Lake City,UT,84101,190,Casual,1,0,0,0,Middle Age
+74,Reo's,8019 Wild Rose Circle ,Santa Fe,NM,87501,200,Casual,1,0,0,1,Old
+75,Kon Tiki Restaurant & Lounge,202 Carpenter Drive ,Oklahoma City,OK,73101,130,Smart Casual,0,1,0,0,Young
+76,Famous Philly's Beef & Beer,159 Willow Road ,Cross River,NY,10518,165,Casual,0,0,0,0,Middle Age
+77,Herbert's Billiards,19 W. 8th Lane ,Brooklyn,NY,11249,195,Formal,1,0,0,1,Old
+78,North Tavern,91 Middle River Street ,Illinois,IL,62701,155,Formal,1,0,1,0,Young
+79,Quality Bar,9 Lantern Lane ,Annapolis,MD,21401,140,Casual,0,0,0,0,Middle Age
+80,Harpos,513 Hilltop Avenue ,Las Vegas,NV,89134,130,Smart Casual,1,0,1,0,Young
+81,Dead Men's Den,564 Big Rock Cove Dr. ,Santa Fe,NM,87501,120,Formal,1,0,1,0,Young
+82,B B's Jazz Blues & Soup Inc,47 Thatcher Ave. ,Dover,MA,02030,175,Casual,1,0,0,0,Middle Age
+83,Big Nose Kate's Saloon,8360 Studebaker St. ,Durham,NC,27706,195,Smart Casual,1,0,1,0,Young
+84,Mexico Lindo,200 Van Dyke St. ,Houston,TX,77084,170,Smart Casual,1,0,0,0,Young
+85,BAR,32 Gainsway Dr. ,New York,NY,10029,185,Smart Casual,1,0,1,0,Young
+86,John Murray,39 North Cambridge St. ,Oklahoma City,OK,73101,175,Smart Casual,1,0,0,0,Young
+87,Cave,794 Wintergreen Street ,Dover,DE,19901,155,Smart Casual,1,0,0,0,Young
+88,Nd Tavern;,72 Brown Ave. ,Frankfort,KY,40601,115,Smart Casual,1,0,0,0,Young
+89,Town Wine Spirits,46 El Dorado Lane ,Dover,MA,02030,165,Casual,0,0,0,0,Young
+90,Claddagh Pub,71 Prince Drive ,Weston,MA,02493,160,Formal,1,1,0,0,Young
+91,Jim's Place,653 Aspen Road ,Santa Fe,NM,87501,110,Smart Casual,1,0,0,0,Young
+92,Thirsty Scholar,9114 Willow Lane ,Fontana,CA,92335,150,Casual,1,0,0,0,Young
+93,Bada Lounge,28 Windsor St. ,Santa Fe,NM,87501,200,Casual,1,1,0,0,Young
+94,Blue Martini Inc,198 Pumpkin Hill Ave. ,Memphis,TN,38157,155,Smart Casual,1,0,0,0,Young
+95,Kyle Johnson,7909 Country Club Lane ,Salt Lake City,UT,84101,230,Smart Casual,0,0,0,0,Young
+96,12th Man /Tennessee LLC,7379 Eagle Lane ,Indianapolis,IN,46290,105,Casual,1,0,0,0,Middle Age
+97,Sharileesjewelry,358 W. Ann St. ,Fontana,CA,92335,120,Casual,1,0,0,0,Middle Age
+98,Butler's Bar & Grill,9977 Holly Street ,Sun City,AZ,85351,185,Formal,1,0,0,0,Middle Age
+99,Bear's Den,91 Peachtree St. ,Great Falls,VA,22066,370,Smart Casual,1,0,1,0,Young
+100,LA Rumba,25 Vermont Dr. ,Salt Lake City,UT,84101,200,Formal,1,0,0,0,Young
+101,Gyms Sports Bar,7561 Briarwood Drive ,Princeton Junction,NJ,08550,175,Casual,1,0,1,0,Young
+102,Stagecoach,2 Thatcher Street ,Austin,TX,78730,180,Smart Casual,0,0,0,0,Young
+103,Circle Inn,8000 Fairway St. ,Washington,DC,20001,145,Smart Casual,1,0,0,0,Young
+104,Downtown Brown's,3 Bohemia Ave. ,Annapolis,MD,21401,190,Formal,1,0,1,0,Young
+105,Trackstirs Sports Bar & Grill,17 River Drive ,Indianapolis,IN,46290,120,Smart Casual,1,0,1,0,Young
+106,International Design Guild,42 Cedarwood Ave. ,Los Angeles,CA,90011,170,Smart Casual,1,0,0,1,Old
+107,Spot Lounge,87 Meadow Street ,New Brunswick,NJ,08901,155,Casual,1,1,1,0,Young
+108,Four Shadows,556 Lincoln Drive ,Houston,TX,77084,190,Formal,1,0,0,0,Young
+109,Jake's Place,761 State Street ,New Brunswick,NJ,08901,120,Casual,1,0,0,0,Young
+110,Room 710,45 Ivy Ave. ,Durham,NC,27706,110,Formal,0,0,1,0,Young
+111,Envie,9860 Manhattan St. ,San Jose,CA,95120,125,Casual,1,0,1,0,Young
+112,Preservation Public,37 10th Dr. ,Indianapolis,IN,46290,160,Casual,0,1,0,0,Young
+113,Tycoons,885 Whitemarsh Lane ,Oklahoma City,OK,73102,195,Smart Casual,1,0,0,0,Young
+114,B B Kings Blues Club,52 Indian Summer St. ,Richmond,VA,23218,190,Smart Casual,1,1,0,0,Young
+115,Auntie Mae's Parlor,767 Park St. ,Weston,MA,02493,135,Casual,1,0,0,1,Old
+116,Ice LAS Vegas,287 Fremont Ave. ,Trenton,NJ,08608,105,Smart Casual,1,0,1,0,Young
+117,Washington Street Pub Ltd,278 Peninsula Ave. ,Annapolis,MD,21401,125,Formal,0,1,1,0,Young
+118,Ernie Biggs Dueling Piano Bar,23 James Dr. ,Miami Beach,FL,33109,200,Formal,1,0,0,0,Young
+119,Juliann Kroboth,737 Monroe St. ,Richmond,VA,23218,155,Casual,0,0,1,0,Young
+120,Ballyhoo Tavern,8132 Carpenter Street ,Charlotte,NC,28105,200,Smart Casual,0,0,0,0,Young
+121,Little Miami Trading Company,53 Honey Creek Dr. ,Washington,DC,20001,140,Smart Casual,1,0,0,0,Young
+122,Ranch House,510 South Woodland Road ,Santa Fe,NM,87501,175,Smart Casual,1,0,0,0,Young
+123,Cman,541 Cross Street ,Cross River,NY,10518,150,Formal,1,0,0,0,Middle Age
+124,1099 Club,8408 Sleepy Hollow Lane ,Atlantic City,NJ,08401,190,Formal,1,1,1,0,Young
+125,Cheap Seats Sports Bar,290 Pendergast Court ,Kenilworth,IL,60043,180,Formal,1,0,0,0,Middle Age
+126,Papa Rocco's,785 6th Rd. ,Memphis,TN,38157,120,Casual,1,0,0,1,Old
+127,Lyzzard's Lounge,79 Tarkiln Hill St. ,Princeton Junction,NJ,08550,155,Smart Casual,1,1,0,0,Young
+128,Uncle Mick's,9814 Gainsway Ave. ,Charlotte,NC,28105,120,Casual,1,0,1,0,Young
+129,Corner Tap,7907 Wood Street ,Cross River,NY,10518,105,Formal,1,0,0,0,Young
+130,Patrick's Pub & Grill,878 E. Clark Rd. ,Los Angeles,CA,90011,140,Formal,1,1,0,0,Young
+131,Ovations,398 Sugar Lane ,Weston,MA,02493,180,Smart Casual,0,0,0,0,Young
+132,8 Second Saloon,510 West Thomas St. ,Las Vegas,NV,89134,150,Smart Casual,1,0,0,0,Young
+133,Diamond Billiards & Pub,115 Harrison Drive ,Springfield,PA,19064,175,Casual,1,1,1,0,Young
+134,Edmond Mukamal D.d.s,79 James Drive ,Brooklyn,NY,11249,120,Formal,1,0,0,0,Middle Age
+135,Kevins Bar & Grille,7059 Bayport Street ,San Jose,CA,95120,125,Casual,1,0,0,0,Middle Age
+136,Lamp Liter Club Inc,29 Miles Road ,Brooklyn,NY,11249,145,Smart Casual,1,1,0,0,Young
+137,H-BAR ENTERPRISES,7980 Griffin St. ,Nashville,TN,37201,170,Casual,1,0,0,0,Middle Age
+138,Best Beer Holdings;,68 Lexington Rd. ,Miami Beach,FL,33109,180,Smart Casual,1,0,1,0,Young
+139,Harbour,2 Prospect St. ,Austin,TX,78730,145,Formal,0,0,1,0,Young
+140,Doc's Club,30 Aspen St. ,Trenton,NJ,08608,155,Smart Casual,1,1,1,0,Young
+141,Northside Cafe Inc,9724 Westminster Ave. ,Salt Lake City,UT,84101,305,Smart Casual,1,0,1,0,Young
+142,Dragonfly Club,84 South Anderson Street ,Brooklyn,NY,11249,135,Smart Casual,1,1,0,0,Young
+143,Rudy's Food & Spirits,7949 Rock Creek Dr. ,Darien,CT,06820,145,Smart Casual,1,0,0,0,Young
+144,Marketing Strategy Planning,8933 Church St. ,Norwalk,CA,90650,130,Smart Casual,1,0,0,0,Young
+145,Zanzibar,9914 East Church Lane ,Boston,MA,01841,195,Casual,1,0,0,0,Middle Age
+146,Spikes Bar & Grill,7196 Shadow Brook Street ,Cross River,NY,10518,140,Smart Casual,0,0,1,0,Young
+147,Champion Billiards Cafe,179 North Tunnel Ave. ,Norwalk,CA,90650,155,Casual,0,0,0,0,Young
+148,Kilroy's Sports Bar,8603 Front Ave. ,Villanova,PA,19085,125,Formal,0,0,1,0,Young
+149,Big Chicks,656 Shady Rd. ,Los Angeles,CA,90011,135,Casual,1,0,0,0,Young
+150,Murray Hill Theatre,50 S. Bridle Street ,Brooklyn,NY,11249,185,Formal,1,0,0,0,Middle Age
+151,PINK FLAMINGO BAR & GRILL,26 Bay St. ,Weston,MA,02493,110,Formal,1,0,0,0,Middle Age
+152,Beerland,96 Atlantic Street ,El Paso,TX,79936,175,Casual,0,0,1,0,Young
+153,Chappy's Safari Lounge,2 Heritage Street ,Austin,TX,78730,195,Casual,1,1,1,0,Young
+154,National Coalition For Church Vocations,16 Logan Circle ,Boston,MA,01841,165,Smart Casual,1,0,0,0,Young
+155,Music Palace,4 Gregory Ave. ,San Jose,CA,95120,115,Formal,1,0,0,1,Old
+156,Ghoulardi's Bar & Grill,281 South Hall Rd. ,Charlotte,NC,28105,180,Smart Casual,1,0,0,0,Young
+157,Hoffman; Jeremy P,7445 Bay Meadows St. ,Dover,DE,19901,160,Formal,1,0,0,0,Young
+158,Barefoot,8664 Harrison St. ,Annapolis,MD,21401,105,Casual,1,0,0,1,Old
+159,Rockwood Music Hall,472 1st Avenue ,Great Falls,VA,22066,195,Formal,1,0,0,0,Middle Age
+160,Atomic Cantina,9465 Court St. ,Annapolis,MD,21401,180,Smart Casual,1,0,0,0,Young
+161,Melnitsky; Patricia,6 County Street ,Nashville,TN,37201,140,Casual,1,0,0,0,Middle Age
+162,V,61 George St. ,Oklahoma City,OK,73102,145,Formal,1,0,0,0,Young
+163,Uncle Albert's Pub,570 Littleton Street ,Atlanta,GA,30334,165,Casual,1,1,1,0,Young
+164,Fairmont Bar And Dining,5 West Armstrong Ave. ,Frankfort,KY,40601,170,Smart Casual,1,0,0,0,Young
+165,Highland House Cafe,9870 S. Armstrong Avenue ,Atlanta,GA,30334,105,Formal,1,0,0,0,Young
+166,Saddle Club,56 Pennington Road ,Weston,MA,02493,180,Formal,1,1,1,0,Young
+167,Blind Willie's,99 SW. Stillwater Street ,Chesapeake,VA,23320,380,Formal,1,0,1,0,Young
+168,Ringler's Pub,106 Fordham Street ,Nashville,TN,37201,160,Smart Casual,1,1,1,0,Young
+169,Las Vegas Lounge,347 Main Lane ,Richmond,VA,23218,330,Smart Casual,0,1,0,0,Young
+170,Connection,733 Beaver Ridge Street ,Sun City,AZ,85351,130,Casual,1,0,1,0,Young
+171,Riverside Bar & Grill,853 East Linda Ave. ,Dover,DE,19901,180,Formal,1,0,1,0,Young
+172,Grand Central Club,97 Cypress St. ,Los Angeles,CA,90011,150,Casual,0,1,1,0,Young
+173,Phebe's,315 N. Pacific St. ,Atlantic City,NJ,08401,145,Casual,1,0,1,0,Young
+174,Wild Goose Bar & Grill,700 Cherry Hill Ave. ,Indianapolis,IN,46290,155,Formal,0,0,0,1,Old
+175,Mc Cabes Irish Bistro,96 Inverness Drive ,Darien,CT,06820,130,Smart Casual,1,0,0,0,Young
+176,Hump's Restaurant & Lounge,488 Sugar Street ,Dover,DE,19901,115,Formal,1,1,0,0,Young
+177,Rockne's Pub,196 Sugar Road ,Richmond,VA,23218,325,Casual,1,1,0,0,Young
+178,GREAT TREATS INC Dba MULLENS DAIRY BAR,9958 Indian Summer Ave. ,Richmond,VA,23218,265,Casual,0,0,0,1,Old
+179,Empire Club,35 Thatcher St. ,El Paso,TX,79936,115,Casual,1,1,0,0,Young
+180,Jimmy's Saloon,402 Birchwood Dr. ,New York,NY,10029,180,Smart Casual,1,0,0,0,Young
+181,Kefi,94 Golf Road ,Springfield,PA,19064,190,Smart Casual,1,0,1,0,Young
+182,Bar One-Level,8710 Woodsman Ave. ,San Jose,CA,95120,165,Formal,1,0,1,0,Young
+183,Traffic Club,754 Warren Street ,New York,NY,10029,105,Casual,1,1,0,0,Young
+184,Staticground,8353 8th Lane ,Salt Lake City,UT,84101,380,Formal,1,0,0,0,Middle Age
+185,The Grille,132 Tanglewood Road ,Darien,CT,06820,150,Casual,1,0,1,0,Young
+186,Crossroads Bar,Apt 5 ,Salem,OR,97301,115,Casual,1,0,0,0,Young
+187,BEECHVIEW BEER DISTRIBUTOR; INC.,8818 Greystone Dr. ,Boston,MA,01841,130,Smart Casual,1,0,1,0,Young
+188,Jimmie's Cornerstone Bar,481 Swanson Drive ,Princeton Junction,NJ,08550,155,Smart Casual,1,0,1,0,Young
+189,Caron Products,656 8th St. ,New York,NY,10029,145,Smart Casual,1,0,0,0,Young
+190,Ho DO Lounge,651 North Sherman Rd. ,Annapolis,MD,21401,155,Formal,1,1,0,0,Young
+191,Diva's Inc,59 Tanglewood Drive ,Brownsville,TX,78521,160,Smart Casual,0,0,1,0,Young
+192,Pike Place Bar & Grill,193 Rockledge Dr. ,Houston,TX,77084,195,Smart Casual,1,0,0,0,Young
+193,Exhale Bar & Grill,39 Clay Lane ,Fontana,CA,92335,145,Smart Casual,1,0,1,0,Young
+194,Wild Rose Tavern,9021 Ashley Lane ,Dover,DE,19901,170,Casual,1,0,1,1,Old
+195,Flossie's Bar & Grill,432 Pilgrim Street ,Boston,MA,01841,155,Formal,1,0,1,0,Young
+196,Kelly's Tavern,27 S. Durham Street ,Chesapeake,VA,23320,370,Smart Casual,1,0,0,0,Young
+197,Shenanigan's,614 Dunbar Street ,Fontana,CA,92335,185,Smart Casual,1,0,0,0,Young
+198,Christines Pit Stop,9404 Sheffield Lane ,Las Vegas,NV,89134,130,Formal,1,0,0,0,Middle Age
+199,Little Woodrows,8264 Mechanic Drive ,Washington,DC,20001,125,Smart Casual,1,0,1,0,Young
+200,J D's Key Club,570 East Yukon Drive ,Fontana,CA,92335,160,Formal,1,1,1,0,Young
+201,Charlie's Go-Go,168 East Lookout Road ,Dover,MA,02030,105,Casual,1,0,0,0,Young
+202,Cabana Jacks,957 Bear Hill Ave. ,Katy,TX,77449,175,Casual,1,0,0,0,Young
+203,Jr S Tavern,23 Foster Ave. ,Highland,MD,20777,120,Smart Casual,0,0,0,0,Young
+204,Madison Pub,366 Meadowbrook Avenue ,Austin,TX,78730,170,Smart Casual,1,1,0,0,Young
+205,Baha Rock Club,93 Edgefield Drive ,Washington,DC,20001,150,Smart Casual,1,1,0,0,Young
+206,Creature,9932 Ocean Road ,Annapolis,MD,21401,140,Casual,1,0,0,0,Middle Age
+207,Yaron Properties,40 Fordham St. ,Santa Fe,NM,87501,170,Casual,1,0,0,0,Middle Age
+208,C J's,7618 Country Club Street ,Oklahoma City,OK,73102,140,Smart Casual,0,0,0,0,Young
+209,We're Late And Smell Like Beer,8485 Yukon St. ,Nashville,TN,37201,190,Smart Casual,1,0,0,0,Young
+210,Elite Home Medical Supply,2 Bayport Ave. ,Trenton,NJ,08608,115,Casual,1,0,0,0,Middle Age
+211,Fitzgerald's,9408 Miller Drive ,Springfield,PA,19064,180,Smart Casual,1,0,0,0,Young
+212,North Bend Lanes Bowling Ctr,56 West Country Club Street ,Boston,MA,01841,175,Smart Casual,0,0,0,0,Young
+213,Mosaic,405 Annadale Ave. ,Memphis,TN,38157,120,Formal,1,0,0,0,Middle Age
+214,Campbell Station Wine And Spirits,79 Pilgrim Street ,Santa Fe,NM,87501,200,Formal,1,0,0,1,Old
+215,Vegas Caberet,7068 Miller Ave. ,Villanova,PA,19085,110,Formal,1,0,1,0,Young
+216,Indian Pass Raw Bar,876 SW. Gates St. ,New York,NY,10029,185,Smart Casual,1,0,1,0,Young
+217,Crow Bar Acres Enterprises,730 West 6th Avenue ,Boston,MA,01841,170,Smart Casual,1,0,0,0,Young
+218,Red Door,332 South Princeton St. ,Springfield,PA,19064,125,Casual,0,0,1,0,Young
+219,One 2 One,8382 Cherry Street ,Kenilworth,IL,60043,175,Casual,1,0,0,0,Middle Age
+220,New York City Comic Book Museum,9135 Victoria St. ,Atlantic City,NJ,08401,165,Smart Casual,1,0,0,0,Young
+221,Bulldog,36 Gregory Lane ,Atlantic City,NJ,08401,190,Casual,1,0,0,0,Young
+222,Villella's Bada Bing,23 Prospect St. ,Dover,MA,02030,160,Casual,0,0,0,1,Old
+223,Hog Heaven Sports Bar & Grill,482 Sugar St. ,El Paso,TX,79936,165,Formal,1,0,0,0,Young
+224,Press Box Sports Emporium,8 N. Columbia Street ,Richmond,VA,23218,270,Formal,0,0,0,0,Young
+225,Ticket,595 Birch Hill Dr. ,Atlanta,GA,30334,155,Smart Casual,1,0,0,0,Young
+226,Darby's Pub & Restaurant,8 South Saxton Ave. ,Princeton Junction,NJ,08550,115,Formal,1,1,0,0,Young
+227,Sro Sports Bar & Cafe,521 Fairview St. ,New York,NY,10029,165,Formal,1,0,0,0,Middle Age
+228,Comedy Circuit,7806 Belmont Dr. ,Atlantic City,NJ,08401,135,Smart Casual,0,0,1,0,Young
+229,Worldwide Wine & Spirits,156 North Beacon Court ,Los Angeles,CA,90011,150,Formal,1,0,0,0,Young
+230,Greenhouse Bar,9798 Brookside Rd. ,Miami Beach,FL,33109,105,Formal,0,0,1,0,Young
+231,Ocean Annie's Beach Bar,470 Middle River St. ,Norwalk,CA,90650,195,Formal,1,0,1,0,Young
+232,Fearon's Public House,208 Gulf Ave. ,Highland,MD,20777,200,Smart Casual,1,1,0,0,Young
+233,Caroline's Comedy Club,16 N. Canal St. ,Weston,MA,02493,165,Formal,1,1,0,1,Young
+234,Crazy Rock Gentlemens Club,526 Rosewood Street ,Memphis,TN,38157,195,Smart Casual,1,1,1,0,Young
+235,Heroes Sports Bar & Grille,7370 Snake Hill Street ,Princeton Junction,NJ,08550,160,Formal,0,0,1,0,Young
+236,Lew Inn,9687 SE. Tarkiln Hill St. ,Richmond,VA,23218,215,Casual,0,0,0,0,Middle Age
+237,Tops Liquor,95 Randall Mill Rd. ,Brownsville,TX,78521,110,Smart Casual,1,0,0,0,Young
+238,Botttom Line Saloon,9028 North Chestnut Street ,Miami Beach,FL,33109,110,Casual,1,0,1,0,Young
+239,Water Of Life Ministries,96 Bayport Dr. ,Frankfort,KY,40601,200,Casual,1,0,0,0,Middle Age
+240,Artful Dodger,9428 Sherwood Dr. ,Princeton Junction,NJ,08550,140,Smart Casual,1,0,1,0,Young
+241,P J Whelihans's Pub,28 West Schoolhouse St. ,Oklahoma City,OK,73102,130,Casual,1,1,0,0,Young
+242,Haven,8282 Manor Road ,Dallas,TX,75001,125,Smart Casual,1,0,1,0,Young
+243,Improv Comedy Club,322 Olive Lane ,Weston,MA,02493,115,Casual,1,1,0,0,Young
+244,B & W Contracting,626 W. Windfall St. ,Nashville,TN,37201,160,Casual,0,0,0,0,Young
+245,Ironhorse,1 South School St. ,Cross River,NY,10518,115,Casual,1,0,0,0,Middle Age
+246,Benchwarmer's Sports Bar,936 E. El Dorado St. ,Weston,MA,02493,170,Casual,0,0,0,0,Young
+247,Laughing Wench,8610 Middle River St. ,Darien,CT,06820,175,Smart Casual,1,0,0,0,Young
+248,Dixie's,177 Delaware Lane ,Boston,MA,01841,195,Casual,1,0,0,0,Young
+249,Up North Bar & Grill Inc,203 Wild Horse St. ,Oklahoma City,OK,73102,160,Formal,1,0,1,0,Young
+250,Old City Bar,8624 Ramblewood St. ,Nashville,TN,37201,150,Casual,1,0,1,0,Young
+251,Trails End,34 Peg Shop Street ,Fontana,CA,92335,190,Smart Casual,1,0,1,0,Young
+252,The Wine Co.,8572 Shore St. ,Dover,MA,02030,120,Formal,1,0,1,0,Young
+253,Tini Martini,7964 2nd Dr. ,Great Falls,VA,22066,225,Smart Casual,1,0,0,0,Young
+254,Wooden Nickel,7 Heritage St. ,Houston,TX,77084,400,Casual,1,0,0,0,Middle Age
+255,Harris Architects,8745 Roberts Rd. ,Charlotte,NC,28105,190,Formal,1,0,0,0,Young
+256,Bacchus,75 Hartford St. ,Santa Fe,NM,87501,165,Casual,1,0,1,0,Young
+257,Mwf Development Corporation,959 West Willow Lane ,Washington,DC,20001,135,Formal,0,0,0,0,Middle Age
+258,Mannahatta Restaurant & Lounge,9028 Church St. ,Dover,MA,02030,145,Smart Casual,1,1,1,0,Young
+259,Soular Productions,10 E. Livingston St. ,Fontana,CA,92335,195,Formal,1,0,0,0,Middle Age
+260,Florida Victorian Archtctrl,94 Oxford Street ,Salt Lake City,UT,84101,175,Casual,0,0,0,0,Middle Age
+261,Nighthawks Tap,54 Campfire Rd. ,Chicago,IL,60629,195,Smart Casual,1,0,0,0,Young
+262,Pure Platinum,18 East Gainsway Lane ,Chesapeake,VA,23320,315,Smart Casual,1,0,0,0,Young
+263,Concepts Unlimited,9063 Mayflower Court ,New Brunswick,NJ,08901,140,Smart Casual,1,0,0,0,Young
+264,Magoos Tavern,439 Wellington Court ,Memphis,TN,38157,180,Casual,1,0,1,0,Young
+265,LYN SIMS,485 8th Lane ,Dallas,TX,75001,195,Smart Casual,0,0,0,0,Young
+266,Lone Star Saloon,3 Second Court ,Atlanta,GA,30334,185,Smart Casual,1,0,1,0,Young
+267,Bojangles,61 E. Lafayette Rd. ,Houston,TX,77084,155,Casual,1,0,0,0,Young
+268,Hurricane Alley,866 Southampton Dr. ,Illinois,IL,62701,145,Casual,1,0,1,0,Young
+269,Showtime,18 River Lane ,Los Angeles,CA,90011,160,Smart Casual,1,0,0,0,Young
+270,Entourage Night Club,9940 SW. Ann Street ,Chesapeake,VA,23320,370,Formal,1,1,1,0,Young
+271,Aquarium,835 Peninsula Street ,Oklahoma City,OK,73101,190,Formal,1,0,0,0,Young
+272,IAMPIERI'S BAR,9652 Bohemia St. ,Atlantic City,NJ,08401,180,Formal,0,0,0,0,Young
+273,Bargainartusa,54 Myrtle St. ,Great Falls,VA,22066,340,Casual,1,0,0,0,Middle Age
+274,Mediknow Inc,33 W. Vernon Street ,Boston,MA,01841,180,Formal,1,0,0,0,Young
+275,Stone Church,702 Ivy Street ,Brownsville,TX,78521,150,Smart Casual,1,0,0,0,Young
+276,Jersey Sports Cafe,7481 Swanson Street ,Charlotte,NC,28105,130,Casual,1,0,0,0,Middle Age
+277,Rusty Nail,91 Hillside Ave. ,Salem,OR,97301,180,Smart Casual,1,0,1,0,Young
+278,Garage Door Bar & Grill,7963 Wakehurst Ave. ,Los Angeles,CA,90011,165,Casual,1,0,0,0,Young
+279,Inferno,Apt 99 ,Atlantic City,NJ,08401,155,Formal,1,0,0,0,Young
+280,Vince's Tavern,3 NE. Ivy St. ,Annapolis,MD,21401,140,Smart Casual,1,0,0,0,Young
+281,Pour House Pub,68 Main Ave. ,Las Vegas,NV,89134,120,Casual,1,1,0,0,Young
+282,Wogie's Bar & Grill,7 E. Summerhouse St. ,Fontana,CA,92335,180,Formal,1,0,0,0,Middle Age
+283,Time Out,9485 Inverness St. ,Atlantic City,NJ,08401,180,Formal,1,0,1,0,Young
+284,Grog Shop,85 Tailwater Road ,Richmond,VA,23218,185,Formal,0,0,0,0,Young
+285,JP's Bar,80 Birchwood Street ,Springfield,PA,19064,140,Formal,0,0,0,0,Middle Age
+286,Seville Quiter,8419 Rose Street ,El Paso,TX,79936,165,Formal,1,0,1,0,Young
+287,Overland Hotel & Saloon,7369 Old Creekside Lane ,Las Vegas,NV,89134,190,Casual,1,0,1,0,Young
+288,Bar Bar,544 Hudson St. ,Los Angeles,CA,90011,110,Casual,1,0,0,0,Middle Age
+289,Studio 59 Inc,8183 Carriage Street ,Villanova,PA,19085,140,Formal,1,0,0,0,Middle Age
+290,Chrismer Communications,767 Central Drive ,Boston,MA,01841,165,Smart Casual,1,0,1,0,Young
+291,Boheme Bistro,245 North Miles Dr. ,Memphis,TN,38157,105,Smart Casual,1,0,0,0,Young
+292,First Western Advisors,396 Brown Street ,Oklahoma City,OK,73102,135,Smart Casual,1,0,0,0,Young
+293,Headliner,870 West High Ridge Ave. ,Chicago,IL,60629,185,Formal,0,0,0,0,Middle Age
+294,Mulrooney's,85 North Bridle St. ,Trenton,NJ,08608,160,Formal,1,0,0,0,Middle Age
+295,Headliners Music Hall,91 Glenlake Street ,Salem,OR,97301,155,Formal,1,0,0,0,Middle Age
+296,Lodge Bar Cincinnati,7807 Creekside St. ,Oklahoma City,OK,73102,180,Casual,1,0,0,0,Middle Age
+297,Willies Saloon,8329 Elmwood St. ,Illinois,IL,62701,105,Casual,0,0,0,0,Young
+298,Whetstone Public House,7034 Glen Eagles Street ,Dover,MA,02030,180,Smart Casual,1,1,0,0,Young
+299,Boro Bar & Grill,231 Proctor Street ,Iowa City,IA,52240,160,Smart Casual,1,0,0,0,Young
+300,Henry's Bar & Grill,2 Liberty Dr. ,Dover,DE,19901,150,Formal,1,0,0,0,Middle Age
+301,Sidewinders,84 North Arch Court ,Houston,TX,77084,200,Formal,1,0,1,0,Young
+302,Dam Site Inn,752 West Selby Drive ,Atlantic City,NJ,08401,150,Smart Casual,1,0,1,0,Young
+303,Trolley's Downtown Bar & Grill,197 Paris Hill Street ,Kenilworth,IL,60043,155,Smart Casual,1,0,0,0,Young
+304,Second Wind,889 St Margarets Rd. ,Richmond,VA,23218,390,Smart Casual,0,0,1,0,Young
+305,Adams Beer Garden,562 Lawrence Street ,Weston,MA,02493,160,Casual,1,0,1,0,Young
+306,Stand-Up New York,84 Windsor St. ,Dallas,TX,75001,140,Smart Casual,0,0,0,0,Young
+307,Common Ground,47 Plymouth Rd. ,El Paso,TX,79936,180,Smart Casual,0,0,0,1,Old
+308,Nonstock Cycles,130 Lake Forest St. ,Fontana,CA,92335,155,Casual,1,0,0,0,Middle Age
+309,Combustionsystemssales,7681 Maiden Dr. ,New Brunswick,NJ,08901,130,Casual,1,0,0,0,Middle Age
+310,Harry''o Pest Control,840 Winding Way Drive ,Illinois,IL,62701,110,Casual,0,0,0,0,Middle Age
+311,Ponderosa Inn,18 E. Blackburn Lane ,Oklahoma City,OK,73101,165,Casual,1,0,0,0,Young
+312,Purple Moose Saloon,7267 Bay Drive ,Santa Fe,NM,87501,200,Smart Casual,0,0,0,0,Young
+313,Allie's,9532 Brookside St. ,Kenilworth,IL,60043,165,Smart Casual,0,0,1,0,Young
+314,Morehead Street Tavern,7353 East Pheasant Street ,Cross River,NY,10518,155,Formal,1,0,0,0,Middle Age
+315,Closet,677 Harvard Ave. ,Iowa City,IA,52240,110,Casual,1,0,0,0,Middle Age
+316,Bardenay,7622 Elmwood Dr. ,Austin,TX,78730,160,Casual,1,0,0,0,Middle Age
+317,Cactus Inn,14 East San Carlos Lane ,Salt Lake City,UT,84101,285,Smart Casual,1,0,1,0,Young
+318,Comedysportz DFW,7539 Mechanic Dr. ,Villanova,PA,19085,140,Casual,0,0,0,0,Middle Age
+319,Sully's Corner,9224 Wintergreen Ave. ,Villanova,PA,19085,180,Formal,1,0,1,0,Young
+320,Sawmill Saloon,9467 Bowman Ave. ,Chesapeake,VA,23320,200,Smart Casual,1,0,0,0,Young
+321,Fado Pubs Inc,7484 Vale Court ,Kenilworth,IL,60043,110,Smart Casual,1,1,0,0,Young
+322,Schooner Inc,63 Tunnel Court ,Washington,DC,20001,155,Casual,1,0,1,0,Young
+323,Bear Creek Saloon,9874 North Manchester Ave. ,Dallas,TX,75001,170,Casual,0,0,0,1,Old
+324,Double Door Inn,189 Talbot Court ,Great Falls,VA,22066,395,Formal,1,0,0,0,Middle Age
+325,Cold Spot,9397B Vale Street ,Richmond,VA,23218,200,Formal,1,0,0,0,Middle Age
+326,Dylan's Sports Bar & Grill,337 Heritage St. ,Las Vegas,NV,89134,155,Smart Casual,1,0,1,0,Young
+327,Johnny Mac's Scoreboard,9995 Wood Street ,El Paso,TX,79936,105,Smart Casual,1,0,0,0,Young
+328,Pace Environmental Clinic,28 Hawthorne St. ,Trenton,NJ,08608,135,Casual,1,0,0,0,Young
+329,Broadway Regency Restaurant,82 Blackburn Avenue ,Salem,OR,97301,190,Formal,1,0,0,0,Middle Age
+330,Corbo S Golden Bowl,8061 South Amerige St. ,Houston,TX,77084,115,Formal,1,0,0,0,Middle Age
+331,Full Moon,13 Shore Drive ,Kenilworth,IL,60043,125,Formal,1,0,0,0,Middle Age
+332,Residence Inn,679 S. Parker Dr. ,Oklahoma City,OK,73102,170,Formal,1,0,0,0,Middle Age
+333,Shady Nook Inn,9 E. 8th Ave. ,Oklahoma City,OK,73102,125,Casual,1,0,0,0,Middle Age
+334,Young's Fine Wine & Liquors,8255 Primrose Dr. ,Las Vegas,NV,89134,140,Casual,1,0,0,0,Young
+335,Borrowed Bucks Road House,10 Glenlake Dr. ,Illinois,IL,62701,145,Smart Casual,0,0,1,0,Young
+336,Fenton Bar & Grill,896 West Lancaster Road ,New Brunswick,NJ,08901,150,Smart Casual,1,0,0,0,Young
+337,Arnold's Deli,938 White Ave. ,Dover,DE,19901,140,Smart Casual,1,0,0,0,Young
+338,Clarke's At South Station,8207 Ryan Street ,El Paso,TX,79936,115,Smart Casual,0,0,0,0,Young
+339,Charcoals Graphics,402 Stillwater Road ,Cross River,NY,10518,140,Smart Casual,1,0,0,0,Young
+340,Broadstreet Cafe & Billiards,7830C Ridge Ave. ,Illinois,IL,62701,170,Smart Casual,1,0,0,0,Young
+341,Diamond,52 Wintergreen Street ,Charlotte,NC,28105,165,Casual,1,0,1,0,Young
+342,Monk's Bar & Grill,84 Summer Ave. ,Kenilworth,IL,60043,200,Formal,1,0,1,0,Young
+343,Bugsy's Speakeasy,960 Lake Drive ,Kenilworth,IL,60043,190,Formal,1,0,0,0,Middle Age
+344,Net Soft Usa Inc.,8224 Vine Street ,Nashville,TN,37201,115,Smart Casual,1,0,0,0,Young
+345,Northwoods Bar & Grill,80 Buckingham Ave. ,Darien,CT,06820,140,Smart Casual,1,0,1,0,Young
+346,Muggbees Bar & Grill,972 10th Dr. ,Brownsville,TX,78521,170,Formal,0,0,0,0,Middle Age
+347,Old Broadway Restaurant,8326 Catherine Ave. ,Weston,MA,02493,155,Smart Casual,1,0,1,0,Young
+348,Three Nines Tavern,9560 N. Bear Hill Dr. ,Atlantic City,NJ,08401,155,Formal,1,0,1,0,Young
+349,Mary's Outpost No 1,111 Newcastle Dr. ,Oklahoma City,OK,73102,190,Smart Casual,0,0,0,0,Young
+350,Holloway's Pub,139 Lancaster Ave. ,Las Vegas,NV,89134,175,Casual,1,1,0,0,Young
+351,Ocean Club Restaurant & Club,8207 Piper Dr. ,Los Angeles,CA,90011,195,Casual,1,1,0,0,Young
+352,Leather Stallion,99 James Street ,Chesapeake,VA,23320,260,Formal,1,0,0,0,Young
+353,Bonanza Bar & Grill,592 Kent Road ,Los Angeles,CA,90011,150,Smart Casual,1,0,0,0,Young
+354,Gary's Liquor Store,9835 Oakwood St. ,Sun City,AZ,85351,175,Smart Casual,1,0,0,0,Young
+355,Train Station,6 Hilltop Dr. ,Frankfort,KY,40601,200,Casual,1,0,0,0,Middle Age
+356,Mugsy's,649 Madison Dr. ,Miami Beach,FL,33109,165,Smart Casual,0,0,0,0,Young
+357,Murph's Other Bar,7215 Jones Drive ,Dover,DE,19901,110,Formal,1,0,0,0,Middle Age
+358,Up A Creek,1 Amherst St. ,Austin,TX,78730,175,Casual,1,0,0,0,Middle Age
+359,Murphy's Ale House,27 Creek St. ,Iowa City,IA,52240,170,Smart Casual,1,0,0,0,Young
+360,Boatyard Bar & Grill,803 Joy Ridge St. ,Richmond,VA,23218,205,Smart Casual,1,0,0,0,Young
+361,E & J Lounge,777 Selby Ave. ,Dover,MA,02030,160,Smart Casual,1,1,0,0,Young
+362,Crystal Inn,9688 Sleepy Hollow Street ,Kenilworth,IL,60043,160,Smart Casual,1,0,0,1,Old
+363,Hodkinson's Grill & Grocery,259 Front St. ,Frankfort,KY,40601,180,Casual,0,0,1,1,Old
+364,Finn's Pub,969 Poplar Street ,Santa Fe,NM,87501,150,Smart Casual,1,1,0,0,Young
+365,Comedy Cafe,72 Race Lane ,New Brunswick,NJ,08901,115,Formal,0,0,0,0,Middle Age
+366,Boomers,246 Cambridge Ave. ,Miami,FL,33158,140,Casual,1,0,0,0,Middle Age
+367,Tin Cups Tavern,34 El Dorado Ave. ,New Brunswick,NJ,08901,160,Casual,0,0,1,0,Young
+368,Boomer's Adult Entertainment,8316 Philmont Court ,Nashville,TN,37201,120,Formal,1,0,0,0,Middle Age
+369,Ghostriders Saloon,317 Blackburn St. ,Brooklyn,NY,11249,120,Smart Casual,1,0,0,0,Young
+370,Devereux,7300 Wentworth Court ,Las Vegas,NV,89134,115,Smart Casual,1,0,0,0,Young
+371,Sports Zone,8871 Stillwater St. ,Salem,OR,97301,135,Casual,1,0,0,0,Young
+372,Three Frogs Lounge,7327 W. Manhattan St. ,Dallas,TX,75001,145,Formal,1,1,0,0,Young
+373,Stardust,950 South Fawn Dr. ,Trenton,NJ,08608,165,Formal,1,0,0,0,Middle Age
+374,Alfred's,792 Pheasant Lane ,Illinois,IL,62701,135,Formal,0,0,0,0,Middle Age
+375,Clutch Cargo-Mill Street Entry,667 East Chapel Ave. ,Atlantic City,NJ,08401,150,Smart Casual,0,0,0,0,Middle Age
+376,Kingpin,8214 Birchwood Dr. ,Boston,MA,01841,120,Casual,1,0,1,0,Young
+377,Digital Machine Works,25 East Elmwood Ave. ,Durham,NC,27706,140,Formal,1,0,0,0,Middle Age
+378,Lost Creek Sky Ranch,52 Lakeshore St. ,Great Falls,VA,22066,300,Smart Casual,0,0,0,0,Middle Age
+379,Splinters From The Pine,8581 West Virginia Street ,Brooklyn,NY,11249,150,Smart Casual,1,0,0,0,Young
+380,Orion Sports Bar & Grill,8755 Devonshire St. ,Oklahoma City,OK,73102,145,Smart Casual,1,0,0,0,Middle Age
+381,House Of Rock,967 St Louis Lane ,Norwalk,CA,90650,170,Formal,1,0,0,0,Young
+382,J's Bar,152 Theatre Lane ,New York,NY,10029,145,Smart Casual,1,0,0,0,Middle Age
+383,Buffalo,707 Grant Street ,Durham,NC,27706,145,Smart Casual,1,0,0,0,Young
+384,Palladium Nightclub,949 Windfall St. ,Kenilworth,IL,60043,130,Formal,1,1,0,0,Young
+385,Light House,9015 Liberty St. ,Richmond,VA,23218,370,Casual,1,0,0,0,Middle Age
+386,Crystal Palace,968 Vernon St. ,Katy,TX,77449,155,Casual,1,0,0,0,Young
+387,Knock Knock Club,9676 Rockville Dr. ,Santa Fe,NM,87501,125,Casual,1,1,0,0,Young
+388,Kryptonite,803 Constitution Ave. ,Dover,DE,19901,170,Formal,1,0,1,0,Young
+389,801 Bourbon Bar,7039 Shub Farm St. ,Dover,DE,19901,110,Smart Casual,0,0,0,0,Young
+390,Airway Lounge,7305 Locust Lane ,Dover,DE,19901,195,Smart Casual,1,1,1,0,Young
+391,Deja Vu Of Hammond Inc,811 Arrowhead Avenue ,Villanova,PA,19085,175,Smart Casual,1,0,1,0,Young
+392,America's Bar & Grill,8498 Bayberry St. ,Cross River,NY,10518,180,Casual,0,0,0,0,Middle Age
+393,Tiernan's Pub & Restaurant,7044 Bridgeton Drive ,Great Falls,VA,22066,165,Smart Casual,1,1,1,0,Young
+394,Outskirts,73 N. Second Street ,Sun City,AZ,85351,190,Smart Casual,0,0,0,0,Middle Age
+395,Theater 168,416 Pawnee Rd. ,Katy,TX,77449,130,Smart Casual,0,0,0,0,Middle Age
+396,Hot Rods & Honeys,78 Leatherwood Lane ,Santa Fe,NM,87501,200,Formal,0,0,1,0,Young
+397,Azure Grille,8220 Golf St. ,Charlotte,NC,28105,125,Formal,1,0,0,0,Middle Age
+398,Jimmy's Restaurant & Night Clb,65 Courtland Drive ,Iowa City,IA,52240,190,Casual,1,0,1,0,Young
+399,Amber Inn,58 8th Drive ,Cross River,NY,10518,200,Formal,0,0,0,1,Old
+400,MONNOT; FREDERIC,275 Bayport Dr. ,Salem,OR,97301,120,Casual,1,0,0,0,Middle Age
+401,Country Luau Saloon,151 Temple Ave. ,Durham,NC,27706,135,Smart Casual,1,0,0,0,Middle Age
+402,Cosmopolitan,36 Airport St. ,Trenton,NJ,08608,160,Smart Casual,1,0,1,0,Young
+403,Scotty's Georgetown Lounge,9935 South Miles Drive ,Miami Beach,FL,33109,150,Casual,1,1,0,0,Young
+404,Crystal On The Plaza,533 Vine St. ,Iowa City,IA,52240,115,Smart Casual,0,0,0,0,Young
+405,Nutty's Pub & Casino,400 E. Pearl Street ,Dover,MA,02030,195,Formal,0,1,0,0,Young
+406,Mr B's,87 Swanson Street ,Atlanta,GA,30334,125,Smart Casual,0,0,1,0,Young
+407,Florida Bar,2 Railroad Street ,Richmond,VA,23218,285,Casual,0,0,0,0,Young
+408,Great Lakes Bar,9499 Temple Street ,Princeton Junction,NJ,08550,155,Formal,1,0,0,0,Middle Age
+409,Four Day Weekend Comedy Troup,8957 Joy Ridge Street ,Oklahoma City,OK,73101,120,Smart Casual,1,0,0,0,Middle Age
+410,Brewery,7083 Marsh St. ,Brownsville,TX,78521,375,Casual,0,0,0,0,Middle Age
+411,Go-Go Rama,9827 Newport St. ,Houston,TX,77084,130,Casual,1,0,0,0,Young
+412,Lost Village Saloon,52 N. Country St. ,Annapolis,MD,21401,110,Casual,0,0,0,0,Middle Age
+413,The Landing Bar Grill,9247 Cooper Street ,Trenton,NJ,08608,175,Smart Casual,1,0,1,0,Young
+414,Escape Ultralounge,8894 La Sierra Ave. ,Austin,TX,78730,120,Smart Casual,1,1,0,0,Young
+415,Casino El Camino Bar & Grill,834 Piper St. ,Indianapolis,IN,46290,155,Smart Casual,1,0,0,0,Young
+416,Chester Street Bar,669 Spruce St. ,Great Falls,VA,22066,265,Smart Casual,0,0,1,0,Young
+417,Bryant's Cocktail Lounge,7591 Stonybrook Drive ,Atlantic City,NJ,08401,115,Casual,1,1,0,0,Young
+418,Westgate Pub Grille & Billiard,67 Willow Ave. ,Illinois,IL,62701,185,Formal,1,1,1,0,Young
+419,Immersion Grafx,9079 Elm Street ,Las Vegas,NV,89134,195,Smart Casual,1,0,1,0,Young
+420,Zampa,8785 Rock Maple Avenue ,Illinois,IL,62701,180,Smart Casual,1,0,0,0,Middle Age
+421,J R Steakhouse,228 E. Vernon Circle ,Los Angeles,CA,90011,120,Formal,0,0,1,0,Young
+422,Fausto''s Markets,2 Armstrong St. ,Salt Lake City,UT,84101,310,Formal,1,0,1,1,Old
+423,Milwaukee St Tavern,12 Division Street ,Kenilworth,IL,60043,135,Casual,1,0,0,0,Young
+424,Rain,225 N. Richardson Street ,Atlanta,GA,30334,165,Formal,1,0,0,0,Young
+425,Transit Lounge,72 Carson Rd. ,Norwalk,CA,90650,165,Smart Casual,1,1,0,0,Young
+426,Bike Stop Inc,3 S. Honey Creek Street ,Villanova,PA,19085,105,Smart Casual,1,0,0,1,Old
+427,Charlie's Denver,471 Annadale Ave. ,Las Vegas,NV,89134,200,Smart Casual,1,0,0,0,Middle Age
+428,Monkey Bar,36 Cobblestone St. ,Frankfort,KY,40601,145,Casual,1,0,0,0,Middle Age
+429,Lannie's Clocktower Cabaret,985 Stillwater Drive ,Austin,TX,78730,115,Smart Casual,1,0,0,0,Middle Age
+430,Fillmore,978 Prince Circle ,Dover,MA,02030,175,Smart Casual,1,0,0,0,Middle Age
+431,Dallas Woody's,220 Hilldale Dr. ,Memphis,TN,38157,175,Casual,1,0,0,0,Young
+432,Titillations Go-Go Bar,564 Marconi St. ,Charlotte,NC,28105,120,Smart Casual,1,0,0,0,Middle Age
+433,Leff's Lucky Town,8103 Glenridge Ave. ,Austin,TX,78730,185,Casual,1,0,0,0,Young
+434,Nick's Road House,19 Saxton Dr. ,Atlanta,GA,30334,135,Casual,1,0,0,0,Young
+435,Gonzo's,9173 53rd Street ,Princeton Junction,NJ,08550,150,Casual,1,0,0,0,Middle Age
+436,City Wine Works Unlmt,9041 Pulaski Drive ,Highland,MD,20777,130,Casual,1,0,1,0,Young
+437,Shooter's 21,Suite 25 ,Indianapolis,IN,46290,195,Casual,1,0,1,0,Young
+438,Chilkoot Charlie's,40 Cypress Court ,Chicago,IL,60629,120,Formal,1,0,1,0,Young
+439,Brendee's Cafe,645 Woodside Ave. ,Norwalk,CA,90650,185,Formal,1,0,0,0,Young
+440,Scarlett's Inc,9403 Sussex Ave. ,Illinois,IL,62701,180,Casual,1,0,0,1,Old
+441,Mc Auliffe's Pub,92 Peninsula Road ,Indianapolis,IN,46290,115,Casual,1,1,1,0,Young
+442,Bucket Shop,680 Wood Dr. ,Villanova,PA,19085,160,Formal,1,0,0,0,Young
+443,Dawson Street Pub,8967 Randall Mill Dr. ,Fontana,CA,92335,200,Formal,1,1,1,0,Young
+444,R J Waters Pub,796 N. Catherine Avenue ,Atlanta,GA,30334,200,Formal,1,1,0,0,Young
+445,Js Writing Services,703 Railroad Street ,Brooklyn,NY,11249,125,Smart Casual,1,0,0,0,Middle Age
+446,Legends Patio Bar & Grille,9458 Tower Street ,Great Falls,VA,22066,260,Casual,1,0,0,0,Middle Age
+447,Lydia's,8645 S. Glen Creek St. ,Salt Lake City,UT,84101,220,Formal,0,0,0,0,Middle Age
+448,LA Fonda Hotel,187 Del Monte St. ,Princeton Junction,NJ,08550,150,Smart Casual,0,0,0,0,Middle Age
+449,Escapade,791 Bradford Lane ,Norwalk,CA,90650,130,Casual,1,0,0,0,Middle Age
+450,W O Wright's,743 W. Cedar Lane ,Brownsville,TX,78521,150,Smart Casual,1,0,0,0,Middle Age
+451,Wine Cellar,35 Oak Valley Street ,Oklahoma City,OK,73102,165,Casual,1,0,1,0,Young
+452,First Avenue & 7th St Entry,459 Cambridge Drive ,Miami Beach,FL,33109,105,Casual,1,0,0,0,Middle Age
+453,X O Bar,684 Brickyard Lane ,Houston,TX,77084,185,Casual,1,0,0,0,Young
+454,Laffs Comedy Caffe',745 Valley Farms Road ,Chicago,IL,60629,175,Smart Casual,1,0,1,0,Young
+455,Tavern In The Grove,453 Marsh Ave. ,Santa Fe,NM,87501,175,Smart Casual,1,0,0,0,Middle Age
+456,Anchor Bar,558 10th Dr. ,Brownsville,TX,78521,365,Casual,1,0,0,0,Middle Age
+457,Vito's On Penn,1 Bayberry Ave. ,Sun City,AZ,85351,115,Smart Casual,0,0,0,1,Old
+458,LOW,8803 Adams St. ,Salem,OR,97301,130,Smart Casual,1,0,0,0,Young
+459,Flatiron Lounge,19 S. 10th Ave. ,Washington,DC,20001,125,Casual,0,1,1,0,Young
+460,Cottage Bar,662 Catherine Lane ,Charlotte,NC,28105,185,Casual,1,0,0,0,Young
+461,Library Lounge,628 Ridgeview Lane ,Weston,MA,02493,195,Formal,0,1,0,0,Young
+462,Crobar,9191 Bayport Street ,Brooklyn,NY,11249,200,Formal,1,0,0,0,Young
+463,Minneapolis Eagle,35 Ramblewood St. ,Princeton Junction,NJ,08550,140,Smart Casual,1,0,0,0,Young
+464,Murphy's Law Irish Pub,99 Trusel St. ,Nashville,TN,37201,145,Casual,1,1,0,0,Young
+465,Stillwaters Inc,573 Thorne St. ,Frankfort,KY,40601,165,Formal,1,0,0,0,Young
+466,Bamboo Bernie's,81 Newcastle Drive ,Memphis,TN,38157,105,Casual,1,0,1,0,Young
+467,Empire Inc,688 Saxon Dr. ,Dover,MA,02030,165,Formal,1,0,0,0,Middle Age
+468,Water Street Music Hall,851 Valley View Dr. ,Dover,MA,02030,190,Formal,1,0,0,0,Young
+469,Bank,6 Cleveland St. ,Las Vegas,NV,89134,150,Formal,1,0,1,0,Young
+470,My Brothers Pub,67 Spring Street ,Chesapeake,VA,23320,170,Formal,0,1,1,0,Young
+471,Seattle Eagle Tavern,638 Lookout St. ,Weston,MA,02493,185,Smart Casual,0,0,1,0,Young
+472,Gaslight Bar & Grille,95 Linden Street ,Trenton,NJ,08608,110,Casual,1,0,0,0,Middle Age
+473,White's Bar,8305 South Peninsula St. ,El Paso,TX,79936,115,Formal,1,0,0,0,Young
+474,L'Esprit,7977 Snake Hill Drive ,Frankfort,KY,40601,150,Formal,0,0,1,0,Young
+475,Tommy Keegan's,86 South Selby Ave. ,New Brunswick,NJ,08901,175,Smart Casual,1,0,0,0,Young
+476,Scoop's Pub & Grill,948 High Point St. ,Atlantic City,NJ,08401,185,Casual,1,1,0,0,Young
+477,Pony Keg Grill & Bar,392 Heather Avenue ,Salt Lake City,UT,84101,265,Smart Casual,1,0,0,0,Middle Age
+478,Fionn Mac Cool's Irish Pub,9731 Sulphur Springs Street ,Los Angeles,CA,90011,170,Casual,1,1,0,0,Young
+479,Paradise Cafe,84 N. Devon St. ,Dover,MA,02030,185,Casual,0,0,1,0,Young
+480,Boy Bar,9 Hillcrest St. ,Highland,MD,20777,115,Casual,1,0,0,0,Middle Age
+481,Club Vibe Llc,904 Buttonwood St. ,Kenilworth,IL,60043,195,Formal,1,1,1,0,Young
+482,Essex Inn,672 Riverside Rd. ,Brownsville,TX,78521,160,Smart Casual,1,0,0,0,Middle Age
+483,Catbirds,66 East Avenue ,Indianapolis,IN,46290,120,Smart Casual,0,0,1,0,Young
+484,Sutton Place Bar & Restaurant,492 Silver Spear St. ,Oklahoma City,OK,73101,170,Casual,1,0,1,0,Young
+485,3 Crow Bar,72 Manhattan Circle ,Brownsville,TX,78521,135,Formal,1,0,0,0,Middle Age
+486,Eddie's Tavern,303 Thompson Court ,New Brunswick,NJ,08901,170,Smart Casual,1,0,0,0,Middle Age
+487,Schnauzers Bar & Grille,17 Sleepy Hollow St. ,Iowa City,IA,52240,185,Casual,1,0,0,0,Middle Age
+488,Champs,7108 Somerset Street ,Las Vegas,NV,89134,115,Smart Casual,1,0,1,0,Young
+489,Georges Younes,8936 Theatre Drive ,Dover,DE,19901,160,Smart Casual,1,0,0,0,Middle Age
+490,Ugly Dog Saloon,7928 West Race Drive ,New York,NY,10029,165,Casual,0,0,0,0,Middle Age
+491,Lucky Bar,166 West Saxon St. ,Miami,FL,33158,175,Formal,1,0,0,0,Middle Age
+492,Liberty Inn,9857 Arrowhead St. ,El Paso,TX,79936,305,Formal,0,0,0,0,Middle Age
+493,Cottage,34 Heather Rd. ,Miami Beach,FL,33109,200,Casual,1,0,0,0,Middle Age
+494,Filling Station,804 Woodsman Street ,Oklahoma City,OK,73102,150,Casual,1,0,0,0,Middle Age
+495,It's 'Bout Time,166 Pennington Ave. ,Oklahoma City,OK,73101,195,Formal,1,0,0,0,Middle Age
+496,Howl At The Moon Saloon,16 Lilac Drive ,Brownsville,TX,78521,170,Casual,1,0,0,0,Middle Age
+497,Ugly Monkey,450 Devon Ave. ,Kenilworth,IL,60043,120,Formal,1,0,0,0,Middle Age
+498,New Dodge Lounge,90 Trout Dr. ,Princeton Junction,NJ,08550,135,Smart Casual,1,1,0,0,Young
+499,Next Door,614 Redwood Road ,Cross River,NY,10518,130,Formal,0,0,1,0,Young
+500,Racers Cafe,51 Walnut Ave. ,Atlanta,GA,30334,140,Formal,1,0,0,0,Young
+501,Extra Innings,8950 West Hartford Street ,Miami,FL,33158,115,Formal,1,0,0,0,Middle Age
+502,Bedford Tavern,651 Fawn Circle ,Atlantic City,NJ,08401,135,Casual,1,0,1,0,Young
+503,Mac Swiney Club,392 Chestnut Street ,Indianapolis,IN,46290,150,Casual,0,1,0,0,Young
+504,Down Under Lounge,9535 West Mill Ave. ,Salem,OR,97301,130,Smart Casual,1,1,1,0,Young
+505,Al Hrabosky's Saloon,472 Grant Dr. ,Dover,MA,02030,170,Formal,1,0,0,0,Young
+506,Tillys Tavern,9566 Oakwood Drive ,Oklahoma City,OK,73101,165,Formal,1,0,1,0,Young
+507,Scarlet O'Hara's,5 Myers St. ,Nashville,TN,37201,175,Smart Casual,1,0,0,0,Young
+508,Neurolux Inc,7689 Griffin Street ,Atlantic City,NJ,08401,190,Smart Casual,1,0,0,0,Middle Age
+509,Hideaway,7818 South Inverness Lane ,Sun City,AZ,85351,115,Smart Casual,0,0,0,0,Middle Age
+510,Ocean Petroleum CO,318 North Courtland Street ,Los Angeles,CA,90011,180,Casual,0,0,1,0,Young
+511,Wise Fools Pub,104 Summit Road ,Princeton Junction,NJ,08550,175,Smart Casual,1,1,0,0,Young
+512,Georgie's Alibi Of St Pete,571 Wilson Drive ,Great Falls,VA,22066,180,Casual,1,0,0,1,Old
+513,Friendly Bar & Grill,397 Big Rock Cove Dr. ,Darien,CT,06820,155,Smart Casual,1,0,0,0,Middle Age
+514,Trophy Club,507 E. Dogwood St. ,Darien,CT,06820,180,Formal,1,1,1,0,Young
+515,Arlington Wine And Liquor,969 4th Street ,Brownsville,TX,78521,385,Formal,1,0,0,0,Middle Age
+516,Mulligan's Pub,88 Olive Road ,Great Falls,VA,22066,280,Casual,1,1,0,1,Young
+517,Blazing Saddle Inc,8428 Fifth St. ,Villanova,PA,19085,185,Casual,1,0,1,0,Young
+518,Cowboys Concert Hall-Atlanta,614 Cooper Street ,New Brunswick,NJ,08901,160,Smart Casual,1,0,1,0,Young
+519,Billabong Aussie Grill & Pub,221 Cooper Drive ,Richmond,VA,23218,360,Formal,1,1,0,0,Young
+520,Island Grill,705 North Woodsman Dr. ,Oklahoma City,OK,73102,180,Casual,1,0,1,1,Old
+521,Money,63 Fairground Street ,Darien,CT,06820,185,Smart Casual,1,0,1,0,Young
+522,Green Onion,8216 High Ridge Lane ,El Paso,TX,79936,130,Formal,1,0,1,0,Young
+523,Sportsman's Inn,7609 Greenrose St. ,Oklahoma City,OK,73101,120,Casual,0,0,1,0,Young
+524,New Image,59 Grand St. ,San Jose,CA,95120,110,Casual,1,0,0,0,Middle Age
+525,The Coroner Shop Inc,69 El Dorado St. ,Dallas,TX,75001,160,Casual,1,0,0,0,Young
+526,Bubble Room,7391 South Taylor Street ,Boston,MA,01841,175,Smart Casual,1,0,0,0,Young
+527,North Miami Ale House,288 Young Street ,New Brunswick,NJ,08901,170,Formal,1,0,0,0,Middle Age
+528,Copper Rocket Pub,86 Chestnut St. ,Chesapeake,VA,23320,235,Formal,1,1,1,0,Young
+529,Texas Arizona,9677 Van Dyke Ave. ,Chesapeake,VA,23320,330,Smart Casual,1,0,0,0,Middle Age
+530,Chemically Inbalanced Theater,8322 S. Young Drive ,Oklahoma City,OK,73101,150,Casual,1,0,0,0,Middle Age
+531,Somma Pizza & Sports Bar,8992 6th Lane ,Kenilworth,IL,60043,185,Smart Casual,1,0,0,0,Young
+532,Chris Nicoletto,124 Middle River St. ,Fontana,CA,92335,140,Smart Casual,0,0,1,0,Young
+533,Purple Pub,193 Lookout Court ,New Brunswick,NJ,08901,155,Smart Casual,1,1,0,0,Young
+534,Outback Jack's World Famous,103 East Sugar Lane ,Charlotte,NC,28105,200,Formal,1,0,1,0,Young
+535,Sextant Bar & Galley,21 Cedarwood Ave. ,Santa Fe,NM,87501,135,Formal,1,0,0,0,Middle Age
+536,Club Landing,912 Clark Ave. ,Washington,DC,20001,140,Casual,1,1,0,0,Young
+537,Dog House,704 Gates Court ,Miami Beach,FL,33109,110,Formal,1,0,1,0,Young
+538,Doc & Eddy's,8264 Myers St. ,Cross River,NY,10518,130,Casual,1,0,1,0,Young
+539,C. Brian Williams,731 La Sierra Drive ,Memphis,TN,38157,150,Casual,1,0,1,0,Young
+540,Sam's Restaurant,7105 Tarkiln Hill Circle ,Brooklyn,NY,11249,155,Smart Casual,1,0,0,0,Young
+541,Wayne Hotel,632 Winchester Ave. ,Miami,FL,33158,150,Formal,0,0,0,0,Middle Age
+542,Humpy's Great Alaskan Alehouse,10 Fifth Street ,Miami,FL,33158,115,Formal,0,0,1,0,Young
+543,Esquire Lounge Inc,339 South Miles Ave. ,Santa Fe,NM,87501,115,Smart Casual,1,1,0,0,Young
+544,Rusty Spur Saloon,52 Brook Dr. ,Santa Fe,NM,87501,105,Formal,1,0,0,0,Middle Age
+545,Masters,577 Coffee Ave. ,Oklahoma City,OK,73102,105,Casual,1,0,0,1,Old
+546,Gargoyles Saloon,9987 Bow Ridge Street ,Richmond,VA,23218,220,Formal,1,0,0,0,Middle Age
+547,Carmody's West,6 Ketch Harbour Drive ,Dover,DE,19901,180,Casual,1,0,0,0,Middle Age
+548,Driftwood Inn,8185 Washington St. ,Annapolis,MD,21401,105,Smart Casual,1,0,0,0,Middle Age
+549,Happy Days Cafe,290 Eagle Ave. ,Weston,MA,02493,120,Formal,1,0,0,0,Young
+550,Bar 35,25 E. Plumb Branch Road ,Memphis,TN,38157,160,Formal,1,0,1,0,Young
+551,Primetime,7955 Cedarwood Ave. ,Darien,CT,06820,165,Formal,1,0,1,0,Young
+552,Historic Revere Tavern; Inc.,648 Woodland Road ,Villanova,PA,19085,155,Formal,1,0,1,0,Young
+553,Custom Comedy Capers,234 Bayport Court ,Atlantic City,NJ,08401,185,Casual,1,0,0,0,Middle Age
+554,Wild Bill Saloon,8314 Catherine Road ,Springfield,PA,19064,125,Casual,1,0,1,0,Young
+555,Fat Pelican,337 Essex Ave. ,Miami Beach,FL,33109,115,Casual,1,0,0,0,Middle Age
+556,Arthur S Tavern,520 Wagon St. ,Annapolis,MD,21401,120,Formal,1,0,0,0,Middle Age
+557,Electric Cowboy,346 Valley Avenue ,Princeton Junction,NJ,08550,170,Smart Casual,0,0,0,0,Middle Age
+558,Columbia Wine And Spirits,3 Wood Street ,Memphis,TN,38157,170,Casual,0,0,1,0,Young
+559,Celtica,634 Sherman Ave. ,Durham,NC,27706,130,Casual,0,0,0,0,Middle Age
+560,Three Tides,944 NW. Rockledge Ave. ,Charlotte,NC,28105,185,Formal,0,0,0,0,Young
+561,Tiares Sports Bar & Grill,40 Durham Street ,Miami,FL,33158,140,Casual,1,0,0,0,Middle Age
+562,Connie Mac Inc,206 N. Glenlake Street ,New York,NY,10029,165,Formal,1,0,0,0,Middle Age
+563,Bell Environmental,97 Creekside Street ,Indianapolis,IN,46290,115,Smart Casual,1,0,0,0,Middle Age
+564,Sharkey's,888 10th Avenue ,Dover,DE,19901,115,Casual,1,0,0,0,Middle Age
+565,Bitter End,33 Annadale Court ,Annapolis,MD,21401,160,Formal,1,0,1,0,Young
+566,Liaisons,8467 Valley Farms Ave. ,Highland,MD,20777,185,Casual,1,0,0,0,Middle Age
+567,At The Tracks Ltd,5 Mountainview St. ,Chesapeake,VA,23320,400,Smart Casual,1,0,0,0,Middle Age
+568,Broadway Sports Bar Grill,142 Tanglewood St. ,Kenilworth,IL,60043,160,Formal,1,0,1,0,Young
+569,Castle Grille,72 Woodland St. ,New York,NY,10029,165,Formal,1,0,0,0,Young
+570,Blackstone Tap,24 Wrangler Ave. ,Fontana,CA,92335,160,Casual,0,0,1,0,Young
+571,Maxwell's Club,87 Glenholme St. ,Miami,FL,33158,110,Casual,1,1,0,0,Young
+572,Murphy's Place Jazz Club,66 Griffin Ave. ,Darien,CT,06820,140,Formal,1,1,1,0,Young
+573,Swig,9297 Glen Creek Street ,Miami Beach,FL,33109,160,Formal,1,0,0,0,Middle Age
+574,Pete's Inn,586 Overlook Ave. ,Oklahoma City,OK,73102,145,Casual,1,0,0,0,Young
+575,College Inn,50 Buttonwood Court ,Oklahoma City,OK,73102,115,Formal,1,0,0,0,Young
+576,Doc's Place,633 Courtland Rd. ,Atlantic City,NJ,08401,120,Formal,1,0,0,0,Middle Age
+577,Cooter Brown's Tavern,291 Lakeshore St. ,Sun City,AZ,85351,135,Smart Casual,1,0,0,0,Middle Age
+578,Glass,770 Miles St. ,Katy,TX,77449,165,Smart Casual,1,0,1,0,Young
+579,Southern Grill,48 Trout Rd. ,Charlotte,NC,28105,120,Formal,1,0,1,0,Young
+580,DE Soto Holiday House,92 Locust Road ,Durham,NC,27706,120,Casual,1,0,1,0,Young
+581,Puff,41 Brown Rd. ,Atlanta,GA,30334,200,Formal,1,0,0,0,Middle Age
+582,THE GATEWAY TAVERN,8476 Lafayette Dr. ,Cross River,NY,10518,165,Smart Casual,1,0,0,0,Middle Age
+583,Michael Charles Premier Wine Shops,327 Wrangler Ave. ,Oklahoma City,OK,73102,120,Casual,1,0,1,0,Young
+584,Eighth Ave. Tavern;,7849 Arrowhead Street ,Norwalk,CA,90650,130,Casual,1,0,0,0,Middle Age
+585,Illinois Ave Bar & Grill,977 Lincoln Street ,Brownsville,TX,78521,340,Casual,1,0,0,0,Middle Age
+586,Bumpers,9413 Tailwater Drive ,Houston,TX,77084,180,Smart Casual,1,0,1,0,Young
+587,Cafe Venice,511 East Court ,Chicago,IL,60629,150,Casual,1,0,0,0,Middle Age
+588,Max,503 Corona Rd. ,Annapolis,MD,21401,155,Formal,1,0,0,0,Middle Age
+589,Jolly Inn,9248 Galvin Street ,Oklahoma City,OK,73102,105,Casual,1,0,0,0,Middle Age
+590,Mc Gillacuddy's Sports Bar,65 Andover Ave. ,Katy,TX,77449,200,Smart Casual,1,0,1,0,Young
+591,Club Personalities Inc,43 Middle River Dr. ,Norwalk,CA,90650,195,Formal,0,1,1,0,Young
+592,Bird's Nest,22 Brown Dr. ,Dallas,TX,75001,155,Casual,1,0,1,0,Young
+593,John E's Restaurant & Lounge,7 Canal Drive ,Boston,MA,01841,155,Casual,1,1,0,0,Young
+594,Burnsville Bowl,9638 N. York Ave. ,Durham,NC,27706,150,Casual,1,0,1,0,Young
+595,Vip Show Club,9280 Annadale Dr. ,Miami,FL,33158,175,Smart Casual,0,1,0,0,Young
+596,Buckskin Bar,24 Columbia Avenue ,San Jose,CA,95120,185,Casual,1,0,0,0,Middle Age
+597,Post Bar Woodward,7388 Branch Court ,Fontana,CA,92335,195,Formal,1,0,0,0,Middle Age
+598,Dragon,902 Talbot Ave. ,Chicago,IL,60629,160,Casual,0,0,0,0,Middle Age
+599,Galway Inc,65 53rd Street ,Frankfort,KY,40601,120,Casual,1,0,0,0,Middle Age
+600,Ted Dahmke,9279 Sunset St. ,Great Falls,VA,22066,350,Formal,0,0,1,0,Young
+601,Brewsky's Food & Spirits,7 Foster Lane ,Dover,DE,19901,105,Smart Casual,1,0,0,0,Young
+602,Ice House Lounge,71 Grandrose Lane ,Boston,MA,01841,185,Smart Casual,1,1,0,0,Young
+603,Kaoba Inc,54 Johnson Lane ,Brownsville,TX,78521,200,Casual,1,0,1,0,Young
+604,Thirsty Camel Saloon,8538 Henry Drive ,Oklahoma City,OK,73102,145,Smart Casual,1,0,1,0,Young
+605,Roanoke Inn,4 W. Arrowhead Road ,Illinois,IL,62701,165,Smart Casual,1,0,0,0,Middle Age
+606,Donohoe Consulting Group,9904 Oak Meadow Street ,Miami,FL,33158,150,Casual,1,0,0,0,Middle Age
+607,2nd Street Music Hall,285 Leatherwood St. ,Katy,TX,77449,190,Smart Casual,1,0,0,0,Middle Age
+608,Wild Buffalo House Of Music,865 Cooper Circle ,Atlantic City,NJ,08401,165,Formal,1,0,0,0,Middle Age
+609,Fifth Quarter Tap,907 Homewood Street ,Charlotte,NC,28105,125,Smart Casual,1,0,1,0,Young
+610,Sidelines Tavern & Grill,46 South Van Dyke St. ,Oklahoma City,OK,73101,175,Formal,1,0,0,0,Middle Age
+611,Jungle,40 Swanson St. ,Cross River,NY,10518,140,Casual,1,0,0,0,Middle Age
+612,Keller International Pubg Llc,22 Madison Street ,San Jose,CA,95120,150,Casual,1,1,1,0,Young
+613,Funugyz,45 Bridgeton Ave. ,Frankfort,KY,40601,185,Formal,1,0,0,0,Middle Age
+614,Summit Wine And Spirits,14 South Pawnee Street ,Iowa City,IA,52240,130,Smart Casual,1,0,0,0,Young
+615,Curtis Warren,45 Manor Street ,Oklahoma City,OK,73102,190,Formal,0,0,0,0,Middle Age
+616,Village Pub Bar & Grill,9789 S. Campfire Road ,Illinois,IL,62701,105,Casual,1,1,1,1,Young
+617,Daily Planet,8109 Cherry Hill Ave. ,Dallas,TX,75001,205,Casual,1,0,0,0,Middle Age
+618,New Jester's Lounge,17 East Fremont Dr. ,Charlotte,NC,28105,195,Formal,1,1,0,0,Young
+619,Flick's Package Liquor,9933 Adams Drive ,Austin,TX,78730,340,Casual,1,0,0,0,Middle Age
+620,Envy Lounge,9713 E. Cactus Ave. ,Fontana,CA,92335,160,Casual,1,1,0,0,Young
+621,Hydrate,1 River Avenue ,Sun City,AZ,85351,115,Smart Casual,1,0,0,0,Middle Age
+622,Strozzi's Bar,9358 Lakewood Court ,Charlotte,NC,28105,165,Casual,1,0,1,0,Young
+623,Bentz Street Raw Bar,31 S. Lantern St. ,Great Falls,VA,22066,400,Casual,1,0,0,1,Old
+624,Laffs Comedy Cafe,65 N. Primrose Dr. ,Atlanta,GA,30334,165,Casual,0,0,1,0,Young
+625,Jo-Jo's Tavern & Restaurant,9077 East Coffee Dr. ,Charlotte,NC,28105,165,Formal,1,0,0,0,Young
+626,On The Mark,9052 Third St. ,New Brunswick,NJ,08901,175,Smart Casual,1,0,0,0,Middle Age
+627,Iron Horse Saloon,615 Southampton Ave. ,New York,NY,10029,185,Smart Casual,1,0,1,0,Young
+628,Andrea Hotel Inc,8322 South Poplar Lane ,Oklahoma City,OK,73101,160,Smart Casual,1,0,1,1,Old
+629,Calico Cat,9919 Brickell Street ,Highland,MD,20777,200,Casual,1,0,1,0,Young
+630,Rowdy Buck Saloon,9 Court Ave. ,Austin,TX,78730,180,Formal,1,0,0,0,Young
+631,Blake's,9480 Columbia Ave. ,Katy,TX,77449,155,Smart Casual,1,0,1,0,Young
+632,Average Joe's Sports Pub,9708 Westminster Dr. ,Kenilworth,IL,60043,125,Smart Casual,1,1,0,1,Young
+633,House Of Blues New Media,7007 Linda Avenue ,New York,NY,10029,190,Smart Casual,1,0,0,0,Middle Age
+634,Laundry Bar,9668 Sugar St. ,El Paso,TX,79936,360,Casual,1,0,0,0,Middle Age
+635,Shank's Tavern,59 East Smoky Hollow Dr. ,Richmond,VA,23218,350,Smart Casual,1,0,0,0,Middle Age
+636,Roosters Country,353 Crescent Ave. ,Dover,MA,02030,165,Smart Casual,1,0,0,0,Young
+637,River City Entertainment (D.b,1 Canal Street ,Richmond,VA,23218,220,Casual,0,0,0,1,Old
+638,Neighbors,733 W. Sutor Avenue ,Durham,NC,27706,135,Casual,1,0,0,0,Young
+639,Manhattan's,9186 Plumb Branch Dr. ,Springfield,PA,19064,140,Casual,0,0,0,0,Middle Age
+640,Apartment,8839 Williams St. ,Richmond,VA,23218,310,Smart Casual,1,0,0,0,Young
+641,Huron Athletic Club,8055 Ridgeview Street ,Cross River,NY,10518,105,Smart Casual,1,1,1,0,Young
+642,Spike's Keg O Nails,9553 Sierra Ave. ,Sun City,AZ,85351,200,Formal,1,0,0,1,Old
+643,Tamaqua Bar & Marina,54 Vale Lane ,Dallas,TX,75001,190,Smart Casual,1,0,0,0,Young
+644,Aj's,815 Holly Lane ,Austin,TX,78730,110,Casual,1,0,0,0,Young
+645,Town Tavern Inc,83 Glen Eagles St. ,Princeton Junction,NJ,08550,170,Formal,1,0,1,0,Young
+646,White House Inn,227 Peninsula Dr. ,Austin,TX,78730,130,Smart Casual,1,0,0,0,Young
+647,Tavern On Mill,130 W. Deerfield Lane ,El Paso,TX,79936,140,Smart Casual,1,0,0,0,Middle Age
+648,Excel Communication,7008 Holly St. ,Oklahoma City,OK,73102,120,Formal,1,0,0,0,Middle Age
+649,Branch,9327 Grant Street ,Atlanta,GA,30334,200,Formal,1,0,0,0,Middle Age
+650,Black Forest,75 Vale Street ,Brownsville,TX,78521,185,Casual,0,0,1,0,Young
+651,Myth The Nightclub,709 North Lilac St. ,Salt Lake City,UT,84101,400,Smart Casual,1,1,1,0,Young
+652,Kennedy's Pub,8146 Ridgeview Lane ,Kenilworth,IL,60043,150,Casual,1,1,0,0,Young
+653,Speakeasy Ultra Lounge,Apt 331 ,Villanova,PA,19085,110,Smart Casual,1,1,1,0,Young
+654,Escapades,324 North Lilac St. ,Oklahoma City,OK,73101,175,Formal,1,0,0,0,Middle Age
+655,BUCKEYE TAVERN,12 East Greenview Lane ,Springfield,PA,19064,135,Casual,1,0,1,0,Young
+656,Knight Time Billiards,9528 E. Chapel St. ,Richmond,VA,23218,200,Casual,0,0,0,0,Middle Age
+657,Trap N Fish Motel,9322 South South Rd. ,Trenton,NJ,08608,140,Smart Casual,1,0,0,0,Middle Age
+658,Draft House,177 Van Dyke Drive ,Norwalk,CA,90650,155,Formal,1,0,1,0,Young
+659,Jr's Bar & Grill,635 La Sierra Road ,Norwalk,CA,90650,145,Smart Casual,1,0,0,1,Old
+660,Checkers Tavern,9510 8th Road ,Iowa City,IA,52240,155,Smart Casual,1,0,1,0,Young
+661,Chrome Night Life Arena,10 John Rd. ,Brooklyn,NY,11249,170,Smart Casual,0,0,0,0,Middle Age
+662,K C's Cabin Tavern,8196 Vermont Drive ,Atlanta,GA,30334,195,Formal,1,0,0,0,Middle Age
+663,Blu,198 Somerset Dr. ,Darien,CT,06820,195,Formal,1,0,1,0,Young
+664,African Art Design International,217 Lakeview Rd. ,Brownsville,TX,78521,120,Smart Casual,1,0,0,0,Middle Age
+665,Spot,872 South Sheffield Rd. ,Oklahoma City,OK,73102,140,Casual,0,0,0,0,Middle Age
+666,Blind Horse Saloon Inc,575 Linden Street ,Frankfort,KY,40601,165,Smart Casual,1,0,0,0,Middle Age
+667,John's Place,7868 North Manhattan St. ,Cross River,NY,10518,110,Formal,1,0,1,0,Young
+668,Slim & Chubby's,7953 East Park Drive ,Dover,MA,02030,195,Formal,1,0,0,0,Middle Age
+669,Godfather Ii,88 W. Wayne Road ,Highland,MD,20777,130,Smart Casual,1,0,0,1,Old
+670,Freebird Cafe,9020 South Pulaski Ave. ,Brooklyn,NY,11249,120,Smart Casual,1,0,0,0,Middle Age
+671,Barley John's Brew Pub,7437 Pawnee Rd. ,Sun City,AZ,85351,125,Smart Casual,1,1,0,0,Young
+672,Game Time,279 NW. Golden Star Avenue ,Houston,TX,77084,175,Smart Casual,1,0,0,0,Middle Age
+673,Arizona Wine Makers,68 Myers Avenue ,New York,NY,10029,120,Casual,1,0,1,0,Young
+674,Thirsty Parrot,66 W. Court St. ,Nashville,TN,37201,155,Formal,1,0,0,1,Old
+675,Club Orleans,7625 Hudson Drive ,Salem,OR,97301,130,Smart Casual,1,1,0,0,Young
+676,Johnny Mack's,161 Arnold Avenue ,Atlanta,GA,30334,185,Casual,1,0,0,0,Middle Age
+677,Albuquerque Mining Co,8640 Ann Lane ,Las Vegas,NV,89134,110,Smart Casual,0,0,1,0,Young
+678,Club Deep,9485 North Hickory Ave. ,Richmond,VA,23218,385,Smart Casual,1,1,0,0,Young
+679,Jean Marion,7150 Lower River Drive ,Iowa City,IA,52240,170,Formal,0,0,0,0,Middle Age
+680,Challenges,8 2nd St. ,Darien,CT,06820,120,Formal,1,0,0,0,Middle Age
+681,The Barker Tavern,606 Nicolls Court ,Los Angeles,CA,90011,140,Smart Casual,0,0,0,0,Middle Age
+682,Lovejoy's,886 Wagon Drive ,Indianapolis,IN,46290,125,Formal,1,0,0,0,Young
+683,Mikeee's,8977 Rosewood Lane ,Durham,NC,27706,190,Smart Casual,0,0,0,0,Young
+684,Village Cafe,920 Race Street ,Houston,TX,77084,295,Casual,1,0,0,0,Middle Age
+685,Lunkers,8528 Summer Street ,El Paso,TX,79936,210,Formal,1,0,0,0,Middle Age
+686,Frog's Landing,9501 Golf St. ,Washington,DC,20001,125,Smart Casual,1,0,1,0,Young
+687,Lawrenceville Beer,7248 Clay Street ,El Paso,TX,79936,205,Casual,1,0,0,0,Middle Age
+688,Nyc Provocatour,7579 Pin Oak Lane ,Trenton,NJ,08608,190,Smart Casual,1,0,1,0,Young
+689,Braddock Hills Beer Distributor,129 Delaware Ave. ,Dover,MA,02030,200,Formal,1,0,0,0,Middle Age
+690,Murphy's Irish Pub,622 Stillwater Street ,Atlanta,GA,30334,170,Casual,1,1,1,0,Young
+691,Broadway Limousine Inc.,9880 Lafayette Drive ,Norwalk,CA,90650,140,Formal,1,0,0,0,Young
+692,Harassments,7329 Essex St. ,Great Falls,VA,22066,250,Formal,1,0,0,0,Middle Age
+693,Johnny D's Uptown Restaurant,503 Rockwell Street ,Weston,MA,02493,175,Casual,1,0,1,0,Young
+694,Pencak & Co,2 North 3rd Drive ,Dover,MA,02030,155,Casual,1,0,1,0,Young
+695,North Star Bar,6 Ridgeview Ave. ,Las Vegas,NV,89134,180,Casual,1,0,0,0,Young
+696,Silver Cloud Bar Grill,77 E. Princeton Ave. ,Houston,TX,77084,110,Formal,1,0,0,0,Young
+697,Tr's Point,9578 Cedarwood Drive ,Fontana,CA,92335,130,Casual,1,0,0,0,Middle Age
+698,North Dallas Bar & Grill,45 Kent Ave. ,Brownsville,TX,78521,160,Smart Casual,1,0,0,0,Middle Age
+699,Chris Owens Club,8345 Glendale Rd. ,Nashville,TN,37201,170,Smart Casual,1,1,0,0,Young
+700,Country Club,963 E. Center Lane ,New Brunswick,NJ,08901,130,Formal,1,1,1,0,Young
+701,Lot 1210,583 Purple Finch St. ,Darien,CT,06820,170,Smart Casual,1,0,1,0,Young
+702,Sidelines,7383 Evergreen St. ,Springfield,PA,19064,105,Formal,0,0,0,0,Middle Age
+703,River Room Lounge,344 John Street ,Kenilworth,IL,60043,165,Casual,1,1,0,0,Young
+704,Blondies,225 Shirley St. ,Katy,TX,77449,120,Smart Casual,1,0,0,0,Middle Age
+705,Raw Bar & Grill,369 S. Gonzales Drive ,Santa Fe,NM,87501,190,Smart Casual,1,0,0,0,Middle Age
+706,Heartbreakers,7152 Brookside Street ,Durham,NC,27706,130,Casual,0,0,0,0,Middle Age
+707,Phone Booth Lounge,73 High Noon Drive ,New Brunswick,NJ,08901,105,Casual,1,1,1,0,Young
+708,Maxum Bar & Grill,9111 Meadowbrook Dr. ,Norwalk,CA,90650,140,Casual,1,0,0,1,Old
+709,Brandy Library Lounge,920 Rockland Dr. ,Villanova,PA,19085,110,Smart Casual,1,1,1,0,Young
+710,Highland Inn,42 Ohio Drive ,Miami Beach,FL,33109,115,Formal,1,0,1,0,Young
+711,Terrace Bar,115 Arch St. ,Kenilworth,IL,60043,135,Smart Casual,1,0,1,0,Young
+712,Wise Crackers Comedy Clubs,9514 Sunbeam Lane ,New Brunswick,NJ,08901,125,Formal,1,1,0,0,Young
+713,4th & 23rd,30 University Rd. ,Oklahoma City,OK,73101,170,Formal,1,0,0,0,Middle Age
+714,Mangabang's PR Bar/Nightclub,79 Brickell Dr. ,Los Angeles,CA,90011,140,Casual,1,1,1,0,Young
+715,George's Majestic Lounge,9 Lees Creek Dr. ,Fontana,CA,92335,115,Casual,0,1,0,0,Young
+716,Sahara,36 Big Rock Cove Ave. ,Fontana,CA,92335,200,Casual,1,0,0,0,Middle Age
+717,Sodbusters,8535 Airport Road ,Dallas,TX,75001,185,Formal,1,0,1,0,Young
+718,Molly's Bar,9430 Birchpond Ave. ,Chesapeake,VA,23320,345,Formal,1,0,1,0,Young
+719,Stone Forge Tavern & Publick,748 Summerhouse Street ,Katy,TX,77449,165,Smart Casual,1,1,0,0,Young
+720,Bar An Eating & Drinking,7 Meadow St. ,Salt Lake City,UT,84101,190,Formal,0,0,1,0,Young
+721,Chicago Bar,7877 Albany Court ,Dallas,TX,75001,160,Smart Casual,1,0,0,0,Middle Age
+722,Ling & Louie's Asian Bar,57 Logan Street ,Princeton Junction,NJ,08550,190,Formal,1,0,0,0,Young
+723,Metal Rebel Bar & Grill,443 Roberts Street ,Salem,OR,97301,150,Casual,1,0,0,0,Young
+724,Monkey Pants & Bar & Grill,9 Goldfield St. ,Annapolis,MD,21401,185,Formal,1,0,0,0,Young
+725,Birmingham Bridge Tavern,7 New Saddle Dr. ,Dover,MA,02030,110,Formal,1,0,0,0,Young
+726,This Wine Is Mine,854 Carpenter Road ,Brownsville,TX,78521,160,Formal,1,0,1,0,Young
+727,Hunter Relocation,43 Oak Meadow Dr. ,Miami,FL,33158,185,Formal,1,0,0,0,Middle Age
+728,Fisher's Camp Resort,295 S. Sierra St. ,Norwalk,CA,90650,190,Formal,1,0,0,0,Young
+729,Products,47 S. Golden Star Drive ,Dover,DE,19901,170,Formal,0,0,1,0,Young
+730,Irving Mill Restaurant,47 West Nut Swamp Street ,Princeton Junction,NJ,08550,195,Smart Casual,1,0,1,1,Old
+731,Sjb Inc,9859 Poor House Avenue ,Kenilworth,IL,60043,125,Casual,0,0,0,0,Middle Age
+732,Skeeter's Lounge,672 Anderson Dr. ,Brooklyn,NY,11249,170,Casual,0,1,0,0,Young
+733,Dream House,538 Rockland St. ,Charlotte,NC,28105,190,Formal,1,0,0,0,Middle Age
+734,Den,889 Whitemarsh Dr. ,Oklahoma City,OK,73102,150,Smart Casual,0,0,0,0,Middle Age
+735,Border Lounge,7412 West Goldfield St. ,Austin,TX,78730,135,Casual,1,1,1,0,Young
+736,Italian Wine Merchants,610 Mulberry Ave. ,Richmond,VA,23218,245,Casual,0,0,0,0,Middle Age
+737,Rusty Harpoon,73 Pennington St. ,Salt Lake City,UT,84101,280,Formal,1,0,0,0,Young
+738,Pyramid Breweries Inc,9944 Leatherwood Ave. ,Highland,MD,20777,175,Casual,1,0,0,0,Middle Age
+739,Nice Guy Eddie's,7183 Brookside St. ,Chesapeake,VA,23320,170,Formal,1,0,1,0,Young
+740,Carlo Russo's Wine & Spirit World,9664 King St. ,Frankfort,KY,40601,130,Formal,1,0,0,0,Young
+741,Emerson Biggins Sports Bar,391 College Rd. ,Trenton,NJ,08608,145,Casual,1,0,0,0,Middle Age
+742,My Brother's Place,98 Manor St. ,Brooklyn,NY,11249,105,Smart Casual,0,0,0,0,Young
+743,Grape Lakes Wine Appreciation Guild,8077 S. Gartner Court ,Illinois,IL,62701,185,Casual,0,0,0,0,Young
+744,Bowery,7411 NW. Snake Hill Drive ,Dover,DE,19901,165,Formal,0,0,0,0,Middle Age
+745,Howlin' Wolf,8720 St Louis St. ,Illinois,IL,62701,155,Casual,1,0,1,0,Young
+746,Ad-Lib Bar & Grille,738 Willow Lane ,Fontana,CA,92335,155,Formal,1,0,0,0,Middle Age
+747,Hilltop,13 Cottage Drive ,Atlanta,GA,30334,200,Casual,1,0,0,0,Middle Age
+748,Venue 1215,826 Bowman Drive ,Indianapolis,IN,46290,200,Smart Casual,1,0,0,0,Middle Age
+749,The Whitley Company,92 Pilgrim Drive ,Highland,MD,20777,130,Casual,0,0,0,0,Middle Age
+750,John's Alley Tavern,8 Sugar St. ,Los Angeles,CA,90011,170,Casual,1,0,0,1,Old
+751,Rick's American Cafe,153 St Margarets Court ,Richmond,VA,23218,355,Smart Casual,0,0,1,0,Young
+752,Barking Spider Tavern,408 Trout St. ,Austin,TX,78730,195,Smart Casual,0,0,0,0,Middle Age
+753,Loafers Beach Club,980 Riverside Rd. ,Fontana,CA,92335,135,Smart Casual,1,1,0,0,Young
+754,Ship's Inn,398 Chestnut Rd. ,San Jose,CA,95120,165,Formal,1,0,0,0,Middle Age
+755,Dee's Cafe,997 Oak Meadow Avenue ,San Jose,CA,95120,125,Smart Casual,1,0,0,0,Middle Age
+756,Omega DC,8260 Newbridge Rd. ,Charlotte,NC,28105,135,Formal,1,0,0,0,Young
+757,Lone Eagle Saloon,734 Redwood Ave. ,Austin,TX,78730,145,Smart Casual,1,0,1,0,Young
+758,Ticoz Resto-Bar,7666 Piper Street ,Salt Lake City,UT,84101,230,Casual,1,0,1,0,Young
+759,Village Pub,9917 Church Ave. ,Miami Beach,FL,33109,120,Casual,1,1,0,0,Young
+760,Stetsons Nightlife,71 Saxton St. ,Darien,CT,06820,180,Formal,1,0,0,0,Middle Age
+761,Brick Store Pub,58 Hawthorne St. ,Durham,NC,27706,130,Smart Casual,0,1,0,0,Young
+762,Subterranean,336 Vine Ave. ,Dover,DE,19901,110,Formal,1,0,1,0,Young
+763,Tryst Lounge,7552 Armstrong Street ,Oklahoma City,OK,73102,165,Formal,0,1,0,0,Young
+764,Overlook,133 E. 3rd Drive ,Oklahoma City,OK,73101,185,Casual,1,0,1,0,Young
+765,Crystal Corner Bar,7360 East Brookside St. ,Brooklyn,NY,11249,135,Casual,1,0,0,0,Middle Age
+766,Ginger Man,39 Rockwell St. ,Trenton,NJ,08608,110,Casual,1,0,0,0,Middle Age
+767,Key West Saloon; Inc.,660 N. 3rd Rd. ,Washington,DC,20001,185,Formal,1,0,0,0,Middle Age
+768,Belmont Inn,600 Arch Drive ,Dover,DE,19901,190,Casual,1,0,1,0,Young
+769,Touchdowns Sportsbar,9482 Poor House Dr. ,Kenilworth,IL,60043,140,Casual,0,0,1,0,Young
+770,Plan B,8716 Fairground Dr. ,Trenton,NJ,08608,105,Formal,1,0,0,0,Middle Age
+771,Project,4 Glenwood Dr. ,Trenton,NJ,08608,155,Smart Casual,1,0,1,0,Young
+772,Mhtechnologies,81 S. Dunbar St. ,Chesapeake,VA,23320,295,Formal,1,0,1,0,Young
+773,Ninety Nine Restaurant & Pub,566 Sherman Street ,Dover,MA,02030,175,Smart Casual,1,1,1,0,Young
+774,Stress Factory Comedy Club,5 Lookout Dr. ,Brownsville,TX,78521,130,Smart Casual,0,1,1,0,Young
+775,Blanchard's Tavern,177 Annadale Rd. ,Weston,MA,02493,190,Casual,1,0,0,0,Middle Age
+776,Sudsy Malone's Rock & Roll Bar,180 Dogwood St. ,Salem,OR,97301,175,Casual,1,0,0,0,Middle Age
+777,Cowboys & Indians,930 Peachtree St. ,Chesapeake,VA,23320,345,Casual,1,0,0,0,Middle Age
+778,Chieftan Pub,7981 Cardinal St. ,Weston,MA,02493,160,Casual,1,1,0,0,Young
+779,Trixie's Gold Room,8976 Mountainview Street ,Brownsville,TX,78521,150,Smart Casual,0,0,0,0,Middle Age
+780,Charta Unlimited,7700 Cooper Drive ,El Paso,TX,79936,140,Formal,1,0,1,0,Young
+781,Planet Rose,8992 East Griffin Rd. ,Brooklyn,NY,11249,140,Casual,1,0,0,0,Young
+782,Slainte Irish Pub & Restaurant,37 Lexington St. ,Norwalk,CA,90650,150,Smart Casual,1,1,0,0,Young
+783,Scarlett's,459 Cedarwood Ave. ,Brooklyn,NY,11249,170,Formal,1,0,1,0,Young
+784,Krog Bar Llc,9239 Wayne Avenue ,Houston,TX,77084,195,Smart Casual,0,0,1,0,Young
+785,Johnny Banana's Tavern,424 Piper Street ,Weston,MA,02493,175,Casual,1,0,1,1,Old
+786,Enoch's Pub & Grill,7773 Surrey Ave. ,Trenton,NJ,08608,145,Smart Casual,1,1,1,0,Young
+787,Meehan's Ale House,155 Plumb Branch Street ,Princeton Junction,NJ,08550,145,Formal,0,0,1,0,Young
+788,Spanish Tavern,23 Strawberry Street ,New Brunswick,NJ,08901,200,Casual,1,0,1,0,Young
+789,Brewski's,46 Broad Ave. ,Annapolis,MD,21401,170,Formal,1,0,0,1,Old
+790,Superior Painting And Wallpaper,Apt 2 ,Austin,TX,78730,155,Casual,1,0,1,0,Young
+791,Cowboy Club,782 Fremont Dr. ,New Brunswick,NJ,08901,180,Smart Casual,1,1,0,0,Young
+792,Beach House Bar & Grill,24 Harrison Dr. ,Los Angeles,CA,90011,125,Smart Casual,1,0,0,1,Old
+793,Glen Lakes Wine Shop,8720 West Summer Avenue ,Fontana,CA,92335,130,Formal,1,0,1,0,Young
+794,Old Point Bar,993 Briarwood Rd. ,Salt Lake City,UT,84101,220,Formal,1,0,0,0,Middle Age
+795,Lucky 13 Saloon,8872 Cedar Swamp Lane ,Annapolis,MD,21401,200,Smart Casual,1,0,0,0,Young
+796,Don Sprayberry,68 Oakwood Dr. ,Villanova,PA,19085,130,Formal,0,0,0,0,Young
+797,Lounge 201 Llc,9826 Summit Lane ,Great Falls,VA,22066,305,Casual,1,1,1,0,Young
+798,Tempe Improv,9891 Smoky Hollow Dr. ,Illinois,IL,62701,160,Formal,0,0,0,0,Young
+799,Shuckers Raw Bar,44 Third St. ,Princeton Junction,NJ,08550,175,Smart Casual,1,0,1,0,Young
+800,Stage One,16 Baker Rd. ,Brooklyn,NY,11249,200,Casual,0,0,0,0,Middle Age
+801,Devil's Martini North,559 Bay St. ,Great Falls,VA,22066,250,Formal,1,0,0,0,Young
+802,South River Pub,99 Pacific Street ,Chesapeake,VA,23320,315,Formal,1,1,0,0,Young
+803,Killarney's Publick House,9011 Lafayette Court ,Memphis,TN,38157,175,Smart Casual,1,1,0,0,Young
+804,House Of Blues,784 Delaware Street ,New York,NY,10029,145,Smart Casual,1,0,0,0,Middle Age
+805,Club Odyssey,8834A East Beech Lane ,Atlanta,GA,30334,130,Formal,1,1,1,0,Young
+806,Velveeta Room,361 Gulf St. ,Miami Beach,FL,33109,195,Casual,1,0,0,0,Middle Age
+807,Anchorage Tavern,21 Mulberry Street ,Memphis,TN,38157,150,Smart Casual,1,0,1,0,Young
+808,Little Bear,75 Piper Ave. ,Fontana,CA,92335,115,Casual,1,0,0,0,Middle Age
+809,Matador Sports Pub,952 Ashley Court ,Chicago,IL,60629,160,Formal,0,1,0,1,Young
+810,Thirsty's 2,7247 Vermont Avenue ,Charlotte,NC,28105,130,Smart Casual,0,0,0,0,Middle Age
+811,Jazz Central,135 West Hillside Court ,Trenton,NJ,08608,125,Casual,1,0,0,0,Middle Age
+812,Cheap Wine Productions,8939 East Warren Drive ,New York,NY,10029,180,Smart Casual,1,0,0,0,Middle Age
+813,Red Star Tavern,64 Lookout St. ,Sun City,AZ,85351,115,Formal,1,0,0,0,Young
+814,Nico,47 South Race St. ,Miami,FL,33158,145,Smart Casual,1,0,0,0,Middle Age
+815,Cruisers Motorsports,418 E. Indian Summer Ave. ,Nashville,TN,37201,120,Casual,0,0,0,0,Young
+816,Ybor Strip,161 Railroad Ave. ,Memphis,TN,38157,140,Casual,1,0,0,0,Middle Age
+817,Club Passim,164 Forest Road ,Norwalk,CA,90650,120,Formal,1,1,0,0,Young
+818,Tavern On The Green,8983 Wild Rose Street ,Fontana,CA,92335,105,Formal,0,0,0,0,Middle Age
+819,Amvets,3 Wentworth St. ,Villanova,PA,19085,160,Formal,1,0,0,0,Middle Age
+820,Frankie's Sports Bar & Grill,19 Bay St. ,Memphis,TN,38157,115,Casual,1,0,0,0,Middle Age
+821,Slv Trader,67 N. Lake View Street ,Atlanta,GA,30334,180,Formal,0,0,0,0,Middle Age
+822,Jeremiah's Tavern,9927 Ketch Harbour Street ,Katy,TX,77449,220,Casual,1,0,0,0,Middle Age
+823,Boulevard Grill & Sports Bar,912 Wall Street ,Annapolis,MD,21401,130,Casual,1,0,1,1,Old
+824,Hickory Tavern,587 Theatre Street ,Los Angeles,CA,90011,195,Formal,0,0,0,0,Young
+825,Mugs Pub,64 Holly St. ,Salt Lake City,UT,84101,340,Smart Casual,1,1,1,0,Young
+826,Chrome,408 Manor Station St. ,Charlotte,NC,28105,165,Smart Casual,1,0,0,0,Middle Age
+827,Alonso's Restaurant & Package,960 West Lafayette St. ,Boston,MA,01841,185,Formal,1,0,0,0,Middle Age
+828,Mainline Bar & Grill,89 Griffin Court ,Las Vegas,NV,89134,170,Smart Casual,1,0,0,0,Young
+829,Roxy Nightclub Boston,76 Vernon St. ,New Brunswick,NJ,08901,120,Formal,1,1,1,0,Young
+830,Comedy House Theatre,595 Clark Ave. ,Norwalk,CA,90650,120,Formal,1,0,1,0,Young
+831,Tanners Bar & Grill,830 Talbot Street ,Sun City,AZ,85351,105,Smart Casual,1,0,0,0,Middle Age
+832,Show & Tell,7613 Sunbeam Street ,El Paso,TX,79936,345,Casual,1,0,0,0,Middle Age
+833,G B Curly's,543 East Foxrun St. ,Dover,DE,19901,105,Formal,1,0,0,0,Young
+834,Pearl's Place,258 Country Club Street ,Richmond,VA,23218,360,Smart Casual,1,0,1,0,Young
+835,Tavern On Main,12 Lower River St. ,San Jose,CA,95120,150,Casual,1,0,0,0,Young
+836,Claddagh Pub Of College Park,825 W. Henry Smith Ave. ,Santa Fe,NM,87501,160,Formal,1,1,0,0,Young
+837,Dublin Inn,392 South Franklin Ave. ,Illinois,IL,62701,115,Casual,1,0,0,0,Middle Age
+838,Club Metronome,7 Sugar Lane ,Austin,TX,78730,175,Casual,1,1,0,0,Young
+839,Peppertree Lounge,9873 6th Ave. ,Boston,MA,01841,105,Formal,1,1,1,0,Young
+840,Home Wet Bar,9042 Hillside Ave. ,Chesapeake,VA,23320,395,Formal,1,0,0,0,Young
+841,Bistro 829,7715 Atlantic Street ,Salem,OR,97301,155,Formal,1,0,0,0,Young
+842,Fine Wine Online,575 Bishop Ave. ,Chicago,IL,60629,140,Smart Casual,1,0,0,0,Middle Age
+843,Ed's Dog House,7136 West Pulaski Street ,Washington,DC,20001,105,Casual,1,0,0,0,Middle Age
+844,Coconuts Beachfront Bar,373 Rockville Street ,Dover,DE,19901,180,Smart Casual,1,0,0,1,Old
+845,Dayton Systems Group,226 Kirkland St. ,Oklahoma City,OK,73101,135,Formal,1,0,0,0,Middle Age
+846,London's,808 Main Drive ,Dallas,TX,75001,130,Formal,1,0,0,0,Young
+847,J T's Shaft,80 Halifax St. ,Indianapolis,IN,46290,110,Casual,1,0,1,0,Young
+848,Ryles,234 Prairie Rd. ,Memphis,TN,38157,150,Formal,1,0,0,0,Middle Age
+849,Visions Night Club,770 Augusta St. ,Richmond,VA,23218,200,Formal,1,1,0,0,Young
+850,Independence Bar & Grill,8722 Glenridge Court ,Santa Fe,NM,87501,165,Formal,1,0,0,0,Middle Age
+851,The Bog Tavern,99 Winchester Road ,Sun City,AZ,85351,190,Smart Casual,0,0,0,0,Young
+852,Kendall's,9902 3rd Street ,Salem,OR,97301,130,Formal,1,0,1,0,Young
+853,Horse & Hound Off Broadway,30 El Dorado Dr. ,Durham,NC,27706,170,Casual,0,0,0,0,Young
+854,Bison Witches Bar & Deli,7166 Beach Ave. ,Durham,NC,27706,170,Formal,0,0,0,0,Middle Age
+855,Barb's Pub,7370 N. Woodsman Lane ,Trenton,NJ,08608,175,Formal,1,1,0,0,Young
+856,Phelan's Pub & Grill,93 Rose St. ,Charlotte,NC,28105,125,Casual,0,1,1,0,Young
+857,Tribeca Night Club,9737 Theatre St. ,Atlanta,GA,30334,165,Smart Casual,1,1,0,0,Young
+858,Sugar's,277 Maple St. ,Trenton,NJ,08608,160,Smart Casual,0,0,0,0,Young
+859,Harley's Club 155,61 South Golf Street ,Miami,FL,33158,130,Smart Casual,1,1,1,0,Young
+860,Bap's Tap Sports Bar & Grill,64 E. Pearl Rd. ,Dallas,TX,75001,130,Casual,1,0,1,0,Young
+861,English Pub,953 Shub Farm Dr. ,Miami,FL,33158,200,Smart Casual,1,1,0,0,Young
+862,Corner Loft Designs,561 S. County Road ,Chesapeake,VA,23320,235,Formal,0,0,0,0,Young
+863,Christian Counseling Assoc,357 Prairie St. ,Dover,MA,02030,180,Casual,1,0,0,0,Young
+864,Euromoney Publications Plc,7226 Sunnyslope Drive ,Dover,MA,02030,160,Casual,1,1,0,0,Young
+865,Freight Yard Restaurant & Pub,713 S. Brickyard Ave. ,San Jose,CA,95120,165,Formal,1,1,1,0,Young
+866,Rio Nightlife,8476 W. Marsh St. ,Los Angeles,CA,90011,150,Formal,1,0,1,0,Young
+867,Admiral's Cup,601 Plymouth St. ,Princeton Junction,NJ,08550,110,Formal,1,0,1,0,Young
+868,ABC Fine Wine & Spirits,464 Lantern St. ,Chicago,IL,60629,155,Smart Casual,1,0,0,0,Middle Age
+869,Grizzly's Grill N' Saloon,5 Yukon St. ,Weston,MA,02493,150,Formal,1,0,0,0,Middle Age
+870,Locos Deli & Pub,560 N. Walnutwood Drive ,Chicago,IL,60629,105,Formal,1,1,0,0,Young
+871,Hungry Brain,925 Ramblewood Road ,Annapolis,MD,21401,110,Casual,1,0,0,0,Young
+872,Toppers,5 Ann Rd. ,Austin,TX,78730,245,Formal,1,0,0,0,Middle Age
+873,Banana Wind,9829 Leeton Ridge Lane ,Villanova,PA,19085,145,Smart Casual,1,0,1,0,Young
+874,Lanigan's Irish Pub & Eatery,3 Spring Street ,Durham,NC,27706,165,Casual,1,1,0,0,Young
+875,Tail-Gator's Grill & Pub,7501 Edgemont Lane ,Katy,TX,77449,150,Formal,0,1,0,0,Young
+876,Copper Canyon Brewing & Ale,288 Annadale Rd. ,Atlantic City,NJ,08401,105,Formal,1,0,0,0,Young
+877,Slippery Noodle Inn,9289 East Myers Rd. ,Indianapolis,IN,46290,155,Formal,1,0,0,0,Young
+878,Grand,8590 E. Olive Drive ,Trenton,NJ,08608,150,Formal,1,0,0,0,Middle Age
+879,The Sand Bar And Grill,64 Glenholme Lane ,Houston,TX,77084,105,Smart Casual,1,0,1,0,Young
+880,Allen Beer,14 3rd Ave. ,Dover,MA,02030,105,Smart Casual,0,0,0,0,Middle Age
+881,Sand Trap,485 Dogwood Ave. ,Weston,MA,02493,175,Casual,1,0,0,0,Middle Age
+882,Houligan's Steak & Seafood Pub,8621 Studebaker Street ,Los Angeles,CA,90011,195,Casual,1,1,0,0,Young
+883,Billboard Live Intl Corp,8 W. Nicolls Lane ,Atlanta,GA,30334,200,Formal,1,0,0,0,Young
+884,Crossroads Tavern,907 White Drive ,Chesapeake,VA,23320,270,Smart Casual,1,0,1,0,Young
+885,Viper Bar,867 Madison Circle ,Princeton Junction,NJ,08550,195,Formal,1,0,1,0,Young
+886,Jim's Bistro,463 Manor St. ,Princeton Junction,NJ,08550,165,Smart Casual,1,0,0,0,Middle Age
+887,Barnacle's,170 Wild Horse Drive ,Boston,MA,01841,190,Smart Casual,1,0,0,0,Middle Age
+888,California Clipper,856 E. Ivy Drive ,Atlanta,GA,30334,135,Casual,1,0,0,0,Young
+889,Decatur Package Liquor,9186 Rocky River Street ,Austin,TX,78730,180,Casual,1,0,0,0,Middle Age
+890,Buffalo Tap,18 York St. ,Annapolis,MD,21401,120,Formal,1,0,0,0,Young
+891,Chicken Ranch,8879 Arrowhead St. ,San Jose,CA,95120,105,Formal,1,0,0,0,Middle Age
+892,Stokers Ice House,550 Edgewater Ave. ,Chicago,IL,60629,165,Formal,1,0,0,0,Middle Age
+893,Mason Jar,9836 West Bayberry St. ,El Paso,TX,79936,105,Formal,1,0,1,0,Young
+894,Pioneer Pub,9216 Franklin Street ,Richmond,VA,23218,225,Smart Casual,1,1,0,0,Young
+895,Flamingo Show Club,8658 Oklahoma St. ,Houston,TX,77084,195,Smart Casual,0,1,1,0,Young
+896,Oak Rail Tavern,141 South 1st St. ,Durham,NC,27706,125,Smart Casual,0,0,0,0,Middle Age
+897,C J's-Cadillac Jack's,27 E. Rockcrest St. ,Oklahoma City,OK,73101,120,Formal,1,0,1,0,Young
+898,Makers Mark Bourbon House,688 Grove Court ,Fontana,CA,92335,165,Formal,1,0,1,0,Young
+899,Gilligan's,8326 Deerfield St. ,Oklahoma City,OK,73102,120,Smart Casual,1,0,0,0,Middle Age
+900,Kwik Liquor Inc.,76 Ivy Street ,Princeton Junction,NJ,08550,145,Casual,0,0,0,0,Young
+901,Brocach Irish Pub,942 Lafayette St. ,Miami Beach,FL,33109,110,Casual,1,1,0,0,Young
+902,Collins Irish Pub & Grill,6 Warren St. ,Frankfort,KY,40601,160,Smart Casual,1,1,1,0,Young
+903,Boston Beanery,9321 High Ridge Ave. ,Villanova,PA,19085,130,Casual,1,0,0,0,Young
+904,Signatures,8443 Lakeshore St. ,San Jose,CA,95120,145,Formal,1,0,0,0,Middle Age
+905,Lightning Jacks Bar & Grill,788 S. Sutor Avenue ,Brooklyn,NY,11249,200,Casual,0,0,0,0,Middle Age
+906,Brownie's,66 Mountainview Ave. ,Oklahoma City,OK,73101,115,Casual,1,0,0,0,Middle Age
+907,O'Hara's Irish Pub,10 Locust St. ,Durham,NC,27706,135,Formal,1,1,0,0,Young
+908,Putters,65 Church Lane ,Houston,TX,77084,120,Casual,1,0,1,0,Young
+909,Starlight,51 E. Marshall Street ,Salt Lake City,UT,84101,175,Casual,1,0,1,0,Young
+910,Axis,587 Prince St. ,Frankfort,KY,40601,155,Casual,1,0,1,0,Young
+911,Bracken's Pub,691 University Road ,Durham,NC,27706,185,Smart Casual,1,0,1,0,Young
+912,Beacon Tap,616 Fairground Dr. ,Memphis,TN,38157,115,Smart Casual,1,0,0,0,Young
+913,Beer,7909 Shub Farm Dr. ,Houston,TX,77084,180,Casual,1,0,0,1,Old
+914,Steve's Lounge,8331 Wrangler Dr. ,Fontana,CA,92335,115,Smart Casual,0,1,0,0,Young
+915,Aj' S,818 King Street ,Villanova,PA,19085,170,Smart Casual,0,0,1,0,Young
+916,Club Amnesia,558 N. New Ave. ,Frankfort,KY,40601,145,Formal,0,1,0,0,Young
+917,No Idea,241 East Lawrence Dr. ,Memphis,TN,38157,185,Casual,1,0,0,0,Middle Age
+918,Sundance Saloon,96 Brickell Road ,Weston,MA,02493,135,Casual,1,0,0,1,Old
+919,Faces & Names,9709 Rockaway St. ,Oklahoma City,OK,73102,170,Smart Casual,0,0,0,0,Young
+920,MARRIOTT INTERNATIONAL,9139 Bowman St. ,Miami,FL,33158,190,Casual,1,0,0,0,Middle Age
+921,Outer Banks Brewing Station,756 Blackburn Rd. ,Kenilworth,IL,60043,110,Formal,1,0,0,0,Middle Age
+922,Muses Cafe,902 West Gulf St. ,Atlanta,GA,30334,125,Casual,1,0,1,0,Young
+923,Grainger's Pub & Grill,849 Strawberry Road ,Springfield,PA,19064,160,Smart Casual,1,0,0,0,Middle Age
+924,Scrub Club,91 Henry St. ,Annapolis,MD,21401,125,Smart Casual,0,1,0,0,Young
+925,Wild Things,8870 West 1st Street ,Illinois,IL,62701,125,Casual,1,0,1,0,Young
+926,Sluggers World Class Sports,8034 N. Shore Circle ,Springfield,PA,19064,185,Smart Casual,1,0,0,0,Middle Age
+927,Bar 412,15 Walnutwood Court ,Princeton Junction,NJ,08550,200,Smart Casual,1,0,0,0,Middle Age
+928,Sheffield Wine & Spirits Center,35 SE. Galvin Avenue ,Brownsville,TX,78521,185,Formal,1,0,0,0,Middle Age
+929,Cancun Cantina Inc,493C S. Sugar Drive ,Washington,DC,20001,180,Casual,0,0,1,0,Young
+930,Powerhouse Pub,20 Ridgewood Rd. ,Santa Fe,NM,87501,140,Formal,1,0,0,0,Young
+931,Berbati Pan,215 Edgewood St. ,Santa Fe,NM,87501,155,Smart Casual,1,0,0,0,Young
+932,On Deck,92 N. Richardson St. ,Durham,NC,27706,145,Formal,1,0,1,0,Young
+933,Diamonds,8308 Brewery Dr. ,Sun City,AZ,85351,185,Formal,1,0,1,0,Young
+934,Fred's Bar,7475 St Paul Ave. ,Washington,DC,20001,165,Smart Casual,1,0,0,0,Young
+935,Sandtrap Bar & Grill,349 Jones Dr. ,Santa Fe,NM,87501,180,Formal,1,0,0,0,Middle Age
+936,Barking Kudu,8531 Euclid Drive ,Atlantic City,NJ,08401,195,Casual,1,0,1,0,Young
+937,Pcs Inc.,9278 Andover St. ,Nashville,TN,37201,195,Casual,1,0,1,0,Young
+938,Centovini Bar,9277 Studebaker Court ,Frankfort,KY,40601,185,Casual,1,0,0,0,Middle Age
+939,Beachland Ballroom & Tavern,48 Crescent Dr. ,Salem,OR,97301,190,Casual,1,0,0,0,Middle Age
+940,Groucho's Bar & Grill,7530 SW. Bear Hill Ave. ,Chicago,IL,60629,180,Smart Casual,0,0,0,0,Young
+941,Blue Cats,7409 Grove Dr. ,Cross River,NY,10518,175,Smart Casual,1,0,0,0,Middle Age
+942,Jax,7752 Berkshire Ave. ,Atlanta,GA,30334,120,Smart Casual,1,0,0,0,Young
+943,Comedy Off Broadway,864 Homestead Street ,Kenilworth,IL,60043,180,Formal,1,0,0,0,Young
+944,Chillers,66 East St Paul Lane ,Trenton,NJ,08608,175,Formal,1,0,0,0,Middle Age
+945,Razzoo Bar & Patio,7 Ocean St. ,Weston,MA,02493,110,Formal,1,0,0,0,Middle Age
+946,Blue Velvet Lounge,721 Williams Dr. ,Trenton,NJ,08608,110,Smart Casual,1,1,0,0,Young
+947,Ding-Dong Lounge,7325 High Point St. ,Norwalk,CA,90650,110,Casual,1,1,0,0,Young
+948,Joes Sports Bar,9442 Harvard Dr. ,Annapolis,MD,21401,105,Casual,1,0,1,0,Young
+949,Etai Gross,895 Saxton Dr. ,Iowa City,IA,52240,185,Formal,0,0,1,0,Young
+950,Jrbc,214 George St. ,Weston,MA,02493,160,Formal,0,0,1,0,Young
+951,Creekside Inn,8154 Crescent St. ,Kenilworth,IL,60043,130,Formal,0,0,0,0,Middle Age
+952,Hitching Post,443 Trusel Dr. ,New York,NY,10029,120,Smart Casual,1,0,0,0,Middle Age
+953,Gallery Bar,41 Lakewood Drive ,Charlotte,NC,28105,180,Smart Casual,1,0,1,0,Young
+954,Outer Limits,9789 Glen Creek Drive ,Dallas,TX,75001,195,Formal,1,0,1,0,Young
+955,Raiford's,815 Griffin Lane ,Villanova,PA,19085,120,Casual,1,0,0,0,Middle Age
+956,New Orleans Original Daiquiris,127 Old Meadowbrook Ave. ,El Paso,TX,79936,150,Casual,1,0,1,0,Young
+957,Decoy's Grill & Bar Inc,622 Riverside Ave. ,Trenton,NJ,08608,155,Smart Casual,1,0,1,0,Young
+958,Taylor's,96 N. Ketch Harbour Ave. ,New York,NY,10029,200,Formal,0,0,1,0,Young
+959,Pink Elephant,900 Jennings Court ,Norwalk,CA,90650,145,Formal,0,0,0,0,Middle Age
+960,Tony's,7310 N. James Rd. ,Darien,CT,06820,125,Formal,1,0,1,0,Young
+961,Boulevard Catering,7 Cemetery Street ,Richmond,VA,23218,165,Smart Casual,0,0,0,0,Young
+962,Fantasyland,8 East Ashley Court ,Memphis,TN,38157,155,Formal,1,0,0,0,Middle Age
+963,Christine's,9189 Oakwood St. ,Cross River,NY,10518,140,Smart Casual,1,0,1,0,Young
+964,Georgie's Alibi,9269 West Woodside Dr. ,Brownsville,TX,78521,305,Casual,0,0,0,0,Middle Age
+965,Fox & Hound English Pub & Gril,62 Union St. ,Darien,CT,06820,105,Formal,1,0,0,0,Young
+966,Texas Longhorn Club,874 East Fordham Court ,Nashville,TN,37201,150,Smart Casual,0,1,1,0,Young
+967,Henrietta Hudson,7836 Ohio Court ,El Paso,TX,79936,205,Casual,1,0,0,0,Middle Age
+968,M C's Pub & Grill,114 Carson Street ,Trenton,NJ,08608,155,Smart Casual,1,0,0,0,Young
+969,Spanky's Lounge & Sports Bar,972 Orchard Street ,Norwalk,CA,90650,165,Formal,1,1,0,0,Young
+970,Villa,9873 S. Mayfield Ave. ,Highland,MD,20777,130,Smart Casual,1,0,1,0,Young
+971,Claude & Annie's,9559 8th Road ,Annapolis,MD,21401,110,Casual,0,0,0,0,Middle Age
+972,Beer Garden,20 Mammoth Lane ,Atlanta,GA,30334,170,Formal,1,0,0,0,Middle Age
+973,Olde Towne Tavern,9387 Atlantic St. ,Chesapeake,VA,23320,175,Casual,1,0,1,0,Young
+974,Bleachers,15 Sutor Ave. ,Dover,MA,02030,160,Casual,1,0,1,1,Old
+975,Pumpkin Vine Room,8725 Anderson Ave. ,Springfield,PA,19064,120,Smart Casual,1,0,0,0,Young
+976,Peanut Bar,85 Hilldale Ave. ,Miami Beach,FL,33109,140,Smart Casual,1,0,1,0,Young
+977,Paddy's Pub,574 South Cactus St. ,Charlotte,NC,28105,180,Smart Casual,1,0,1,0,Young
+978,Glynn Hospitality Group,28 West Baker Drive ,Chesapeake,VA,23320,270,Smart Casual,1,0,0,0,Middle Age
+979,Moose Preserve Bar & Grill,8745 W. Park St. ,Salt Lake City,UT,84101,280,Smart Casual,1,0,0,0,Middle Age
+980,Shai,686 South Wintergreen Drive ,Villanova,PA,19085,145,Formal,0,0,1,0,Young
+981,Triangle,49 High Lane ,Houston,TX,77084,245,Formal,1,0,0,0,Middle Age
+982,Lolita Bar,8426 Cleveland Ave. ,Atlanta,GA,30334,185,Formal,1,0,0,0,Middle Age
+983,Kesler Sports Bar & Grill,517 Shady Street ,Santa Fe,NM,87501,150,Formal,1,0,0,0,Middle Age
+984,Lehigh Valley Wine Trail,7410 N. High Point Ave. ,Las Vegas,NV,89134,135,Smart Casual,0,0,1,0,Young
+985,Sobo 151 Bar & Grill,834 Blue Spring Court ,Springfield,PA,19064,175,Casual,1,0,0,0,Middle Age
+986,Duffy's Tavern,7219 Roosevelt Drive ,Houston,TX,77084,185,Smart Casual,1,0,1,0,Young
+987,Harvey's Comedy Club & Rstrnt,987 N. Oakwood Street ,Trenton,NJ,08608,185,Smart Casual,1,1,0,0,Young
+988,Studio G,2 Prairie Street ,Dover,DE,19901,175,Casual,1,0,0,0,Middle Age
+989,Boynton Restaurant & Spirits,71 Canal St. ,Charlotte,NC,28105,190,Casual,1,0,1,0,Young
+990,Bottle & Cork,4 Briarwood Dr. ,Brooklyn,NY,11249,120,Casual,0,0,0,0,Young
+991,Mohawk Tavern;,528 Ridgeview St. ,Cross River,NY,10518,175,Formal,1,0,0,0,Middle Age
+992,Cosmopolitan Club,24 W. Arrowhead Dr. ,Iowa City,IA,52240,115,Smart Casual,1,1,1,0,Young
+993,Howling Dog Saloon,963 Theatre Ave. ,New York,NY,10029,150,Casual,1,0,1,0,Young
+994,Tipperary Inn,316 Creek Street ,Chesapeake,VA,23320,325,Casual,1,0,0,0,Middle Age
+995,Chili Liquor,168 Summit St. ,Miami Beach,FL,33109,170,Formal,1,0,0,0,Middle Age
+996,Van Dome,407 E. College Drive ,Houston,TX,77084,215,Casual,1,0,0,0,Middle Age
+997,Pussy Cat Lounge,2 W. Park Dr. ,Atlantic City,NJ,08401,145,Formal,0,1,1,0,Young
+998,Golden Rail Pub,117 Pendergast St. ,Dover,DE,19901,200,Formal,1,0,0,0,Middle Age
+999,Scarlet Pub,2 Green Hill Drive ,Frankfort,KY,40601,175,Smart Casual,1,0,0,0,Middle Age
