@@ -130,8 +130,6 @@ friendsApp.controller('friendsList', [
             }, 1000);
             jQuery('#networkSpinner').removeClass().addClass("modalFormHidden");
           }, 2000);
-
-
         });
       });
 

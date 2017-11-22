@@ -240,17 +240,6 @@
           </div>
         </div>
       </div>
-      <div class="content-block footer-bottom" id="footer">
-        <div class="container">
-          <div class="row">
-            <div class="text-center">By Raj Patel, Nill Patel, Prabhjot Singh - Database 336 Fall 2017</div>
-            <br><br>
-              <div class="text-center">
-                <i class="fa fa-github fa-2x"></i>
-              </div>
-          </div>
-        </a>
-      </div>
       <!-- Menu Modal  -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -263,28 +252,28 @@
             </div>
             <div class="modal-body">
               <div id="modalMenuHeight">
-              <div ng-repeat="drink in sellsList">
-                <div class="menu">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h4 class="menu-title">{{drink.drinkName}}</h4>
-                      <div class="menu-detail">Special Happy Hour Price: {{drink.happyHourPrice}}</div>
-                    </div>
-                    <div class="col-sm-4 menu-price-detail">
-                      <h4 class="menu-price">{{drink.price}}</h4>
+                <div ng-repeat="drink in sellsList">
+                  <div class="menu">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <h4 class="menu-title">{{drink.drinkName}}</h4>
+                        <div class="menu-detail">Special Happy Hour Price: {{drink.happyHourPrice}}</div>
+                      </div>
+                      <div class="col-sm-4 menu-price-detail">
+                        <h4 class="menu-price">{{drink.price}}</h4>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
 
+          </div>
         </div>
       </div>
-		</div>
 
       <!-- Rating Modal -->
       <div class="modal fade" id="ratingsModal" role="dialog">
@@ -547,6 +536,16 @@
           </div>
         </div>
       </div>
+      <div class="content-block footer-bottom" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="text-center">By Raj Patel, Nill Patel, Prabhjot Singh - Database 336 Fall 2017</div>
+              <div class="text-center">
+                <a href="https://github.com/apacrathon/nill-pointers"><i class="fa fa-github fa-2x"></i></a>
+              </div>
+          </div>
+      </div>
+
 
       <!--/#wrapper-->
 
